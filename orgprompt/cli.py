@@ -1027,5 +1027,148 @@ def superhuman_inspect_cmd(
         click.echo(pkg.to_markdown())
 
 
+# ---------------------------------------------------------------------------
+# Fiduciary Governance & Independent Audit Command Group (Phase 15)
+# ---------------------------------------------------------------------------
+
+@cli.group(name="governance")
+def governance_group() -> None:
+    """Fiduciary Board of Directors, Independent Auditors & Superhuman Governance engine."""
+    pass
+
+
+@governance_group.command(name="list-roles")
+@click.option("--category", "-c", default=None, type=click.Choice(["BOARD_DIRECTOR", "INDEPENDENT_AUDITOR"], case_sensitive=False), help="Filter by fiduciary category.")
+@click.option("--industry", "-i", default=None, help="Filter by macro industry slug.")
+@click.option("--format", "-f", "output_format", default="table", type=click.Choice(["table", "json", "markdown", "md"], case_sensitive=False), show_default=True)
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output roles as JSON.")
+def governance_list_roles_cmd(category: Optional[str], industry: Optional[str], output_format: str, db_path: Optional[str], json_output: bool) -> None:
+    """Lists the 18 Fiduciary Board Director & Independent Auditor seats."""
+    from orgprompt.governance import list_governance_roles
+
+    roles = list_governance_roles(db_path_or_conn=db_path, category=category, industry_slug=industry)
+    if json_output or output_format.lower() == "json":
+        click.echo(json.dumps([r.to_dict() for r in roles], indent=2))
+        return
+    if output_format.lower() in ("markdown", "md"):
+        lines = [f"# Fiduciary Governance & Independent Audit Catalog ({len(roles)} Seats)", ""]
+        for r in roles:
+            lines.append(f"- **{r.title}** (`{r.slug}` | `{r.governance_category}`) — {r.committee_type} (`{r.character_count:,}` chars)")
+        click.echo("\n".join(lines))
+        return
+    table = Table(title=f"Fiduciary Governance & Independent Audit Roles ({len(roles)})", show_header=True)
+    table.add_column("ID / Slug", style="cyan")
+    table.add_column("Category", style="magenta")
+    table.add_column("Title & Committee", style="bold white")
+    table.add_column("Prompt Chars", justify="right", style="green")
+    for r in roles:
+        table.add_row(f"{r.id}\n({r.slug})", r.governance_category, f"{r.title}\n[dim]{r.committee_type}[/dim]", f"{r.character_count:,}")
+    console.print(table)
+
+
+@governance_group.command(name="board-slate")
+@click.option("--company", "-c", default=None, help="Company name or slug (e.g., 'Orange France', 'A24', 'Apple').")
+@click.option("--industry", "-i", default=None, help="Macro industry slug or keyword (e.g., 'telecommunications', 'creative_media').")
+@click.option("--stage", "-s", default=None, type=click.Choice(["PUBLIC_ENTERPRISE", "VENTURE_OR_BOUTIQUE"], case_sensitive=False), help="Override company stage.")
+@click.option("--format", "-f", "output_format", default="markdown", type=click.Choice(["markdown", "md", "json"], case_sensitive=False), show_default=True)
+@click.option("--output", "-o", "output_path", default=None, help="Optional file path to save slate.")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output slate as JSON.")
+def governance_board_slate_cmd(company: Optional[str], industry: Optional[str], stage: Optional[str], output_format: str, output_path: Optional[str], db_path: Optional[str], json_output: bool) -> None:
+    """Recommends a complete Board of Directors & External Audit Slate for a company or industry."""
+    from orgprompt.governance import board_for_company
+
+    target = company or industry
+    if not target:
+        console.print("[bold red]Error:[/bold red] Provide either `--company` or `--industry`.")
+        sys.exit(1)
+    slate = board_for_company(target, stage=stage, db_path_or_conn=db_path)
+    eff_fmt = "json" if (json_output or output_format.lower() == "json") else "markdown"
+    if output_path:
+        saved = slate.save(output_path, format=eff_fmt)
+        if json_output:
+            click.echo(slate.to_json())
+        else:
+            console.print(f"[bold green]Board & Audit Slate saved to:[/bold green] {saved}")
+        return
+    click.echo(slate.to_json() if eff_fmt == "json" else slate.to_markdown())
+
+
+@governance_group.command(name="synthesize-superhuman")
+@click.option("--problem", "-p", required=True, help="Target fiduciary governance or audit problem/mandate.")
+@click.option("--role", "-r", default=None, help="Base governance role slug or ID.")
+@click.option("--company", "-c", default=None, help="Optional company or industry context.")
+@click.option("--fuse", multiple=True, help="Additional governance role slugs to fuse (repeatable).")
+@click.option("--developer-context", "-dc", default="", help="Shareholder/developer context or constraints.")
+@click.option("--slug", default=None, help="Optional explicit profile slug.")
+@click.option("--title", default=None, help="Optional explicit profile title.")
+@click.option("--persist/--no-persist", default=False, show_default=True, help="Persist profile to SQLite.")
+@click.option("--format", "-f", "output_format", default="markdown", type=click.Choice(["markdown", "md", "json"], case_sensitive=False), show_default=True)
+@click.option("--output", "-o", "output_path", default=None, help="Optional output file path.")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output package as JSON.")
+def governance_synthesize_superhuman_cmd(
+    problem: str, role: Optional[str], company: Optional[str], fuse: tuple[str, ...],
+    developer_context: str, slug: Optional[str], title: Optional[str], persist: bool,
+    output_format: str, output_path: Optional[str], db_path: Optional[str], json_output: bool,
+) -> None:
+    """Synthesizes an 8-Section Superhuman Board Director or Superhuman Independent Auditor."""
+    from orgprompt.governance import SuperhumanGovernanceSynthesizer
+
+    synth = SuperhumanGovernanceSynthesizer(db_path)
+    pkg = synth.synthesize(
+        problem=problem, role_slug_or_id=role, company_or_industry=company,
+        fuse_committee_slugs=list(fuse) if fuse else None,
+        developer_context=developer_context, slug_override=slug, title_override=title, persist=persist,
+    )
+    eff_fmt = "json" if (json_output or output_format.lower() == "json") else "markdown"
+    if output_path:
+        saved = pkg.save(output_path, format=eff_fmt)
+        if json_output:
+            click.echo(pkg.to_json())
+        else:
+            console.print(f"[bold green]Superhuman Governance Blueprint saved to:[/bold green] {saved} (`{pkg.prompt_character_count:,}` chars)")
+        return
+    click.echo(pkg.to_json() if eff_fmt == "json" else pkg.to_markdown())
+
+
+@governance_group.command(name="inspect")
+@click.argument("id_or_slug", required=True)
+@click.option("--format", "-f", "output_format", default="markdown", type=click.Choice(["markdown", "md", "json"], case_sensitive=False), show_default=True)
+@click.option("--output", "-o", "output_path", default=None, help="Optional output file path.")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output as JSON.")
+def governance_inspect_cmd(id_or_slug: str, output_format: str, output_path: Optional[str], db_path: Optional[str], json_output: bool) -> None:
+    """Inspects either a Governance Role (`gov_*`) or a Superhuman Governance Profile (`superhuman_gov_*`)."""
+    from orgprompt.governance import SuperhumanGovernanceSynthesizer, get_governance_role
+
+    eff_fmt = "json" if (json_output or output_format.lower() == "json") else "markdown"
+    synth = SuperhumanGovernanceSynthesizer(db_path)
+    sh_pkg = synth.get_profile(id_or_slug)
+    if sh_pkg:
+        if output_path:
+            saved = sh_pkg.save(output_path, format=eff_fmt)
+            if not json_output:
+                console.print(f"[bold green]Exported to:[/bold green] {saved}")
+                return
+        click.echo(sh_pkg.to_json() if eff_fmt == "json" else sh_pkg.to_markdown())
+        return
+
+    role = get_governance_role(id_or_slug, db_path_or_conn=db_path)
+    if not role:
+        console.print(f"[bold red]Governance role or profile not found:[/bold red] {id_or_slug}")
+        sys.exit(1)
+    text = role.to_json() if eff_fmt == "json" else role.to_markdown()
+    if output_path:
+        p = Path(output_path)
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(text, encoding="utf-8")
+        if not json_output:
+            console.print(f"[bold green]Exported to:[/bold green] {p}")
+            return
+    click.echo(text)
+
+
 if __name__ == "__main__":
     cli()

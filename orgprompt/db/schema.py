@@ -65,4 +65,12 @@ def ensure_superhuman_schema(
     return conn
 
 
-__all__ = ["SUPERHUMAN_ROLE_PROFILES_DDL", "ensure_superhuman_schema", "get_schema_sql"]
+from orgprompt.governance.schema import GOVERNANCE_SCHEMA_DDL, ensure_governance_schema
+
+__all__ = [
+    "SUPERHUMAN_ROLE_PROFILES_DDL",
+    "GOVERNANCE_SCHEMA_DDL",
+    "ensure_superhuman_schema",
+    "ensure_governance_schema",
+    "get_schema_sql",
+]

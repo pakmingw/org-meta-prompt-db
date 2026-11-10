@@ -1,0 +1,90 @@
+{
+  "packet_id": "case2_novaframe_creator_studio_q4_2026",
+  "entity": "NovaFrame Studios & Channels, Inc.",
+  "currency": "USD",
+  "cash_and_runway_baseline_usd": {
+    "ending_unrestricted_cash_q4_2026": 7100000.0,
+    "venture_debt_or_credit_lines_available": 0.0,
+    "current_monthly_cash_inflows_verified": {
+      "long_form_youtube_adsense": 342250.0,
+      "syndicated_shorts_adsense": 7290.0,
+      "earned_cash_sponsorships_and_merch": 310460.0,
+      "total_monthly_cash_receipts": 660000.0
+    },
+    "current_monthly_cash_operating_outflows": {
+      "long_form_production_4_episodes_at_185k_each": 740000.0,
+      "sga_editorial_and_studio_overhead_38_fte": 299166.67,
+      "total_monthly_cash_opex": 1039166.67
+    },
+    "current_baseline_monthly_net_burn": 379166.67
+  },
+  "channel_telemetry_and_unit_economics": {
+    "q4_2025_prior_year": {
+      "total_monthly_views_m": 75.6,
+      "syndicated_shorts_monthly_views_m": 42.0,
+      "shorts_rpm_usd": 0.06,
+      "core_long_form_monthly_views_m": 33.6,
+      "long_form_adsense_rpm_usd": 18.5,
+      "long_form_packaging_ctr_pct": 8.4,
+      "long_form_average_view_duration_avd_pct": 54.0,
+      "first_30s_hook_retention_pct": 81.0,
+      "core_brand_sponsor_renewal_rate_pct": 68.0,
+      "sponsor_net_dollar_retention_pct": 112.0,
+      "cost_per_long_form_episode_usd": 142000.0
+    },
+    "q4_2026_current": {
+      "total_monthly_views_m": 140.0,
+      "syndicated_shorts_monthly_views_m": 121.5,
+      "shorts_rpm_usd": 0.06,
+      "shorts_to_long_form_sub_conversion_pct": 0.14,
+      "core_long_form_monthly_views_m": 18.5,
+      "long_form_adsense_rpm_usd": 18.5,
+      "long_form_packaging_ctr_pct": 3.9,
+      "long_form_average_view_duration_avd_pct": 36.0,
+      "first_30s_hook_retention_pct": 56.0,
+      "core_brand_sponsor_renewal_rate_pct": 46.92,
+      "core_sponsor_renewal_relative_decay_pct": -31.0,
+      "sponsor_net_dollar_retention_pct": 77.28,
+      "cost_per_long_form_episode_usd": 185000.0,
+      "episodes_produced_per_month": 4,
+      "pre_production_title_thumbnail_testing_rate_pct": 0.0
+    }
+  },
+  "accounting_and_brand_contract_audit_schedule": {
+    "reported_fy2026_revenue_usd": 18400000.0,
+    "reported_fy2026_adjusted_ebitda_usd": 1150000.0,
+    "asc606_upfront_retainer_recognition_issue": {
+      "upfront_recognized_2027_multi_quarter_retainers_usd": 6200000.0,
+      "total_contracted_integrations": 34,
+      "integrations_filmed_or_aired_as_of_2026_12_31": 6,
+      "undelivered_2027_integrations_recognized_upfront": 28,
+      "unearned_revenue_requiring_deferral_reversal_usd": 6200000.0,
+      "audit_note": "Management booked 100% of $6.20M multi-quarter 2027 brand retainers as Q3/Q4 2026 revenue upon contract signature (`ASC 606-10-25` violation: performance obligations are distinct episode integrations satisfied only at public broadcast/upload)."
+    },
+    "audience_guarantee_make_good_exposure": {
+      "contracts_missing_guaranteed_view_thresholds_count": 19,
+      "unbooked_make_good_ad_inventory_and_rebate_liability_usd": 3800000.0,
+      "cash_rebate_demands_due_h1_2027_usd": 600000.0,
+      "free_make_good_episode_slots_owed_in_2027": 19,
+      "accrued_liability_booked_on_balance_sheet_usd": 0.0
+    }
+  },
+  "proposed_expansion_commitments_resolution_exp02": {
+    "fixed_2yr_talent_minimum_guarantee_total_usd": 12000000.0,
+    "fixed_talent_mg_monthly_cash_outflow_usd": 500000.0,
+    "la_soundstage_year1_total_commitment_usd": 4500000.0,
+    "la_soundstage_monthly_lease_and_ops_usd": 150000.0,
+    "la_soundstage_buildout_capex_total_usd": 2700000.0,
+    "la_soundstage_buildout_monthly_draws_months_1_to_6_usd": 450000.0
+  },
+  "alternative_operating_model_benchmarks": {
+    "blumhouse_mrbeast_ai_swarm_turnaround_spec": {
+      "kill_gate_rule": "Zero principal photography until Title + Thumbnail concept achieves >= 6.5% simulated/panel CTR and 0-30s script animatic clears >= 75% retention (`Beast/Blumhouse Packaging-First Gate`).",
+      "ai_production_and_localization_swarm": "Replace manual footage logging, rough-cut assembly, and outsourced dubbing with AI transcript NLE rough-cut swarm, multi-variant thumbnail/hook telemetry testing, and 6-language AI voice/lip localization\u2014cutting per-episode cost from $185,000 to $96,000 (-48.1%) and reducing total monthly cash OpEx (incl. modular day-rate stage rentals & profit-share talent pods) to $665,000/mo.",
+      "turnaround_cost_per_episode_usd": 96000.0,
+      "turnaround_total_monthly_cash_opex_usd": 665000.0,
+      "conservative_stabilized_monthly_cash_receipts_during_makegood_burnoff_usd": 370000.0,
+      "stabilized_post_q2_monthly_cash_receipts_with_dubbing_and_ctr_recovery_usd": 820000.0
+    }
+  }
+}

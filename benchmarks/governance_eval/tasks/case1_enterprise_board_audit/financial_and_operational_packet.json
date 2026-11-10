@@ -1,0 +1,118 @@
+{
+  "packet_id": "case1_euronet_cloud_fiber_q4_2026",
+  "entity": "EuroNet Cloud & Fiber S.A.",
+  "currency": "EUR_MILLIONS",
+  "corporate_parameters": {
+    "wacc_annual": 0.078,
+    "effective_tax_rate": 0.25,
+    "senior_rcf_facility_limit_eur_m": 1500.0,
+    "rcf_maintenance_covenant_max_net_debt_to_ebitda": 2.5,
+    "rcf_covenant_definition_note": "Per Clause 22.4 of the \u20ac1,500M Senior RCF Agreement, Consolidated EBITDA excludes capitalized routine operating maintenance not meeting IAS 38.57 development criteria, and Consolidated Net Debt includes any supplier finance / reverse factoring obligations novated to financial institutions or extended >90 days beyond standard 60-day industry trade terms under IAS 7 / IFRS 7, while excluding legally trapped/escrowed cash only if pledged (unrestricted cash = \u20ac674.0M)."
+  },
+  "income_and_cashflow_summary_eur_m": {
+    "fy2025_audited": {
+      "revenue": 7650.0,
+      "operating_expenses_excl_da": 5584.2,
+      "reported_adjusted_ebitda": 2065.8,
+      "operating_cash_flow": 1820.0,
+      "ecapex": 1170.0,
+      "free_cash_flow": 650.0
+    },
+    "fy2026_unaudited_management": {
+      "revenue": 7880.0,
+      "operating_expenses_excl_da": 5620.0,
+      "reported_adjusted_ebitda": 2260.0,
+      "reported_ebitda_yoy_growth_pct": 9.4007,
+      "operating_cash_flow_reported": 2039.0,
+      "ecapex_reported": 1480.0,
+      "free_cash_flow_reported": 559.0
+    }
+  },
+  "balance_sheet_debt_and_liquidity_eur_m": {
+    "gross_financial_debt_reported": 5420.0,
+    "unrestricted_cash_and_equivalents": 674.0,
+    "net_debt_reported": 4746.0,
+    "reported_net_debt_to_ebitda_x": 2.1,
+    "trade_payables_standard_60d": 890.0
+  },
+  "unaudited_accounting_and_treasury_footnotes": {
+    "note_7_aurora_capitalization_policy_change": {
+      "effective_date": "2026-01-01",
+      "total_reclassified_from_opex_to_ecapex_eur_m": 310.0,
+      "components_eur_m": {
+        "tier2_tier3_legacy_oss_bss_bugfix_and_ticket_maintenance": 185.0,
+        "recurring_copper_drop_weather_fault_truck_roll_repairs": 125.0
+      },
+      "internal_audit_workpaper_comment": "Internal engineering logs confirm 0% new software feature creation or asset useful-life extension; 100% of the \u20ac310.0M represents recurring day-to-day maintenance previously expensed in OpEx in FY2025. IAS 38.57 technical/economic feasibility gates were bypassed via CFO manual journal override."
+    },
+    "note_11_supplier_reverse_factoring_program": {
+      "facility_balance_fy2026_eur_m": 480.0,
+      "facility_balance_fy2025_eur_m": 320.0,
+      "net_yoy_working_capital_cash_inflow_booked_in_ocf_eur_m": 160.0,
+      "original_vendor_payment_terms_days": 60,
+      "extended_bank_settlement_terms_days": 180,
+      "interest_margin_paid_by_euronet_to_bank": "EURIBOR + 265 bps",
+      "legal_structure": "Tri-party novation agreement extinguishing original vendor trade payable at Day 60 and creating an interest-bearing financial obligation to Alpine Trade Bank AG at Day 180; classified by CFO under 'Other Working Capital Accruals' outside Reported Gross Debt."
+    },
+    "note_14_executive_compensation_ltip_gate": {
+      "fy2026_ceo_cfo_bonus_pool_eur_m": 18.4,
+      "vesting_formula": "70% weighted on Reported Adjusted EBITDA YoY growth >= +8.0% (cliff threshold) and 30% weighted on Reported Net Debt / Adjusted EBITDA <= 2.25x. Zero FCF, eCapEx, or ROIC metrics."
+    }
+  },
+  "project_alpine_mna_due_diligence_schedule": {
+    "target_name": "Helvetia Legacy IT Services AG",
+    "purchase_enterprise_value_eur_m": 1800.0,
+    "new_acquisition_debt_eur_m": 1800.0,
+    "new_debt_interest_rate": 0.0685,
+    "target_ltm_ebitda_eur_m": 156.52,
+    "acquisition_ev_to_ebitda_multiple_x": 11.5,
+    "business_mix_and_risk_findings": {
+      "legacy_mainframe_solaris_mpls_revenue_share": 0.68,
+      "annual_legacy_revenue_attrition_rate": -0.065,
+      "top5_bank_contracts_expiring_2027_share": 0.41,
+      "unfunded_ias19_pension_and_works_council_liability_eur_m": 95.0,
+      "required_integration_and_severance_outlay_eur_m": 110.0
+    },
+    "independent_steady_state_economics_eur_m": {
+      "normalized_post_synergy_ebit_eur_m": 100.8,
+      "effective_tax_rate": 0.25,
+      "normalized_nopat_eur_m": 75.6,
+      "explicit_unlevered_fcf_years_1_to_5_eur_m": [
+        42.0,
+        68.0,
+        82.0,
+        85.0,
+        86.0
+      ],
+      "year_6_terminal_unlevered_fcf_eur_m": 88.58,
+      "perpetual_terminal_growth_rate": 0.01,
+      "discount_rate_wacc": 0.078
+    }
+  },
+  "deferred_internal_ai_and_infra_redeployment_backlog": {
+    "initiative_a_autonomous_copper_decommissioning": {
+      "name": "AI GIS Dispatch & Autonomous Copper-to-FTTH Exchange Decommissioning (1,450 Exchanges)",
+      "upfront_capex_eur_m": 260.0,
+      "annual_after_tax_cash_savings_years_1_to_5_eur_m": [
+        72.0,
+        108.0,
+        118.0,
+        122.0,
+        125.0
+      ],
+      "salvage_copper_and_real_estate_release_year_5_eur_m": 65.0
+    },
+    "initiative_b_agentic_soc_and_sdwan_swarms": {
+      "name": "Agentic Tier-1/2 Cyber SOC Triage & Zero-Touch NetBox/Terraform SD-WAN Provisioning Swarms",
+      "upfront_capex_eur_m": 140.0,
+      "annual_after_tax_cash_uplift_years_1_to_5_eur_m": [
+        52.0,
+        76.0,
+        88.0,
+        94.0,
+        98.0
+      ],
+      "terminal_value_year_5_conservative_eur_m": 110.0
+    }
+  }
+}

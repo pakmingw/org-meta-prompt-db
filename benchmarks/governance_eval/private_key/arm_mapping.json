@@ -1,0 +1,88 @@
+{
+  "trials": [
+    {
+      "trial_uuid8": "daa55402",
+      "case_num": 1,
+      "case_id": "case1_enterprise_board_audit",
+      "arm": "Arm_1_Baseline",
+      "persona_source": "Generic 2-Sentence Board Advisor & Auditor Prompt",
+      "persona_char_count": 305,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/private_key/personas/persona_daa55402.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case1_enterprise_board_audit/TASK.md",
+      "deck_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case1_enterprise_board_audit/management_board_deck.md",
+      "packet_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case1_enterprise_board_audit/financial_and_operational_packet.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/runs/run_daa55402",
+      "role_label": "Independent Board Director & Forensic Audit Reviewer (Enterprise Telecom/Cloud)"
+    },
+    {
+      "trial_uuid8": "affe7ff5",
+      "case_num": 1,
+      "case_id": "case1_enterprise_board_audit",
+      "arm": "Arm_2_Typical_Gov",
+      "persona_source": "Typical Governance Role (gov_capital_allocation_value_director: Shareholder Value & Capital-Allocation Director (ROIC/WACC & SOTP))",
+      "persona_char_count": 11101,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/private_key/personas/persona_affe7ff5.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case1_enterprise_board_audit/TASK.md",
+      "deck_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case1_enterprise_board_audit/management_board_deck.md",
+      "packet_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case1_enterprise_board_audit/financial_and_operational_packet.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/runs/run_affe7ff5",
+      "role_label": "Independent Board Director & Forensic Audit Reviewer (Enterprise Telecom/Cloud)"
+    },
+    {
+      "trial_uuid8": "6b9324ad",
+      "case_num": 1,
+      "case_id": "case1_enterprise_board_audit",
+      "arm": "Arm_3_Superhuman_Gov",
+      "persona_source": "Superhuman Governance Role (superhuman_gov_capital_allocation_board_director: Superhuman Capital-Allocation, SOTP & Infrastructure ROIC Board Director)",
+      "persona_char_count": 35092,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/private_key/personas/persona_6b9324ad.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case1_enterprise_board_audit/TASK.md",
+      "deck_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case1_enterprise_board_audit/management_board_deck.md",
+      "packet_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case1_enterprise_board_audit/financial_and_operational_packet.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/runs/run_6b9324ad",
+      "role_label": "Independent Board Director & Forensic Audit Reviewer (Enterprise Telecom/Cloud)"
+    },
+    {
+      "trial_uuid8": "37023646",
+      "case_num": 2,
+      "case_id": "case2_creator_studio_board",
+      "arm": "Arm_1_Baseline",
+      "persona_source": "Generic 2-Sentence Studio Board Member Prompt",
+      "persona_char_count": 258,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/private_key/personas/persona_37023646.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case2_creator_studio_board/TASK.md",
+      "deck_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case2_creator_studio_board/management_board_deck.md",
+      "packet_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case2_creator_studio_board/studio_financial_and_channel_packet.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/runs/run_37023646",
+      "role_label": "Series B Board Director & Studio Audit Reviewer (Film & Creator Media)"
+    },
+    {
+      "trial_uuid8": "64a3dec9",
+      "case_num": 2,
+      "case_id": "case2_creator_studio_board",
+      "arm": "Arm_2_Typical_Gov",
+      "persona_source": "Typical Governance Role (gov_media_creator_venture_board_partner: Film Studio, IP Slate & Creator-Economy Venture Board Partner)",
+      "persona_char_count": 11013,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/private_key/personas/persona_64a3dec9.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case2_creator_studio_board/TASK.md",
+      "deck_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case2_creator_studio_board/management_board_deck.md",
+      "packet_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case2_creator_studio_board/studio_financial_and_channel_packet.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/runs/run_64a3dec9",
+      "role_label": "Series B Board Director & Studio Audit Reviewer (Film & Creator Media)"
+    },
+    {
+      "trial_uuid8": "b797d7d7",
+      "case_num": 2,
+      "case_id": "case2_creator_studio_board",
+      "arm": "Arm_3_Superhuman_Gov",
+      "persona_source": "Superhuman Governance Role (superhuman_gov_media_creator_board_partner: Superhuman Film Studio, IP Slate & Creator-Economy Venture Board Partner)",
+      "persona_char_count": 35151,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/private_key/personas/persona_b797d7d7.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case2_creator_studio_board/TASK.md",
+      "deck_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case2_creator_studio_board/management_board_deck.md",
+      "packet_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/tasks/case2_creator_studio_board/studio_financial_and_channel_packet.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/governance_eval/runs/run_b797d7d7",
+      "role_label": "Series B Board Director & Studio Audit Reviewer (Film & Creator Media)"
+    }
+  ]
+}

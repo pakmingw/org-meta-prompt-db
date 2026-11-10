@@ -1,0 +1,32 @@
+{
+  "total_monthly_views_m": 140.0,
+  "shorts_views_share_pct": 86.79,
+  "shorts_rpm_usd": 0.06,
+  "long_form_views_yoy_pct": -44.94,
+  "long_form_ctr_prior_pct": 8.4,
+  "long_form_ctr_current_pct": 3.9,
+  "long_form_avd_prior_pct": 54.0,
+  "long_form_avd_current_pct": 36.0,
+  "sponsor_renewal_decay_pct": -31.0,
+  "reported_revenue_usd_m": 18.4,
+  "asc606_deferred_revenue_reversal_usd_m": 6.2,
+  "true_gaap_revenue_usd_m": 12.2,
+  "true_gaap_ebitda_usd_m": -5.05,
+  "unbooked_make_good_liability_usd_m": 3.8,
+  "ending_cash_usd_m": 7.1,
+  "baseline_monthly_burn_usd_k": 379.17,
+  "proposed_expansion_monthly_burn_usd_k": 1479.17,
+  "proposed_expansion_runway_months": 4.8,
+  "expansion_board_vote": "REJECT",
+  "turnaround_episode_cost_usd_k": 96.0,
+  "episode_cost_reduction_pct": 48.11,
+  "turnaround_transition_runway_months": 22.03,
+  "supplementary_stress_metrics": {
+    "net_adsense_yoy_monthly_loss_usd": -274580.0,
+    "fully_provisioned_economic_revenue_usd_m": 8.4,
+    "fully_provisioned_economic_ebitda_usd_m": -8.85,
+    "expansion_stressed_runway_with_rebates_and_makegoods_months": 3.67,
+    "turnaround_h1_ending_cash_usd_m": 4.73,
+    "turnaround_post_q2_monthly_net_cash_flow_usd_k": 155.0
+  }
+}

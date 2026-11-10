@@ -1,0 +1,92 @@
+{
+  "auditor_conversation_id": "cc5b4383-4bd4-44cc-beb5-fb19a5006b78",
+  "quarantine_attestation": "STRICT_SINGLE_BLIND_QUARANTINE_VERIFIED: Only tasks/case{1,2}_* and blind_packets/case_{1,2}/Director_{A,B,C}/ were inspected prior to locking scores. Zero access to private_key/, runs/, or /tmp/gov_trial_personas/.",
+  "rubric_scale_max_per_director": 50.0,
+  "dimensions": [
+    "d1_forensic_accounting_and_gaap_ifrs_rigor",
+    "d2_capital_allocation_roic_and_solvency_stress",
+    "d3_multi_committee_governance_and_incentive_controls",
+    "d4_ai_swarm_and_operating_value_creation_specificity",
+    "d5_falsifiable_gates_skepticism_and_board_actionability"
+  ],
+  "cases": {
+    "case_1": {
+      "entity": "EuroNet Cloud & Fiber S.A.",
+      "ranking": ["Director_A", "Director_C", "Director_B"],
+      "scores": {
+        "Director_A": {
+          "d1_forensic_accounting_and_gaap_ifrs_rigor": 9.5,
+          "d2_capital_allocation_roic_and_solvency_stress": 10.0,
+          "d3_multi_committee_governance_and_incentive_controls": 9.5,
+          "d4_ai_swarm_and_operating_value_creation_specificity": 9.5,
+          "d5_falsifiable_gates_skepticism_and_board_actionability": 9.5,
+          "total_50": 48.0,
+          "normalized_100": 96.0,
+          "rank": 1,
+          "forensic_rationale": "Strongest end-to-end institutional packet in Case 1. Exact IAS 38.57 (€310M reversal -> €1,950M EBITDA, -5.61% YoY), IAS 7.44A / IFRS 7 (€480M novated debt -> €5,226M Net Debt, €399M FCF, 2.68x pre-M&A RCF breach with exact €351.0M excess debt quantified while explicitly carving out €890M standard 60d trade payables), and exact sub-component DCF math (€284.95M + €894.82M = €1,179.77M PV). Uniquely computes BOTH headline (-€64.80M/yr) and all-in (-€80.80M/yr on €2,005M / 12.81x effective EBITDA) Economic Profit destruction plus pre- and post-tax negative carry (-€50.48M Yr-1 deficit), matches a 12-month RCF waiver (capped at 2.75x) to the actual Q3 (2.49x) / Q4 (2.41x) deleveraging curve, draws the causal bridge showing the €400M internal backlog eliminates the exact €125M copper + €185M OSS/BSS = €310M Note 7 maintenance burden, convenes Day-5 CEO/CFO-excluded in-camera sessions across 5 assurance officers, enforces >15% tranche draw-freeze kill gates, and establishes a post-Yr-1 50/50 moat/deleveraging capital sweep."
+        },
+        "Director_B": {
+          "d1_forensic_accounting_and_gaap_ifrs_rigor": 9.5,
+          "d2_capital_allocation_roic_and_solvency_stress": 9.0,
+          "d3_multi_committee_governance_and_incentive_controls": 8.0,
+          "d4_ai_swarm_and_operating_value_creation_specificity": 8.5,
+          "d5_falsifiable_gates_skepticism_and_board_actionability": 8.5,
+          "total_50": 43.5,
+          "normalized_100": 87.0,
+          "rank": 3,
+          "forensic_rationale": "Strong statutory accounting citations—uniquely distinguishes IAS 16.12 (tangible €125M copper plant repairs) alongside IAS 38.57 (€185M OSS/BSS software), cites EU MAR (596/2014) disclosure obligations, and notes that even unadjusted pro-forma leverage (2.71x) breaches 2.50x. However, exhibits clear multi-committee governance and operational gaps relative to A and C: (1) zero closed in-camera sessions with Controller/Internal Audit/CISO/Treasurer excluding CEO & CFO and zero whistleblower safeguards; (2) loosely assumes the forfeited €18.40M LTIP cliff pool provides incremental cash on top of €399.0M FCF; (3) diagnoses 12,400 copilot seat bloat as 'AI theatre' in prose but issues no license revocation/sunset directive, omits named C-suite workstream owners, and unrealistically compresses all 1,450 copper exchange cutovers into Year 1 despite the 5-year savings ramp; and (4) lacks standalone numbered binding Board resolutions and short-horizon 15/30/60/90-day audit gates."
+        },
+        "Director_C": {
+          "d1_forensic_accounting_and_gaap_ifrs_rigor": 9.0,
+          "d2_capital_allocation_roic_and_solvency_stress": 8.5,
+          "d3_multi_committee_governance_and_incentive_controls": 9.5,
+          "d4_ai_swarm_and_operating_value_creation_specificity": 9.5,
+          "d5_falsifiable_gates_skepticism_and_board_actionability": 9.0,
+          "total_50": 45.5,
+          "normalized_100": 91.0,
+          "rank": 2,
+          "forensic_rationale": "Very strong multi-committee Audit + Capital Allocation + Compensation synthesis: Newton-Raphson + bisection solver, sharp comparison of 5.14% after-tax debt cost vs 4.20% asset ROIC, closed CEO/CFO-excluded in-camera sessions (Controller, Internal Audit, Treasurer, CISO, Deputy GC), Big-4 36-month capitalization journal lookback, DACH works-council transition agreements, realistic 750-exchange Year-1 physical power-down pace, and a conservative 3.5-year useful-life guardrail on AI compute hardware. Trails Director_A primarily due to an internal covenant-waiver duration mismatch—requesting only a 2-quarter RCF technical waiver (Gate 1) while projecting Q2 Net Leverage at 2.58x (> 2.50x cap), which would trigger a Q2 re-default prior to the Q3/Q4 cure—plus minor prose PV sub-component rounding drift (€284.93M / €894.84M vs €284.95M / €894.82M)."
+        }
+      }
+    },
+    "case_2": {
+      "entity": "NovaFrame Studios & Channels, Inc.",
+      "ranking": ["Director_A", "Director_C", "Director_B"],
+      "scores": {
+        "Director_A": {
+          "d1_forensic_accounting_and_gaap_ifrs_rigor": 9.5,
+          "d2_capital_allocation_roic_and_solvency_stress": 9.5,
+          "d3_multi_committee_governance_and_incentive_controls": 10.0,
+          "d4_ai_swarm_and_operating_value_creation_specificity": 9.5,
+          "d5_falsifiable_gates_skepticism_and_board_actionability": 9.5,
+          "total_50": 48.0,
+          "normalized_100": 96.0,
+          "rank": 1,
+          "forensic_rationale": "Most complete, rigorous Series B Board & Audit turnaround dossier. Captures exact GAAP restatement ($12.20M Revenue; -$8.85M True GAAP EBITDA with -$5.05M pre-make-good bridge) backed by explicit debit/credit journal entries under ASC 606-10-25-23, ASC 606-10-32, and ASC 450-20 separating $0.60M Accrued Rebate Payable from $3.20M Make-Good Contract Liability, plus production CPM surge ($16.90 -> $40.00 vs $18.50 RPM = -53.75% AdSense margin). Models 5 cash/runway scenarios (18.73m/17.14m baseline; 4.80m expansion; 4.39m post-rebate; 3.60m w/ slot cannibalization; 22.03m net / 24.07m gross turnaround -> +$155k/mo / 18.9% FCF margin post-Q2) and sets a disciplined $4.50M cash floor covenant ($230k buffer below $4.73M H1 trough). Excels on governance: DGCL §141(a)/Caremark framing, closed in-camera interviews (Controller, Line Producer/UPM, Packaging Lead, Brand Partnerships), 4 denominator-backed Socratic probes, weekly 13-week direct cash ledger, >$25k dual-signature lock, Day 15/30/60/90 gates, explicit anti-synthetic-slop brand guardrail, and 100% FY26 bonus clawback + UFCF/CTR/AVD/ROIC-WACC STI/LTI realignment."
+        },
+        "Director_B": {
+          "d1_forensic_accounting_and_gaap_ifrs_rigor": 8.0,
+          "d2_capital_allocation_roic_and_solvency_stress": 9.0,
+          "d3_multi_committee_governance_and_incentive_controls": 7.5,
+          "d4_ai_swarm_and_operating_value_creation_specificity": 9.0,
+          "d5_falsifiable_gates_skepticism_and_board_actionability": 8.0,
+          "total_50": 41.5,
+          "normalized_100": 83.0,
+          "rank": 3,
+          "forensic_rationale": "Strong unit-economics telemetry verification (asserting AdSense RPM*views cross-checks, -$274.58k/mo net AdSense mix-shift loss, 3.67-month combined rebate+make-good stressed expansion runway, $4.73M H1 & $5.66M YE27 cash trajectory, <$3,500 pre-viz kill threshold, 6 named dubbing languages, and 20%-25% creator profit-share above 1.5x recoupment). Penalized for three material fiduciary/accounting shortcomings: (1) reports 'true_gaap_ebitda_usd_m': -5.05 in findings.json instead of -$8.85M—improperly excluding $3.80M of incurred ASC 606-10-32 / ASC 450-20 make-good & cash-rebate liabilities from primary GAAP EBITDA (relegating -$8.85M to a non-GAAP 'Fully Provisioned Economic Basis'); (2) omits closed in-camera sessions with the Controller/UPM/Packaging/Sales leads and completely omits any executive bonus clawback or CEO/Head-of-Finance STI/LTI overhaul; and (3) omits ROIC vs WACC capital-allocation framing, anti-slop AI guardrails, a minimum liquidity covenant floor, and formal restatement/governance resolutions beyond a single EXP-02 rejection clause."
+        },
+        "Director_C": {
+          "d1_forensic_accounting_and_gaap_ifrs_rigor": 9.5,
+          "d2_capital_allocation_roic_and_solvency_stress": 9.5,
+          "d3_multi_committee_governance_and_incentive_controls": 9.5,
+          "d4_ai_swarm_and_operating_value_creation_specificity": 9.0,
+          "d5_falsifiable_gates_skepticism_and_board_actionability": 9.0,
+          "total_50": 46.5,
+          "normalized_100": 93.0,
+          "rank": 2,
+          "forensic_rationale": "High-caliber creator-venture fiduciary dossier. Correctly restates True GAAP Revenue ($12.20M; $11.60M net of cash-rebate variable consideration) and True GAAP EBITDA (-$8.85M), and uniquely adds a proactive ASC 926 film/creator content-library capitalization prohibition (90% YouTube view decay within 30 days) plus a ban on speculative CPG/merch MOQ inventory commitments. Decomposes segment Economic Profit (IC x (ROIC - WACC) vs ~15% studio WACC, showing -$87.29k/mo Long-Form negative contribution pre-SG&A), convenes closed in-camera interviews across 5 operating/assurance leads, caps future audience guarantees at <=70% of trailing 90-day median organic LF views, enforces an anti-slop AI brand guardrail, sets a $3.50M cash floor + $600k rebate escrow, and claws back FY26 bonuses. Finishes 1.5 pts behind Director_A due to slightly looser $50k (vs $25k) dual-signatory threshold, no weekly 13-week direct cash ledger or Day-90 pre-Q3 audit gate, and omission of the 3.60–3.67m slot-cannibalized expansion runway stress test."
+        }
+      }
+    }
+  }
+}
