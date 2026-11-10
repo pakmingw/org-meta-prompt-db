@@ -168,6 +168,11 @@ class SearchResult:
         return self.results[index]
 
     @property
+    def ranked_roles(self) -> List[SearchResultItem]:
+        """Convenience alias for results matching enterprise search conventions."""
+        return self.results
+
+    @property
     def scores(self) -> List[Dict[str, Any]]:
         """Returns score attribution list satisfying PROJECT.md interface contract."""
         return [

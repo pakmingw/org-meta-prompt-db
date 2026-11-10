@@ -295,16 +295,16 @@ orgprompt company onboard "Anduril Industries" --research-file research/anduril.
 Execute hybrid BM25 + dense LSA search across companies, roles, use cases, tools, and subagents:
 ```bash
 # Search for fraud and risk engineering across the graph
-orgprompt search hybrid "fraud detection quantitative model risk"
+orgprompt search query "fraud detection quantitative model risk"
 
 # Search for cloud security architectures
-orgprompt search hybrid "cloud security zero trust kubernetes IAM"
+orgprompt search query "cloud security zero trust kubernetes IAM"
 ```
 
-### 5. Graph Inspection & Invariant Validation
+### 5. Enterprise Benchmark & Retrieval Evaluation
 ```bash
-# Verify graph connectivity and invariants
-orgprompt graph inspect
+# Run the 36-query expanded enterprise retrieval benchmark (Recall@10 & MRR)
+orgprompt benchmark run
 ```
 
 ---
@@ -313,43 +313,43 @@ orgprompt graph inspect
 
 ```python
 import sqlite3
-from orgprompt.db.connection import get_db_connection
-from orgprompt.graph.engine import build_knowledge_graph
+from orgprompt.db.connection import get_connection
+from orgprompt.graph.engine import KnowledgeGraphEngine
 from orgprompt.scaffolder.role_scaffolder import RoleScaffolder
 from orgprompt.scaffolder.company_scaffolder import CompanyScaffolder
 from orgprompt.onboarding.engine import CompanyOnboardingEngine
 from orgprompt.search.hybrid import HybridSearchEngine
 
 # 1. Connect to SQLite Knowledge Base
-conn = get_db_connection()
+conn = get_connection()
 cursor = conn.cursor()
 
 # Query Fortune 500 companies & canonical role count
-cursor.execute("SELECT COUNT(*) FROM companies")
-print(f"Total Companies: {cursor.fetchone()[0]}")  # 501
+cursor.execute("SELECT COUNT(*) FROM fortune500_companies")
+print(f"Total Companies: {cursor.fetchone()[0]}")  # 500 F500 + onboarded
 
-cursor.execute("SELECT COUNT(*) FROM roles")
-print(f"Total Canonical Roles: {cursor.fetchone()[0]}")  # 549
+cursor.execute("SELECT COUNT(*) FROM canonical_roles")
+print(f"Total Canonical Roles: {cursor.fetchone()[0]}")  # 547 base + bespoke
 
 cursor.execute("SELECT COUNT(*) FROM employs_role")
 print(f"Total EMPLOYS_ROLE Edges: {cursor.fetchone()[0]}")  # 26,900+
 
 # 2. NetworkX Knowledge Graph Traversal
-kg = build_knowledge_graph(conn)
+kg = KnowledgeGraphEngine.build_from_db(conn=conn)
 print(f"Graph Nodes: {kg.number_of_nodes()}, Graph Edges: {kg.number_of_edges()}")
 
 # 3. Scaffold a Role Swarm Runbook
 role_scaffolder = RoleScaffolder(conn)
 runbook = role_scaffolder.scaffold_role("chief-ai-officer", company_name="Microsoft")
-print(f"Role: {runbook.role_title}")
-print(f"Subagents in Swarm: {len(runbook.subagents)}")
-print(f"Section 7 Prompt Length: {len(runbook.system_prompt)} characters")
+print(f"Role: {runbook.role['name']}")
+print(f"Subagents in Swarm: {len(runbook.subagent_swarm)}")
+print(f"Section 7 Prompt Length: {len(runbook.role['system_prompt'])} characters")
 
 # 4. Execute Local Hybrid Search
-search_engine = HybridSearchEngine(conn)
+search_engine = HybridSearchEngine.build_from_db(conn)
 results = search_engine.search("high-frequency algorithmic trading market risk", top_k=5)
-for res in results:
-    print(f"[{res.score:.4f}] {res.entity_type}: {res.title}")
+for res in results.ranked_roles:
+    print(f"[{res.rrf_score:.4f}] {res.role.name} ({res.role.slug})")
 ```
 
 ---
