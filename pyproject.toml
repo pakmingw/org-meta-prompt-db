@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orgprompt"
+version = "0.1.0"
+description = "Organizational Knowledge Graph and Professional Role Meta-Prompting Database"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Antigravity Engineering", email = "engineering@antigravity.ai"}
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "networkx>=3.0",
+    "scikit-learn>=1.3.0",
+    "numpy>=1.24.0",
+    "click>=8.1.0",
+    "rich>=13.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0"
+]
+
+[project.scripts]
+orgprompt = "orgprompt.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["orgprompt*"]
+exclude = ["tests*"]
+
+[tool.pytest.ini_options]
+markers = [
+    "e2e: end-to-end acceptance tests",
+    "tier1: tier 1 feature coverage tests",
+    "tier2: tier 2 boundary and edge case tests",
+]

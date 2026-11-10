@@ -1,0 +1,41 @@
+# Gitignore for OrgPrompt Knowledge Graph & Database
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Pytest / Coverage / Caching
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# System and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# SQLite transient WAL files
+*.db-wal
+*.db-shm
+
+# Ignore teamwork multi-agent orchestrator internal metadata
+.agents/teamwork/
+
+# CRITICAL: Always track installed Antigravity Skills in repository
+!.agents/skills/
+!.agents/skills/**
