@@ -1,0 +1,62 @@
+{
+  "name": "Corridor Digital",
+  "slug": "corridor_digital",
+  "id": "f500_corridor_digital",
+  "ticker": "PRIVATE (Boutique Creator Collective)",
+  "is_public": false,
+  "publicly_traded": false,
+  "revenue_billions": 0.012,
+  "headquarters": "Los Angeles (Arts District), California, USA",
+  "founders": "Sam Gorski, Niko Pueringer & Jake Watson",
+  "macro_industry": "Creative Arts, Media, Animation & Interactive Entertainment",
+  "sub_sector": "Boutique Indie VFX & YouTube Creator Collective (~15-25 Staff), Direct SVOD Platform (CorridorDigital.com)",
+  "business_model": "RECURRING_SUBSCRIPTION_SAAS",
+  "operating_archetype": "UNIFICATION",
+  "financial_highlights": {
+    "estimated_annual_revenue_usd_millions": 12.0,
+    "staff_headcount_approx": 18,
+    "flagship_channels_and_platform": "Corridor Crew (~6.5M+ subs), Corridor (~10M+ subs), CorridorDigital.com SVOD ($39.99/yr)",
+    "pipeline_architecture": "Generalist 3D/VFX Artist-Creators (Blender, Unreal Engine, After Effects, DaVinci Resolve, Houdini, NeRF/Gaussian Splatting)",
+    "direct_membership_mechanism": "Producer Points crowd-greenlighting on CorridorDigital.com"
+  },
+  "divisions": [
+    "Corridor Crew Serialized Formats (VFX Artists React, Stuntmen React, Animators React & CGI Challenges)",
+    "Boutique Generalist VFX, Unreal Engine Virtual Production & AI/Gaussian-Splatting R&D Lab",
+    "Narrative Original Series & High-Concept Shorts (Son of a Dungeon, Anime/VFX Specials)",
+    "CorridorDigital.com Owned Streaming App, Producer-Points Greenlighting & Member Community",
+    "Brand Sponsorship Integrations, Puget-Workstation Hardware Partnerships & Limited Merch Drops"
+  ],
+  "challenges": [
+    "18-Person Boutique Bandwidth vs. Hollywood-Grade VFX Expectations: Delivering complex CGI, Unreal Engine, motion-capture, and compositing shots every week without burning out generalist artist-hosts who simultaneously appear on camera and render shots.",
+    "Fair-Use Copyright Claims & Demonetization on 'VFX Artists React': Navigating automated YouTube Content ID strikes/revenue-claims from major film studios on educational VFX breakdown episodes, making owned CorridorDigital.com SVOD subscriptions existential.",
+    "Subscriber Conversion & Churn on Owned CorridorDigital.com Streaming App: Continuously producing exclusive member-only shows (extended React cuts, Son of a Dungeon, crew vlogs) to retain $4/mo ($39.99/yr) subscribers against subscription fatigue.",
+    "Integrating Generative AI Video/3D Tools Without Alienating Craft-Purist VFX Community: Balancing technical curiosity in AI rotoscoping, mocap, and neural rendering (*Anime Rock Paper Scissors*) with deep respect for human artistic authorship.",
+    "Local Workstation Render & NAS Storage Bottlenecks: Managing multi-terabyte raw RED/Blackmagic footage,EXR caches, and GPU render queues across a small Arts District warehouse studio."
+  ],
+  "employed_canonical_roles": [
+    "creator_channel_showrunner_creative_director",
+    "creator_youtube_head_of_ideation_packaging",
+    "creator_retention_scriptwriter_story_producer",
+    "creator_lead_retention_video_editor",
+    "creator_thumbnail_designer_visual_psychologist",
+    "creator_short_form_vertical_producer",
+    "creator_youtube_analytics_strategist",
+    "creator_brand_partnerships_monetization_lead",
+    "creator_solo_founder_one_person_media_studio",
+    "media_post_production_supervisor_finishing",
+    "media_indie_film_line_producer_upm",
+    "media_vfx_supervisor_stagecraft",
+    "media_senior_compositing_lead",
+    "media_color_grading_finishing_artist",
+    "media_audio_sound_designer_lead",
+    "media_lead_shading_technical_director",
+    "media_lead_lighting_artist",
+    "media_lead_renderfarm_systems_director",
+    "media_digital_asset_management_librarian",
+    "media_ip_copyright_chain_of_title_counsel",
+    "exec_chief_executive_officer",
+    "fin_chief_financial_officer",
+    "tech_chief_cloud_infrastructure_architect"
+  ],
+  "bespoke_roles": []
+}

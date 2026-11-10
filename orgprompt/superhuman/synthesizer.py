@@ -446,6 +446,7 @@ class SuperhumanRoleSynthesizer:
         context_file: Optional[Union[str, Path]] = None,
         adjacent_k: int = 4,
         persist: bool = False,
+        slug: Optional[str] = None,
     ) -> SuperhumanRolePackage:
         """Synthesizes a complete SuperhumanRolePackage via any of the 3 input pathways."""
         clean_problem = (problem or "").strip()
@@ -600,8 +601,13 @@ class SuperhumanRoleSynthesizer:
             )
         ).hexdigest()[:8]
         base_slug = _slugify(primary_role.get("slug") or base_title, max_len=40)
-        sh_slug = f"superhuman_{base_slug}_{fingerprint}"
-        sh_id = f"sh_{base_slug}_{fingerprint}"
+        if slug and slug.strip():
+            clean_custom_slug = _slugify(slug.strip(), max_len=80)
+            sh_slug = clean_custom_slug if clean_custom_slug.startswith("superhuman_") else f"superhuman_{clean_custom_slug}"
+            sh_id = f"sh_{sh_slug[len('superhuman_'):]}"
+        else:
+            sh_slug = f"superhuman_{base_slug}_{fingerprint}"
+            sh_id = f"sh_{base_slug}_{fingerprint}"
         now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
         pkg = SuperhumanRolePackage(

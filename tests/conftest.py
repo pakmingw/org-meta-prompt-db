@@ -290,11 +290,12 @@ def cleanup_disk_db():
                            OR slug LIKE 'adversarial_verification_%'
                            OR id NOT IN (SELECT artifact_id FROM role_artifacts)
                     """)
-                    # Clean up any orphaned role_edges, role_artifacts, or employs_role if present
+                    # Clean up any orphaned role_edges, role_artifacts, employs_role, or company_internet_comparisons
                     conn.execute("DELETE FROM role_edges WHERE source_role_id NOT IN (SELECT id FROM canonical_roles) OR target_role_id NOT IN (SELECT id FROM canonical_roles)")
                     conn.execute("DELETE FROM role_artifacts WHERE role_id NOT IN (SELECT id FROM canonical_roles)")
                     conn.execute("DELETE FROM employs_role WHERE role_id NOT IN (SELECT id FROM canonical_roles)")
                     conn.execute("DELETE FROM employs_role WHERE company_id NOT IN (SELECT id FROM fortune500_companies)")
+                    conn.execute("DELETE FROM company_internet_comparisons WHERE company_id NOT IN (SELECT id FROM fortune500_companies)")
                 conn.close()
             except Exception:
                 pass

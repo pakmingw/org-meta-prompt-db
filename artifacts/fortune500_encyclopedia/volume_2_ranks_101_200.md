@@ -230,8 +230,8 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Warner Bros. Discovery links to 54 canonical roles in `org_knowledge_base.db` (Chief Creative Officer (Animation & Features), Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
-- **Bespoke Role Deltas**: Specialized market profiles (Lead Entertainment Solutions Architect, Principal Warner Bros. Discovery Entertainment Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 87.9%.
+- **Exact Matches (DB Mapped Roles)**: Warner Bros. Discovery links to 62 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 57 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Bespoke Role Deltas**: Specialized market profiles (Lead Entertainment Solutions Architect, Principal Warner Bros. Discovery Entertainment Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 89.1%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
 ### Tailored Personal Subagent Swarm Configuration
@@ -643,8 +643,8 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Starbucks links to 53 canonical roles in `org_knowledge_base.db` (Chief Creative Officer (Animation & Features), Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
-- **Bespoke Role Deltas**: Specialized market profiles (Lead Food Services Solutions Architect, Principal Starbucks Food Services Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 79.6%.
+- **Exact Matches (DB Mapped Roles)**: Starbucks links to 61 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 56 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Bespoke Role Deltas**: Specialized market profiles (Lead Food Services Solutions Architect, Principal Starbucks Food Services Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 89.4%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
 ### Tailored Personal Subagent Swarm Configuration
@@ -1260,8 +1260,8 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Netflix links to 54 canonical roles in `org_knowledge_base.db` (Chief Creative Officer (Animation & Features), Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
-- **Bespoke Role Deltas**: Specialized market profiles (Lead Entertainment Solutions Architect, Principal Netflix Entertainment Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 89.0%.
+- **Exact Matches (DB Mapped Roles)**: Netflix links to 62 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 57 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Bespoke Role Deltas**: Specialized market profiles (Lead Entertainment Solutions Architect, Principal Netflix Entertainment Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 86.2%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
 ### Tailored Personal Subagent Swarm Configuration
@@ -1715,8 +1715,8 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Paramount Global links to 55 canonical roles in `org_knowledge_base.db` (Chief Creative Officer (Animation & Features), Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
-- **Bespoke Role Deltas**: Specialized market profiles (Lead Entertainment Solutions Architect, Principal Paramount Global Entertainment Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 86.1%.
+- **Exact Matches (DB Mapped Roles)**: Paramount Global links to 63 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 58 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Bespoke Role Deltas**: Specialized market profiles (Lead Entertainment Solutions Architect, Principal Paramount Global Entertainment Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 92.9%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
 ### Tailored Personal Subagent Swarm Configuration
@@ -2543,8 +2543,8 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: McDonald's links to 54 canonical roles in `org_knowledge_base.db` (Chief Creative Officer (Animation & Features), Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
-- **Bespoke Role Deltas**: Specialized market profiles (Lead Food Services Solutions Architect, Principal McDonald's Food Services Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 83.3%.
+- **Exact Matches (DB Mapped Roles)**: McDonald's links to 62 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 57 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Bespoke Role Deltas**: Specialized market profiles (Lead Food Services Solutions Architect, Principal McDonald's Food Services Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 78.5%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
 ### Tailored Personal Subagent Swarm Configuration
@@ -2998,8 +2998,8 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Marriott International links to 54 canonical roles in `org_knowledge_base.db` (Chief Creative Officer (Animation & Features), Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
-- **Bespoke Role Deltas**: Specialized market profiles (Lead Hotels, Casinos, Resorts Solutions Architect, Principal Marriott International Hotels, Casinos, Resorts Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 81.9%.
+- **Exact Matches (DB Mapped Roles)**: Marriott International links to 62 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 57 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Bespoke Role Deltas**: Specialized market profiles (Lead Hotels, Casinos, Resorts Solutions Architect, Principal Marriott International Hotels, Casinos, Resorts Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 92.4%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
 ### Tailored Personal Subagent Swarm Configuration
@@ -3245,8 +3245,8 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Live Nation Entertainment links to 53 canonical roles in `org_knowledge_base.db` (Chief Creative Officer (Animation & Features), Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
-- **Bespoke Role Deltas**: Specialized market profiles (Lead Entertainment Solutions Architect, Principal Live Nation Entertainment Entertainment Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 78.1%.
+- **Exact Matches (DB Mapped Roles)**: Live Nation Entertainment links to 61 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 56 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Bespoke Role Deltas**: Specialized market profiles (Lead Entertainment Solutions Architect, Principal Live Nation Entertainment Entertainment Operations Manager, Director of Creative Arts Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 86.5%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
 ### Tailored Personal Subagent Swarm Configuration

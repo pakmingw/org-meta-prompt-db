@@ -617,13 +617,25 @@ def seed_expanded_database(
             role_edges_data
         )
 
-        # 6. Insert 500 Fortune 500 Companies
+        # 6. Insert 500 Fortune 500 Companies (ON CONFLICT DO UPDATE preserves ON DELETE CASCADE children like company_internet_comparisons)
         cursor.executemany(
-            """INSERT OR REPLACE INTO fortune500_companies (
+            """INSERT INTO fortune500_companies (
                 id, slug, name, rank, revenue_billions, macro_industry, industry_id,
                 sub_sector, business_model, operating_archetype, functional_units_json, metadata_json
             ) VALUES (:id, :slug, :name, :rank, :revenue_billions, :macro_industry, :industry_id,
-                      :sub_sector, :business_model, :operating_archetype, :functional_units_json, :metadata_json)""",
+                      :sub_sector, :business_model, :operating_archetype, :functional_units_json, :metadata_json)
+            ON CONFLICT(id) DO UPDATE SET
+                slug = excluded.slug,
+                name = excluded.name,
+                rank = excluded.rank,
+                revenue_billions = excluded.revenue_billions,
+                macro_industry = excluded.macro_industry,
+                industry_id = excluded.industry_id,
+                sub_sector = excluded.sub_sector,
+                business_model = excluded.business_model,
+                operating_archetype = excluded.operating_archetype,
+                functional_units_json = excluded.functional_units_json,
+                metadata_json = excluded.metadata_json""",
             companies_data
         )
 

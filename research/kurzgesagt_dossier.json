@@ -1,0 +1,63 @@
+{
+  "name": "Kurzgesagt",
+  "slug": "kurzgesagt",
+  "id": "f500_kurzgesagt",
+  "ticker": "PRIVATE (in a nutshell - kurzgesagt GmbH)",
+  "is_public": false,
+  "publicly_traded": false,
+  "revenue_billions": 0.015,
+  "headquarters": "Munich, Bavaria, Germany",
+  "founders": "Philipp Dettmer (CEO/Founder), Patrizia Mosca (COO)",
+  "macro_industry": "Creative Arts, Media, Animation & Interactive Entertainment",
+  "sub_sector": "Deep-Research Science Edutainment Studio, Vector Illustration/Motion Design, Patreon & Educational E-Commerce",
+  "business_model": "MULTI_SIDED_PLATFORM",
+  "operating_archetype": "UNIFICATION",
+  "financial_highlights": {
+    "estimated_annual_revenue_usd_millions": 15.0,
+    "staff_headcount_approx": 75,
+    "flagship_subscribers_millions": "23.5+ (English) + 10+ Localized Language Channels",
+    "production_hours_per_episode": "1,000 - 1,800+ collective researcher, illustrator & animator hours",
+    "revenue_mix": "E-Commerce Science Shop (~45%+), YouTube AdSense & Multi-Language Channels (~25%), Patreon (~15%), Grants/Sponsors/Books (~15%)"
+  },
+  "divisions": [
+    "Scientific Research, Academic Fact-Checking & Narrative Scriptwriting Pod",
+    "Vector Art Direction, Storyboarding & Signature Illustration Studio",
+    "2D/3D After Effects & Cinema 4D Motion Animation, Sound Design & Orchestral Score",
+    "Multi-Language Localization Network (German/FUNK, Spanish, French, Korean, Japanese, Arabic, Hindi, Portuguese)",
+    "Kurzgesagt E-Commerce Shop (Human Era Calendars, Habit Journals, Posters, Plushies) & Book Publishing",
+    "Patreon Community Membership, Foundation Grants & Ethical Brand Sponsorships"
+  ],
+  "challenges": [
+    "1,200+ Hour Per-Video Production Lead Time vs. Algorithmic Cadence: Investing 6-to-18 months of PhD-reviewed research, custom vector illustration, and frame-by-frame After Effects animation per 11-minute episode without missing upload consistency.",
+    "Rigorous Peer-Reviewed Scientific Accuracy vs. Broad Curiosity Packaging: Simplifying quantum mechanics, immunology, astrophysics, and existential philosophy into viral >=8% CTR Titles/Thumbnails without sensationalist distortion or losing academic credibility.",
+    "High European Studio Payroll (~75 Munich Staff) vs. AdSense Fluctuations: Sustaining full-time German creative employment and software/fulfillment overhead via annual peak Q4 Shop launches (12,027 Human Era Calendar) and recurring Patreon support.",
+    "Synchronizing 9+ Multi-Language Channels & Cultural Nuances: Translating complex scientific idioms, visual text labels, and narrative pacing across Spanish, German, Japanese, Korean, Hindi, and Arabic channels without bottlenecking main-channel animators.",
+    "Defending Signature Vector Art Identity Against Low-Effort AI Copycat Channels: Maintaining unmistakable visual craft, emotional storytelling warmth, and cited primary-source transparency amid a flood of generic AI-cloned explainer videos."
+  ],
+  "employed_canonical_roles": [
+    "creator_channel_showrunner_creative_director",
+    "creator_youtube_head_of_ideation_packaging",
+    "creator_retention_scriptwriter_story_producer",
+    "creator_lead_retention_video_editor",
+    "creator_thumbnail_designer_visual_psychologist",
+    "creator_short_form_vertical_producer",
+    "creator_youtube_analytics_strategist",
+    "creator_brand_partnerships_monetization_lead",
+    "creator_solo_founder_one_person_media_studio",
+    "media_post_production_supervisor_finishing",
+    "media_head_of_story_editorial",
+    "media_lead_character_animator",
+    "media_audio_sound_designer_lead",
+    "media_color_grading_finishing_artist",
+    "media_braintrust_candid_reviewer",
+    "media_ip_copyright_chain_of_title_counsel",
+    "exec_chief_executive_officer",
+    "exec_chief_operating_officer",
+    "fin_chief_financial_officer",
+    "retail_omnichannel_customer_experience_architect",
+    "retail_lead_private_label_product_director",
+    "legal_dir_commercial_contracts",
+    "data_lead_analytics_engineer"
+  ],
+  "bespoke_roles": []
+}

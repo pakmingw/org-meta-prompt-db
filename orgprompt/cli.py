@@ -838,6 +838,7 @@ def superhuman_group() -> None:
     help="Path to file containing developer-complemented domain context.",
 )
 @click.option("--adjacent-k", default=4, type=int, show_default=True, help="Number of OKG neighbors to fuse.")
+@click.option("--slug", default=None, help="Optional explicit superhuman role slug.")
 @click.option("--persist/--no-persist", default=False, show_default=True, help="Persist profile to SQLite.")
 @click.option(
     "--format",
@@ -867,6 +868,7 @@ def superhuman_synthesize_cmd(
     developer_context: Optional[str],
     context_file: Optional[str],
     adjacent_k: int,
+    slug: Optional[str],
     persist: bool,
     output_format: str,
     output_path: Optional[str],
@@ -906,6 +908,7 @@ def superhuman_synthesize_cmd(
                 context_file=context_file,
                 adjacent_k=adjacent_k,
                 persist=persist,
+                slug=slug,
             )
     except Exception as exc:
         console.print(f"[bold red]Superhuman Synthesis Error:[/bold red] {exc}")

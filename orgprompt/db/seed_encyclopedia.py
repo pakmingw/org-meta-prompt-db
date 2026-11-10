@@ -173,8 +173,8 @@ def seed_encyclopedia(
         comp_md = build_company_markdown(c, roles, divs, bespoke, score, swarm_md)
         volumes[vol_idx].append(comp_md)
 
-    # Batch insert into company_internet_comparisons
-    cur.execute("DELETE FROM company_internet_comparisons")
+    # Batch insert core F500 (ranks 1..500) without wiping dynamically onboarded >=501 companies
+    cur.execute("DELETE FROM company_internet_comparisons WHERE f500_rank <= 500")
     cur.executemany(
         "INSERT INTO company_internet_comparisons "
         "(id, company_id, f500_rank, company_name, internet_divisions_json, internet_bespoke_roles_json, "

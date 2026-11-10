@@ -20,17 +20,24 @@ def encyclopedia_db():
 
 
 def test_encyclopedia_table_row_count(encyclopedia_db):
-    """Verifies exactly 500 rows in company_internet_comparisons."""
+    """Verifies 500 core F500 rows (plus any permanently onboarded rank > 500 companies) in company_internet_comparisons."""
     cur = encyclopedia_db.cursor()
-    count = cur.execute("SELECT COUNT(*) FROM company_internet_comparisons").fetchone()[0]
-    assert count == 500, f"Expected exactly 500 rows in company_internet_comparisons, got {count}"
+    total_count = cur.execute("SELECT COUNT(*) FROM company_internet_comparisons").fetchone()[0]
+    assert total_count >= 500, f"Expected >= 500 rows in company_internet_comparisons, got {total_count}"
+    f500_count = cur.execute("SELECT COUNT(*) FROM company_internet_comparisons WHERE f500_rank <= 500").fetchone()[0]
+    assert f500_count == 500, f"Expected exactly 500 core F500 rows (f500_rank <= 500), got {f500_count}"
 
 
 def test_encyclopedia_ranks_contiguity(encyclopedia_db):
-    """Verifies ranks 1..500 are contiguous without gaps."""
+    """Verifies core F500 ranks 1..500 are contiguous without gaps."""
     cur = encyclopedia_db.cursor()
-    ranks = [r[0] for r in cur.execute("SELECT f500_rank FROM company_internet_comparisons ORDER BY f500_rank ASC").fetchall()]
-    assert ranks == list(range(1, 501)), "f500_rank must be strictly contiguous from 1 to 500"
+    ranks = [
+        r[0]
+        for r in cur.execute(
+            "SELECT f500_rank FROM company_internet_comparisons WHERE f500_rank <= 500 ORDER BY f500_rank ASC"
+        ).fetchall()
+    ]
+    assert ranks == list(range(1, 501)), "Core f500_rank must be strictly contiguous from 1 to 500"
 
 
 def test_encyclopedia_referential_integrity(encyclopedia_db):
@@ -45,7 +52,7 @@ def test_encyclopedia_referential_integrity(encyclopedia_db):
 
 
 def test_encyclopedia_no_null_or_empty_columns(encyclopedia_db):
-    """Verifies zero nulls, empty strings, or empty lists across all columns."""
+    """Verifies zero nulls, empty strings, or empty lists across all columns (both F500 and rank > 500 onboarded orgs)."""
     cur = encyclopedia_db.cursor()
     rows = cur.execute("""
         SELECT id, company_id, f500_rank, company_name, internet_divisions_json,
@@ -54,12 +61,14 @@ def test_encyclopedia_no_null_or_empty_columns(encyclopedia_db):
         FROM company_internet_comparisons
     """).fetchall()
 
-    assert len(rows) == 500
+    assert len(rows) >= 500
+    f500_rows = [r for r in rows if r[2] <= 500]
+    assert len(f500_rows) == 500
     for r in rows:
         cid, comp_id, rank, name, divs_json, bespoke_json, roles_cnt, score, delta_md, swarm_md = r
         assert cid and cid.startswith("cic_f500_")
         assert comp_id and comp_id.startswith("f500_")
-        assert 1 <= rank <= 500
+        assert rank >= 1
         assert name and len(name) > 1
 
         # Check JSON parsing
@@ -69,17 +78,18 @@ def test_encyclopedia_no_null_or_empty_columns(encyclopedia_db):
         bespoke = json.loads(bespoke_json)
         assert isinstance(bespoke, list) and len(bespoke) >= 4, f"Company {name} has < 4 bespoke roles"
 
-        assert roles_cnt >= 20, f"Company {name} has unexpectedly low mapped roles: {roles_cnt}"
+        min_roles = 20 if rank <= 500 else 10
+        assert roles_cnt >= min_roles, f"Company {name} has unexpectedly low mapped roles: {roles_cnt}"
         assert 0.70 <= score <= 1.0, f"Company {name} alignment score {score} out of bounds"
         assert len(delta_md.strip()) >= 200, f"Company {name} delta_analysis_md is too short"
         assert len(swarm_md.strip()) >= 300, f"Company {name} tailored_swarm_recommendation_md is too short"
 
 
 def test_encyclopedia_alignment_scores(encyclopedia_db):
-    """Verifies alignment score bounds and average >= 0.75."""
+    """Verifies alignment score bounds and average >= 0.75 across core F500 and onboarded companies."""
     cur = encyclopedia_db.cursor()
     avg_score, min_score, max_score = cur.execute(
-        "SELECT AVG(alignment_score), MIN(alignment_score), MAX(alignment_score) FROM company_internet_comparisons"
+        "SELECT AVG(alignment_score), MIN(alignment_score), MAX(alignment_score) FROM company_internet_comparisons WHERE f500_rank <= 500"
     ).fetchone()
 
     assert avg_score >= 0.75, f"Average alignment score {avg_score} must be >= 0.75"
@@ -134,11 +144,13 @@ def test_encyclopedia_volumes_exist_and_size():
 
 
 def test_encyclopedia_seeder_idempotency(encyclopedia_db):
-    """Verifies seed_encyclopedia is fully idempotent and maintains exact invariants."""
+    """Verifies seed_encyclopedia is fully idempotent and preserves rank > 500 onboarded comparisons."""
     res = seed_encyclopedia()
     assert res["companies_seeded"] == 500
     assert res["volumes_written"] == 5
 
     cur = encyclopedia_db.cursor()
-    cnt = cur.execute("SELECT COUNT(*) FROM company_internet_comparisons").fetchone()[0]
-    assert cnt == 500
+    f500_cnt = cur.execute("SELECT COUNT(*) FROM company_internet_comparisons WHERE f500_rank <= 500").fetchone()[0]
+    assert f500_cnt == 500
+    total_cnt = cur.execute("SELECT COUNT(*) FROM company_internet_comparisons").fetchone()[0]
+    assert total_cnt >= 500
