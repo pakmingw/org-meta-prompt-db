@@ -1,0 +1,1652 @@
+{
+  "results_by_uuid": {
+    "4fd2686b": {
+      "trial_uuid8": "4fd2686b",
+      "task_num": 1,
+      "task_id": "task1_zns_raft",
+      "arm": "Arm_1_Baseline",
+      "persona_source": "Generic 2-Sentence Specialist Prompt",
+      "persona_char_count": 269,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/private_key/personas/persona_4fd2686b.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task1_zns_raft/TASK.md",
+      "input_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task1_zns_raft/input_workload.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/runs/run_4fd2686b",
+      "role_label": "Distributed Storage & Settlement Systems Specialist",
+      "conversation_id": "a1fe4046-5297-469a-8fdf-45ab9de637d6",
+      "launched_at_utc": "2026-11-10T17:45:11Z",
+      "objective_eval": {
+        "ok": true,
+        "status": "ok",
+        "objective_score_50": 50,
+        "breakdown": {
+          "c1_clean_execution": 10,
+          "c2_conservation_and_idempotency": 10,
+          "c3_zns_zone_invariants": 10,
+          "c4_tail_latency_sla": 10,
+          "c5_audit_and_rollback_gates": 10
+        },
+        "metrics": {
+          "baseline_p99_9_ms": 536.926,
+          "mitigated_p50_ms": 2.084,
+          "mitigated_p99_ms": 2.521,
+          "mitigated_p99_9_ms": 2.554,
+          "dr_failover_partition_p99_9_ms": 19.278,
+          "all_regimes_including_dr_partition_p99_9_ms": 19.267,
+          "total_events": 5000,
+          "unique_committed_transfers": 4079,
+          "duplicates_deduplicated": 921,
+          "double_spend_count": 0,
+          "sum_debits_cents": 51076820408,
+          "sum_credits_cents": 51076820408,
+          "conservation_invariant_passed": true,
+          "split_brain_commits_prevented": 151,
+          "stale_lease_22ms_overlap_fenced": 2,
+          "max_concurrent_open_zones_used": 8,
+          "zns_sequential_invariant_passed": true,
+          "baseline_double_spend_count": 921,
+          "baseline_split_brain_commits": 151
+        },
+        "artifact_sizes_bytes": {
+          "solution_py": 12548,
+          "metrics_json": 699,
+          "deliverable_md": 11047
+        }
+      }
+    },
+    "2bf69405": {
+      "trial_uuid8": "2bf69405",
+      "task_num": 1,
+      "task_id": "task1_zns_raft",
+      "arm": "Arm_2_Canonical",
+      "persona_source": "Canonical OKG Role (role_infra_principal_distributed_systems_eng: Principal Distributed Systems Engineer)",
+      "persona_char_count": 8804,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/private_key/personas/persona_2bf69405.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task1_zns_raft/TASK.md",
+      "input_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task1_zns_raft/input_workload.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/runs/run_2bf69405",
+      "role_label": "Distributed Storage & Settlement Systems Specialist",
+      "conversation_id": "8c361502-9ae6-452e-bf77-edf31598f7a3",
+      "launched_at_utc": "2026-11-10T17:45:20Z",
+      "objective_eval": {
+        "ok": true,
+        "status": "ok",
+        "objective_score_50": 50,
+        "breakdown": {
+          "c1_clean_execution": 10,
+          "c2_conservation_and_idempotency": 10,
+          "c3_zns_zone_invariants": 10,
+          "c4_tail_latency_sla": 10,
+          "c5_audit_and_rollback_gates": 10
+        },
+        "metrics": {
+          "baseline_p99_9_ms": 476.85,
+          "mitigated_p50_ms": 2.092,
+          "mitigated_p99_ms": 2.345,
+          "mitigated_p99_9_ms": 2.404,
+          "partition_failover_p50_ms": 19.104,
+          "partition_failover_p99_9_ms": 42.323,
+          "all_events_p99_ms": 19.2,
+          "all_events_p99_9_ms": 19.337,
+          "total_events": 5000,
+          "unique_committed_transfers": 4079,
+          "duplicates_deduplicated": 921,
+          "double_spend_count": 0,
+          "sum_debits_cents": 51076820408,
+          "sum_credits_cents": 51076820408,
+          "conservation_invariant_passed": true,
+          "split_brain_commits_prevented": 52,
+          "max_concurrent_open_zones_used": 4,
+          "zns_sequential_invariant_passed": true,
+          "zns_zone_rollovers_verified": 3,
+          "raft_final_term": 3,
+          "baseline_double_spend_count": 921
+        },
+        "artifact_sizes_bytes": {
+          "solution_py": 11362,
+          "metrics_json": 719,
+          "deliverable_md": 13640
+        }
+      }
+    },
+    "5e85d913": {
+      "trial_uuid8": "5e85d913",
+      "task_num": 1,
+      "task_id": "task1_zns_raft",
+      "arm": "Arm_3_Superhuman",
+      "persona_source": "Superhuman Pathway A (sh_infra_principal_distributed_systems_eng_19f6b915: Superhuman Principal Distributed Systems Engineer)",
+      "persona_char_count": 41853,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/private_key/personas/persona_5e85d913.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task1_zns_raft/TASK.md",
+      "input_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task1_zns_raft/input_workload.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/runs/run_5e85d913",
+      "role_label": "Distributed Storage & Settlement Systems Specialist",
+      "conversation_id": "25c75a5b-af35-4294-88a3-c4c40fed9f60",
+      "launched_at_utc": "2026-11-10T17:45:21Z",
+      "objective_eval": {
+        "ok": true,
+        "status": "ok",
+        "objective_score_50": 50,
+        "breakdown": {
+          "c1_clean_execution": 10,
+          "c2_conservation_and_idempotency": 10,
+          "c3_zns_zone_invariants": 10,
+          "c4_tail_latency_sla": 10,
+          "c5_audit_and_rollback_gates": 10
+        },
+        "metrics": {
+          "baseline_p99_9_ms": 256.7,
+          "mitigated_p50_ms": 2.017,
+          "mitigated_p99_ms": 2.07,
+          "mitigated_p99_9_ms": 2.07,
+          "mitigated_all_5000_including_dr_partition_p50_ms": 2.017,
+          "mitigated_all_5000_including_dr_partition_p99_ms": 19.043,
+          "mitigated_all_5000_including_dr_partition_p99_9_ms": 19.07,
+          "mitigated_3_intra_az_witness_topology_p99_9_ms": 2.07,
+          "total_events": 5000,
+          "unique_committed_transfers": 4079,
+          "duplicates_deduplicated": 921,
+          "double_spend_count": 0,
+          "baseline_double_spend_count": 921,
+          "sum_debits_cents": 51076820408,
+          "sum_credits_cents": 51076820408,
+          "conservation_invariant_passed": true,
+          "split_brain_commits_prevented": 151,
+          "max_concurrent_open_zones_used": 6,
+          "zns_sequential_invariant_passed": true
+        },
+        "artifact_sizes_bytes": {
+          "solution_py": 12895,
+          "metrics_json": 759,
+          "deliverable_md": 15910
+        }
+      }
+    },
+    "d1edc585": {
+      "trial_uuid8": "d1edc585",
+      "task_num": 2,
+      "task_id": "task2_tariff_shock",
+      "arm": "Arm_1_Baseline",
+      "persona_source": "Generic 2-Sentence Specialist Prompt",
+      "persona_char_count": 278,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/private_key/personas/persona_d1edc585.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task2_tariff_shock/TASK.md",
+      "input_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task2_tariff_shock/baseline_financials.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/runs/run_d1edc585",
+      "role_label": "Corporate Finance & Quantitative Risk Specialist",
+      "conversation_id": "e4149f25-8bda-4ce9-896b-35d708e3e7b2",
+      "launched_at_utc": "2026-11-10T17:45:24Z",
+      "objective_eval": {
+        "ok": true,
+        "status": "ok",
+        "objective_score_50": 50,
+        "breakdown": {
+          "c1_monte_carlo_execution": 10,
+          "c2_accounting_identity": 10,
+          "c3_regime_shift_contagion": 10,
+          "c4_covenant_breach_reduction": 10,
+          "c5_board_triggers_and_sensitivity": 10
+        },
+        "metrics": {
+          "num_monte_carlo_paths": 10000,
+          "accounting_identity_max_error": 7.275957614183426e-12,
+          "accounting_identity_passed": true,
+          "modeled_normal_rho": 0.15,
+          "modeled_crisis_rho": 0.88,
+          "unhedged_covenant_breach_prob": 0.4557,
+          "structured_covenant_breach_prob": 0.015,
+          "breach_prob_reduction_abs": 0.4407,
+          "unhedged_p95_net_debt_to_ebitda": 3.8098,
+          "structured_p95_net_debt_to_ebitda": 2.2803,
+          "unhedged_cvar95_fcf_usd_m": -719.78,
+          "structured_cvar95_fcf_usd_m": 1705.87,
+          "hedging_and_working_capital_actions": [
+            {
+              "pillar": "1_Customs_FTZ_And_Dual_Sourcing",
+              "sizing_usd_m": 2462.4,
+              "annual_cost_usd_m": 66.0,
+              "mechanism": "19 CFR 152.103 First-Sale customs unbundling + FTZ duty deferral + Q3-Q4 allied Tier-2 substrate ramp (dutiable share 45% -> 29%)"
+            },
+            {
+              "pillar": "2_Zero_CSA_FX_And_RareEarth_Convexity",
+              "sizing_usd_m": 6920.0,
+              "annual_cost_usd_m": 98.0,
+              "mechanism": "$3,800M/yr zero-CSA Asian FX risk-reversal collar (+2.5%/+18.5%/-4.5%), $1,720M/yr PrNd/DyTb oxide OTC call spread (20%-75%), $1,400M/yr dual-trigger contagion corridor"
+            },
+            {
+              "pillar": "3_Commercial_Tariff_Indexation",
+              "sizing_usd_m": 5472.0,
+              "annual_cost_usd_m": 0.0,
+              "mechanism": "Quarterly OEM/hyperscaler tariff & rare-earth surcharge clauses lifting short-run passthrough 40% -> 49% (-80 bps volume elasticity)"
+            },
+            {
+              "pillar": "4_NonRecourse_AR_And_SCF_WorkingCapital",
+              "sizing_usd_m": 1150.0,
+              "annual_cost_usd_m": 48.0,
+              "mechanism": "$650M ASC-860 non-recourse AR securitization (DSO 54->49.5d, crisis cap +6d) + $500M reverse factoring (DPO 46->50.5d) + bonded VMI (DIO 88->83d)"
+            },
+            {
+              "pillar": "5_Cash_Sweep_And_Contingent_CapEx_Gate",
+              "sizing_usd_m": 850.0,
+              "annual_cost_usd_m": 0.0,
+              "mechanism": "Excess cash sweep >$1,650M retiring 5.50% Term Debt at par + $40M/qtr CapEx deferral gate when prior leverage >1.95x or crisis active"
+            }
+          ],
+          "diagnostics": {
+            "unhedged": {
+              "covenant_breach_prob": 0.4557,
+              "p95_net_debt_to_ebitda": 3.8098,
+              "median_peak_net_debt_to_ebitda": 2.4515,
+              "cvar95_fcf_usd_m": -719.78,
+              "mean_annual_fcf_usd_m": 909.99,
+              "revolver_draw_prob": 0.0334,
+              "min_cash_shortfall_prob": 0.0001,
+              "max_identity_error": 7.275957614183426e-12,
+              "quarterly": [
+                {
+                  "quarter": "Q1",
+                  "mean_ltm_ebitda_usd_m": 4460.72,
+                  "mean_net_debt_usd_m": 8263.48,
+                  "median_leverage": 1.7915,
+                  "p95_leverage": 2.2075,
+                  "covenant_breach_prob": 0.0041,
+                  "mean_fcf_usd_m": 136.52
+                },
+                {
+                  "quarter": "Q2",
+                  "mean_ltm_ebitda_usd_m": 4008.02,
+                  "mean_net_debt_usd_m": 7993.36,
+                  "median_leverage": 1.9487,
+                  "p95_leverage": 2.5259,
+                  "covenant_breach_prob": 0.0552,
+                  "mean_fcf_usd_m": 270.13
+                },
+                {
+                  "quarter": "Q3",
+                  "mean_ltm_ebitda_usd_m": 3510.54,
+                  "mean_net_debt_usd_m": 7755.74,
+                  "median_leverage": 2.1612,
+                  "p95_leverage": 3.0541,
+                  "covenant_breach_prob": 0.1948,
+                  "mean_fcf_usd_m": 237.61
+                },
+                {
+                  "quarter": "Q4",
+                  "mean_ltm_ebitda_usd_m": 3012.7,
+                  "mean_net_debt_usd_m": 7490.01,
+                  "median_leverage": 2.4273,
+                  "p95_leverage": 3.798,
+                  "covenant_breach_prob": 0.439,
+                  "mean_fcf_usd_m": 265.74
+                }
+              ]
+            },
+            "gaussian_naive_benchmark": {
+              "covenant_breach_prob": 0.4338,
+              "p95_net_debt_to_ebitda": 3.7157,
+              "median_peak_net_debt_to_ebitda": 2.4331,
+              "cvar95_fcf_usd_m": -842.9,
+              "mean_annual_fcf_usd_m": 872.75,
+              "revolver_draw_prob": 0.0683,
+              "min_cash_shortfall_prob": 0.0001,
+              "max_identity_error": 7.275957614183426e-12,
+              "quarterly": [
+                {
+                  "quarter": "Q1",
+                  "mean_ltm_ebitda_usd_m": 4464.94,
+                  "mean_net_debt_usd_m": 8311.94,
+                  "median_leverage": 1.7722,
+                  "p95_leverage": 2.2369,
+                  "covenant_breach_prob": 0.0033,
+                  "mean_fcf_usd_m": 88.06
+                },
+                {
+                  "quarter": "Q2",
+                  "mean_ltm_ebitda_usd_m": 4016.56,
+                  "mean_net_debt_usd_m": 8037.43,
+                  "median_leverage": 1.9388,
+                  "p95_leverage": 2.541,
+                  "covenant_breach_prob": 0.0593,
+                  "mean_fcf_usd_m": 274.51
+                },
+                {
+                  "quarter": "Q3",
+                  "mean_ltm_ebitda_usd_m": 3523.72,
+                  "mean_net_debt_usd_m": 7797.29,
+                  "median_leverage": 2.1469,
+                  "p95_leverage": 3.037,
+                  "covenant_breach_prob": 0.1889,
+                  "mean_fcf_usd_m": 240.14
+                },
+                {
+                  "quarter": "Q4",
+                  "mean_ltm_ebitda_usd_m": 3030.67,
+                  "mean_net_debt_usd_m": 7527.25,
+                  "median_leverage": 2.4098,
+                  "p95_leverage": 3.7077,
+                  "covenant_breach_prob": 0.412,
+                  "mean_fcf_usd_m": 270.04
+                }
+              ]
+            },
+            "structured": {
+              "covenant_breach_prob": 0.015,
+              "p95_net_debt_to_ebitda": 2.2803,
+              "median_peak_net_debt_to_ebitda": 1.8883,
+              "cvar95_fcf_usd_m": 1705.87,
+              "mean_annual_fcf_usd_m": 2287.26,
+              "revolver_draw_prob": 0.0033,
+              "min_cash_shortfall_prob": 0.0,
+              "max_identity_error": 7.275957614183426e-12,
+              "quarterly": [
+                {
+                  "quarter": "Q1",
+                  "mean_ltm_ebitda_usd_m": 4465.82,
+                  "mean_net_debt_usd_m": 7581.09,
+                  "median_leverage": 1.6865,
+                  "p95_leverage": 1.7596,
+                  "covenant_breach_prob": 0.0,
+                  "mean_fcf_usd_m": 818.91
+                },
+                {
+                  "quarter": "Q2",
+                  "mean_ltm_ebitda_usd_m": 4054.39,
+                  "mean_net_debt_usd_m": 7038.36,
+                  "median_leverage": 1.7333,
+                  "p95_leverage": 1.9097,
+                  "covenant_breach_prob": 0.0002,
+                  "mean_fcf_usd_m": 542.73
+                },
+                {
+                  "quarter": "Q3",
+                  "mean_ltm_ebitda_usd_m": 3644.18,
+                  "mean_net_debt_usd_m": 6585.15,
+                  "median_leverage": 1.8049,
+                  "p95_leverage": 2.0887,
+                  "covenant_breach_prob": 0.002,
+                  "mean_fcf_usd_m": 453.21
+                },
+                {
+                  "quarter": "Q4",
+                  "mean_ltm_ebitda_usd_m": 3253.77,
+                  "mean_net_debt_usd_m": 6112.74,
+                  "median_leverage": 1.874,
+                  "p95_leverage": 2.2793,
+                  "covenant_breach_prob": 0.015,
+                  "mean_fcf_usd_m": 472.41
+                }
+              ]
+            },
+            "sensitivity_matrix": [
+              {
+                "regime": "Normal_Gaussian_rho0.15",
+                "tariff_rate": 0.3,
+                "unhedged_breach_prob": 0.0439,
+                "structured_breach_prob": 0.0001,
+                "unhedged_p95_lev": 2.478,
+                "structured_p95_lev": 1.9927,
+                "structured_cvar95_fcf_usd_m": 2024.15
+              },
+              {
+                "regime": "Normal_Gaussian_rho0.15",
+                "tariff_rate": 0.6,
+                "unhedged_breach_prob": 0.3001,
+                "structured_breach_prob": 0.0035,
+                "unhedged_p95_lev": 2.9422,
+                "structured_p95_lev": 2.2143,
+                "structured_cvar95_fcf_usd_m": 1783.41
+              },
+              {
+                "regime": "Normal_Gaussian_rho0.15",
+                "tariff_rate": 0.75,
+                "unhedged_breach_prob": 0.5351,
+                "structured_breach_prob": 0.0144,
+                "unhedged_p95_lev": 3.2235,
+                "structured_p95_lev": 2.341,
+                "structured_cvar95_fcf_usd_m": 1664.68
+              },
+              {
+                "regime": "Gaussian_HighRho_0.88",
+                "tariff_rate": 0.3,
+                "unhedged_breach_prob": 0.1923,
+                "structured_breach_prob": 0.0001,
+                "unhedged_p95_lev": 3.0348,
+                "structured_p95_lev": 2.0165,
+                "structured_cvar95_fcf_usd_m": 1997.29
+              },
+              {
+                "regime": "Gaussian_HighRho_0.88",
+                "tariff_rate": 0.6,
+                "unhedged_breach_prob": 0.4626,
+                "structured_breach_prob": 0.0058,
+                "unhedged_p95_lev": 3.6432,
+                "structured_p95_lev": 2.2483,
+                "structured_cvar95_fcf_usd_m": 1745.44
+              },
+              {
+                "regime": "Gaussian_HighRho_0.88",
+                "tariff_rate": 0.75,
+                "unhedged_breach_prob": 0.6462,
+                "structured_breach_prob": 0.0198,
+                "unhedged_p95_lev": 4.0322,
+                "structured_p95_lev": 2.3802,
+                "structured_cvar95_fcf_usd_m": 1621.4
+              },
+              {
+                "regime": "Base_Contagion_t4_rho0.88",
+                "tariff_rate": 0.3,
+                "unhedged_breach_prob": 0.1933,
+                "structured_breach_prob": 0.0031,
+                "unhedged_p95_lev": 3.162,
+                "structured_p95_lev": 2.0419,
+                "structured_cvar95_fcf_usd_m": 1961.34
+              },
+              {
+                "regime": "Base_Contagion_t4_rho0.88",
+                "tariff_rate": 0.6,
+                "unhedged_breach_prob": 0.4557,
+                "structured_breach_prob": 0.015,
+                "unhedged_p95_lev": 3.8098,
+                "structured_p95_lev": 2.2803,
+                "structured_cvar95_fcf_usd_m": 1705.87
+              },
+              {
+                "regime": "Base_Contagion_t4_rho0.88",
+                "tariff_rate": 0.75,
+                "unhedged_breach_prob": 0.6341,
+                "structured_breach_prob": 0.0317,
+                "unhedged_p95_lev": 4.2095,
+                "structured_p95_lev": 2.4165,
+                "structured_cvar95_fcf_usd_m": 1578.98
+              },
+              {
+                "regime": "Severe_Contagion_t4_p0.60_rho0.92",
+                "tariff_rate": 0.3,
+                "unhedged_breach_prob": 0.2968,
+                "structured_breach_prob": 0.0047,
+                "unhedged_p95_lev": 3.4688,
+                "structured_p95_lev": 2.0661,
+                "structured_cvar95_fcf_usd_m": 1945.58
+              },
+              {
+                "regime": "Severe_Contagion_t4_p0.60_rho0.92",
+                "tariff_rate": 0.6,
+                "unhedged_breach_prob": 0.5579,
+                "structured_breach_prob": 0.019,
+                "unhedged_p95_lev": 4.2311,
+                "structured_p95_lev": 2.3139,
+                "structured_cvar95_fcf_usd_m": 1687.63
+              },
+              {
+                "regime": "Severe_Contagion_t4_p0.60_rho0.92",
+                "tariff_rate": 0.75,
+                "unhedged_breach_prob": 0.7017,
+                "structured_breach_prob": 0.0395,
+                "unhedged_p95_lev": 4.724,
+                "structured_p95_lev": 2.4548,
+                "structured_cvar95_fcf_usd_m": 1559.36
+              }
+            ]
+          }
+        },
+        "artifact_sizes_bytes": {
+          "solution_py": 15086,
+          "metrics_json": 10136,
+          "deliverable_md": 16509
+        }
+      }
+    },
+    "b4c81504": {
+      "trial_uuid8": "b4c81504",
+      "task_num": 2,
+      "task_id": "task2_tariff_shock",
+      "arm": "Arm_2_Canonical",
+      "persona_source": "Canonical OKG Role (role_fin_chief_financial_officer: Chief Financial Officer (CFO))",
+      "persona_char_count": 8611,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/private_key/personas/persona_b4c81504.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task2_tariff_shock/TASK.md",
+      "input_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task2_tariff_shock/baseline_financials.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/runs/run_b4c81504",
+      "role_label": "Corporate Finance & Quantitative Risk Specialist",
+      "conversation_id": "5e061159-33aa-4ca2-a5b8-0b87ce6be9bb",
+      "launched_at_utc": "2026-11-10T17:45:26Z",
+      "objective_eval": {
+        "ok": true,
+        "status": "ok",
+        "objective_score_50": 50,
+        "breakdown": {
+          "c1_monte_carlo_execution": 10,
+          "c2_accounting_identity": 10,
+          "c3_regime_shift_contagion": 10,
+          "c4_covenant_breach_reduction": 10,
+          "c5_board_triggers_and_sensitivity": 10
+        },
+        "metrics": {
+          "target_leverage": "<= 2.00x Net Debt / LTM EBITDA (2.50x Maintenance Covenant Ceiling)",
+          "liquidity_buffer_billions": 3.296,
+          "num_monte_carlo_paths": 10000,
+          "accounting_identity_max_error": 7.275957614183426e-12,
+          "accounting_identity_passed": true,
+          "modeled_normal_rho": 0.1456,
+          "modeled_crisis_rho": 0.8746,
+          "unhedged_covenant_breach_prob": 0.3193,
+          "structured_covenant_breach_prob": 0.0247,
+          "breach_prob_reduction_abs": 0.2946,
+          "unhedged_p95_net_debt_to_ebitda": 4.3261,
+          "structured_p95_net_debt_to_ebitda": 2.2203,
+          "unhedged_cvar95_fcf_usd_m": -1455.57,
+          "structured_cvar95_fcf_usd_m": 2216.28,
+          "hedging_and_working_capital_actions": [
+            {
+              "instrument": "ASC 815 OTM Rare-Earth Asian Call Spread + Dual-Trigger Contagion Cap",
+              "notional_usd_m": 1240.0,
+              "annual_cost_usd_m": 57.96
+            },
+            {
+              "instrument": "FX Contingent Collar & Basis Cap (+3.5% Cap / -5.5% Short Put)",
+              "notional_usd_m": 1240.0,
+              "annual_cost_usd_m": 21.97
+            },
+            {
+              "instrument": "ASC 860 Non-Recourse True-Sale AR Securitization + Credit-Insured DSO Cap",
+              "facility_limit_usd_m": 680.0,
+              "annual_discount_rate": 0.0615
+            },
+            {
+              "instrument": "ASU 2022-04 Supply-Chain Reverse Factoring (DPO 46d -> 56d)",
+              "working_capital_release_usd_m": 396.0,
+              "reclassification_risk": "Zero (<= 60d industry trade norm)"
+            },
+            {
+              "instrument": "FTZ First-Sale Tariff Valuation & Allied Tier-2 Dual-Source Qualification",
+              "upfront_qual_opex_usd_m": 36.0,
+              "q4_tariff_relief_share": 0.48
+            },
+            {
+              "instrument": "Discretionary CapEx Deferral ($140M/yr), Variable SG&A Flex (5.0%) & Par Debt Sweep",
+              "annual_cash_preservation_usd_m": 380.0,
+              "on_bs_cash_buffer_floor_usd_m": 1800.0
+            }
+          ],
+          "diagnostics": {
+            "unhedged": {
+              "breach_prob": 0.3193,
+              "p95_lev": 4.3260823854425245,
+              "median_lev": 2.182608618695398,
+              "cvar95_fcf": -1455.566162030064,
+              "mean_fcf": 1167.1393199386343,
+              "min_cash_breach_prob": 0.0046,
+              "q4_mean_cash": 3289.186892162584,
+              "max_bs_err": 7.275957614183426e-12,
+              "qtr_breach_probs": [
+                0.0116,
+                0.0501,
+                0.1447,
+                0.3156
+              ],
+              "re_prem_annual_m": 57.9592916823987,
+              "fx_prem_annual_m": 21.973021269262905
+            },
+            "gaussian_linear": {
+              "breach_prob": 0.3449,
+              "p95_lev": 4.319716786105341,
+              "median_lev": 2.232661599203566,
+              "cvar95_fcf": -1394.4244718628856,
+              "mean_fcf": 1095.7133118181746,
+              "min_cash_breach_prob": 0.0033,
+              "q4_mean_cash": 3215.783931540324,
+              "max_bs_err": 7.275957614183426e-12,
+              "qtr_breach_probs": [
+                0.0098,
+                0.0498,
+                0.1576,
+                0.3414
+              ],
+              "re_prem_annual_m": 57.9592916823987,
+              "fx_prem_annual_m": 21.973021269262905
+            },
+            "structured": {
+              "breach_prob": 0.0247,
+              "p95_lev": 2.2202762784380075,
+              "median_lev": 1.4709507067522245,
+              "cvar95_fcf": 2216.2811478655635,
+              "mean_fcf": 3226.3062027899355,
+              "min_cash_breach_prob": 0.0,
+              "q4_mean_cash": 1796.1220605360352,
+              "max_bs_err": 7.275957614183426e-12,
+              "qtr_breach_probs": [
+                0.0,
+                0.0001,
+                0.0051,
+                0.0247
+              ],
+              "re_prem_annual_m": 57.9592916823987,
+              "fx_prem_annual_m": 21.973021269262905
+            },
+            "sensitivity_grid": [
+              {
+                "crisis_rho": 0.15,
+                "tariff_rate": 0.4,
+                "unhedged_breach_prob": 0.2535,
+                "unhedged_p95_lev": 3.454,
+                "structured_breach_prob": 0.0135,
+                "structured_p95_lev": 2.05
+              },
+              {
+                "crisis_rho": 0.15,
+                "tariff_rate": 0.6,
+                "unhedged_breach_prob": 0.3232,
+                "unhedged_p95_lev": 3.768,
+                "structured_breach_prob": 0.019,
+                "structured_p95_lev": 2.155
+              },
+              {
+                "crisis_rho": 0.15,
+                "tariff_rate": 0.8,
+                "unhedged_breach_prob": 0.4075,
+                "unhedged_p95_lev": 4.125,
+                "structured_breach_prob": 0.0265,
+                "structured_p95_lev": 2.273
+              },
+              {
+                "crisis_rho": 0.55,
+                "tariff_rate": 0.4,
+                "unhedged_breach_prob": 0.2512,
+                "unhedged_p95_lev": 3.874,
+                "structured_breach_prob": 0.0177,
+                "structured_p95_lev": 2.111
+              },
+              {
+                "crisis_rho": 0.55,
+                "tariff_rate": 0.6,
+                "unhedged_breach_prob": 0.3187,
+                "unhedged_p95_lev": 4.267,
+                "structured_breach_prob": 0.0243,
+                "structured_p95_lev": 2.224
+              },
+              {
+                "crisis_rho": 0.55,
+                "tariff_rate": 0.8,
+                "unhedged_breach_prob": 0.3957,
+                "unhedged_p95_lev": 4.739,
+                "structured_breach_prob": 0.0335,
+                "structured_p95_lev": 2.337
+              },
+              {
+                "crisis_rho": 0.88,
+                "tariff_rate": 0.4,
+                "unhedged_breach_prob": 0.2532,
+                "unhedged_p95_lev": 3.999,
+                "structured_breach_prob": 0.0205,
+                "structured_p95_lev": 2.13
+              },
+              {
+                "crisis_rho": 0.88,
+                "tariff_rate": 0.6,
+                "unhedged_breach_prob": 0.316,
+                "unhedged_p95_lev": 4.381,
+                "structured_breach_prob": 0.028,
+                "structured_p95_lev": 2.238
+              },
+              {
+                "crisis_rho": 0.88,
+                "tariff_rate": 0.8,
+                "unhedged_breach_prob": 0.3917,
+                "unhedged_p95_lev": 4.849,
+                "structured_breach_prob": 0.0372,
+                "structured_p95_lev": 2.357
+              },
+              {
+                "crisis_rho": 0.95,
+                "tariff_rate": 0.4,
+                "unhedged_breach_prob": 0.2565,
+                "unhedged_p95_lev": 4.07,
+                "structured_breach_prob": 0.0198,
+                "structured_p95_lev": 2.125
+              },
+              {
+                "crisis_rho": 0.95,
+                "tariff_rate": 0.6,
+                "unhedged_breach_prob": 0.3167,
+                "unhedged_p95_lev": 4.476,
+                "structured_breach_prob": 0.0275,
+                "structured_p95_lev": 2.231
+              },
+              {
+                "crisis_rho": 0.95,
+                "tariff_rate": 0.8,
+                "unhedged_breach_prob": 0.3892,
+                "unhedged_p95_lev": 4.933,
+                "structured_breach_prob": 0.037,
+                "structured_p95_lev": 2.351
+              }
+            ]
+          }
+        },
+        "artifact_sizes_bytes": {
+          "solution_py": 14163,
+          "metrics_json": 6124,
+          "deliverable_md": 14606
+        }
+      }
+    },
+    "abac2d68": {
+      "trial_uuid8": "abac2d68",
+      "task_num": 2,
+      "task_id": "task2_tariff_shock",
+      "arm": "Arm_3_Superhuman",
+      "persona_source": "Superhuman Pathway B (sh_fin_chief_financial_officer_67a9b8c9: Superhuman Chief Financial Officer (CFO) (NVIDIA))",
+      "persona_char_count": 41857,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/private_key/personas/persona_abac2d68.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task2_tariff_shock/TASK.md",
+      "input_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task2_tariff_shock/baseline_financials.json",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/runs/run_abac2d68",
+      "role_label": "Corporate Finance & Quantitative Risk Specialist",
+      "conversation_id": "4d4e82ad-d9a5-40d8-b543-6c55e6fa8a96",
+      "launched_at_utc": "2026-11-10T17:46:05Z",
+      "objective_eval": {
+        "ok": true,
+        "status": "ok",
+        "objective_score_50": 50,
+        "breakdown": {
+          "c1_monte_carlo_execution": 10,
+          "c2_accounting_identity": 10,
+          "c3_regime_shift_contagion": 10,
+          "c4_covenant_breach_reduction": 10,
+          "c5_board_triggers_and_sensitivity": 10
+        },
+        "metrics": {
+          "num_monte_carlo_paths": 10000,
+          "accounting_identity_max_error": 7.275957614183426e-12,
+          "accounting_identity_passed": true,
+          "modeled_normal_rho": 0.15,
+          "modeled_crisis_rho": 0.88,
+          "crisis_upper_tail_dependence_lambda_u": 0.5965,
+          "unhedged_covenant_breach_prob": 0.2814,
+          "structured_covenant_breach_prob": 0.0095,
+          "breach_prob_reduction_abs": 0.2719,
+          "unhedged_p95_net_debt_to_ebitda": 3.9069,
+          "structured_p95_net_debt_to_ebitda": 2.045,
+          "unhedged_cvar95_fcf_usd_m": -1099.75,
+          "structured_cvar95_fcf_usd_m": 1755.66,
+          "hedging_and_working_capital_actions": [
+            {
+              "instrument": "Zero-CSA OTC FX Call Spreads + Tariff-Contingent Quanto Collars",
+              "notional_usd_m_per_qtr": 1368.0,
+              "strikes": "+2.5% / +24.0% call spread funded by -3.5% OTM put floor",
+              "annual_cost_usd_m": 68.0
+            },
+            {
+              "instrument": "Physical Rare-Earth Offtake Price-Cap + OTC Asian Basket Call Options",
+              "notional_usd_m_per_qtr": 320.1,
+              "strikes": "20.0% spot surcharge cap across Q1..Q4",
+              "annual_cost_usd_m": 56.0
+            },
+            {
+              "instrument": "FTZ Bonded Tier-2 Substrate Safety Stock + ASEAN/JP Dual-Source Tooling",
+              "buffer_dio_schedule_days": [
+                95,
+                92,
+                88,
+                88
+              ],
+              "dutiable_corridor_ramp": [
+                0.5,
+                0.38,
+                0.25,
+                0.16
+              ],
+              "qualification_capex_usd_m": 30.0
+            },
+            {
+              "instrument": "ASC 860 Non-Recourse AR True-Sale Securitization + ASU 2022-04 G-SIB SCF",
+              "facility_limit_usd_m": 750.0,
+              "wc_targets": "Cap DSO <= 55d in crisis (SOFR+spread 5.8% ann.); stabilize DPO at 56d",
+              "annual_commitment_fee_usd_m": 8.0
+            },
+            {
+              "instrument": "Covenant-Gated Zero-Based OpEx Circuit Breaker + Contractual Tariff Indexation",
+              "trigger": "Crisis regime or ship_mult < 0.87 or trailing Leverage > 2.05x",
+              "quarterly_ebitda_protection_usd_m": 60.0
+            }
+          ],
+          "diagnostic_benchmarks": {
+            "gaussian_prior_unhedged": {
+              "covenant_breach_prob": 0.1246,
+              "p50_net_debt_to_ebitda": 2.0355,
+              "p95_net_debt_to_ebitda": 2.7798,
+              "mean_fcf_4q_usd_m": 1735.69,
+              "cvar95_fcf_usd_m": 802.67,
+              "p95_revolver_draw_usd_m": 0.0,
+              "accounting_identity_max_error": 7.275957614183426e-12,
+              "quarterly": [
+                {
+                  "quarter": "Q1",
+                  "mean_ltm_ebitda_usd_m": 4466.67,
+                  "mean_net_debt_usd_m": 7711.91,
+                  "p50_leverage": 1.7088,
+                  "p95_leverage": 1.9621,
+                  "qtr_breach_prob": 0.0
+                },
+                {
+                  "quarter": "Q2",
+                  "mean_ltm_ebitda_usd_m": 4076.2,
+                  "mean_net_debt_usd_m": 7382.85,
+                  "p50_leverage": 1.7981,
+                  "p95_leverage": 2.1776,
+                  "qtr_breach_prob": 0.0017
+                },
+                {
+                  "quarter": "Q3",
+                  "mean_ltm_ebitda_usd_m": 3692.37,
+                  "mean_net_debt_usd_m": 7026.01,
+                  "p50_leverage": 1.8916,
+                  "p95_leverage": 2.435,
+                  "qtr_breach_prob": 0.037
+                },
+                {
+                  "quarter": "Q4",
+                  "mean_ltm_ebitda_usd_m": 3311.45,
+                  "mean_net_debt_usd_m": 6664.31,
+                  "p50_leverage": 2.0044,
+                  "p95_leverage": 2.7761,
+                  "qtr_breach_prob": 0.122
+                }
+              ]
+            },
+            "naive_gaussian_linear_hedge": {
+              "covenant_breach_prob": 0.2473,
+              "p50_net_debt_to_ebitda": 2.1521,
+              "p95_net_debt_to_ebitda": 3.3722,
+              "mean_fcf_4q_usd_m": 1311.68,
+              "cvar95_fcf_usd_m": -720.77,
+              "p95_revolver_draw_usd_m": 338.14,
+              "accounting_identity_max_error": 7.275957614183426e-12,
+              "quarterly": [
+                {
+                  "quarter": "Q1",
+                  "mean_ltm_ebitda_usd_m": 4467.86,
+                  "mean_net_debt_usd_m": 8133.3,
+                  "p50_leverage": 1.7351,
+                  "p95_leverage": 2.3263,
+                  "qtr_breach_prob": 0.0254
+                },
+                {
+                  "quarter": "Q2",
+                  "mean_ltm_ebitda_usd_m": 4076.12,
+                  "mean_net_debt_usd_m": 7806.33,
+                  "p50_leverage": 1.8602,
+                  "p95_leverage": 2.5846,
+                  "qtr_breach_prob": 0.0614
+                },
+                {
+                  "quarter": "Q3",
+                  "mean_ltm_ebitda_usd_m": 3693.21,
+                  "mean_net_debt_usd_m": 7455.06,
+                  "p50_leverage": 1.9678,
+                  "p95_leverage": 2.8494,
+                  "qtr_breach_prob": 0.1157
+                },
+                {
+                  "quarter": "Q4",
+                  "mean_ltm_ebitda_usd_m": 3315.35,
+                  "mean_net_debt_usd_m": 7088.32,
+                  "p50_leverage": 2.0853,
+                  "p95_leverage": 3.2853,
+                  "qtr_breach_prob": 0.2132
+                }
+              ]
+            },
+            "unhedged_detail": {
+              "covenant_breach_prob": 0.2814,
+              "p50_net_debt_to_ebitda": 2.1591,
+              "p95_net_debt_to_ebitda": 3.9069,
+              "mean_fcf_4q_usd_m": 1332.2,
+              "cvar95_fcf_usd_m": -1099.75,
+              "p95_revolver_draw_usd_m": 605.46,
+              "accounting_identity_max_error": 7.275957614183426e-12,
+              "quarterly": [
+                {
+                  "quarter": "Q1",
+                  "mean_ltm_ebitda_usd_m": 4470.91,
+                  "mean_net_debt_usd_m": 8118.19,
+                  "p50_leverage": 1.7445,
+                  "p95_leverage": 2.4191,
+                  "qtr_breach_prob": 0.0422
+                },
+                {
+                  "quarter": "Q2",
+                  "mean_ltm_ebitda_usd_m": 4081.41,
+                  "mean_net_debt_usd_m": 7792.51,
+                  "p50_leverage": 1.8507,
+                  "p95_leverage": 2.78,
+                  "qtr_breach_prob": 0.0812
+                },
+                {
+                  "quarter": "Q3",
+                  "mean_ltm_ebitda_usd_m": 3704.26,
+                  "mean_net_debt_usd_m": 7436.71,
+                  "p50_leverage": 1.9513,
+                  "p95_leverage": 3.1581,
+                  "qtr_breach_prob": 0.1489
+                },
+                {
+                  "quarter": "Q4",
+                  "mean_ltm_ebitda_usd_m": 3332.21,
+                  "mean_net_debt_usd_m": 7067.8,
+                  "p50_leverage": 2.0675,
+                  "p95_leverage": 3.8022,
+                  "qtr_breach_prob": 0.2431
+                }
+              ]
+            },
+            "structured_detail": {
+              "covenant_breach_prob": 0.0095,
+              "p50_net_debt_to_ebitda": 1.6949,
+              "p95_net_debt_to_ebitda": 2.045,
+              "mean_fcf_4q_usd_m": 2508.89,
+              "cvar95_fcf_usd_m": 1755.66,
+              "p95_revolver_draw_usd_m": 0.0,
+              "accounting_identity_max_error": 7.275957614183426e-12,
+              "quarterly": [
+                {
+                  "quarter": "Q1",
+                  "mean_ltm_ebitda_usd_m": 4526.24,
+                  "mean_net_debt_usd_m": 7501.32,
+                  "p50_leverage": 1.6556,
+                  "p95_leverage": 1.7109,
+                  "qtr_breach_prob": 0.0
+                },
+                {
+                  "quarter": "Q2",
+                  "mean_ltm_ebitda_usd_m": 4220.07,
+                  "mean_net_debt_usd_m": 6979.92,
+                  "p50_leverage": 1.654,
+                  "p95_leverage": 1.8573,
+                  "qtr_breach_prob": 0.0024
+                },
+                {
+                  "quarter": "Q3",
+                  "mean_ltm_ebitda_usd_m": 3942.31,
+                  "mean_net_debt_usd_m": 6365.68,
+                  "p50_leverage": 1.6126,
+                  "p95_leverage": 1.9286,
+                  "qtr_breach_prob": 0.0044
+                },
+                {
+                  "quarter": "Q4",
+                  "mean_ltm_ebitda_usd_m": 3679.41,
+                  "mean_net_debt_usd_m": 5891.11,
+                  "p50_leverage": 1.5997,
+                  "p95_leverage": 2.0229,
+                  "qtr_breach_prob": 0.009
+                }
+              ]
+            }
+          },
+          "sensitivity_grid": [
+            {
+              "tariff_rate": 0.4,
+              "crisis_rho": 0.15,
+              "unhedged_breach_prob": 0.225,
+              "structured_breach_prob": 0.0041,
+              "unhedged_p95_lev": 3.2495,
+              "structured_p95_lev": 1.9596,
+              "unhedged_cvar95_fcf_usd_m": -912.73,
+              "structured_cvar95_fcf_usd_m": 1825.81
+            },
+            {
+              "tariff_rate": 0.4,
+              "crisis_rho": 0.55,
+              "unhedged_breach_prob": 0.2339,
+              "structured_breach_prob": 0.0057,
+              "unhedged_p95_lev": 3.4946,
+              "structured_p95_lev": 1.9826,
+              "unhedged_cvar95_fcf_usd_m": -928.09,
+              "structured_cvar95_fcf_usd_m": 1817.2
+            },
+            {
+              "tariff_rate": 0.4,
+              "crisis_rho": 0.88,
+              "unhedged_breach_prob": 0.2348,
+              "structured_breach_prob": 0.0076,
+              "unhedged_p95_lev": 3.7032,
+              "structured_p95_lev": 2.0001,
+              "unhedged_cvar95_fcf_usd_m": -965.66,
+              "structured_cvar95_fcf_usd_m": 1806.79
+            },
+            {
+              "tariff_rate": 0.6,
+              "crisis_rho": 0.15,
+              "unhedged_breach_prob": 0.2774,
+              "structured_breach_prob": 0.0046,
+              "unhedged_p95_lev": 3.4141,
+              "structured_p95_lev": 2.0002,
+              "unhedged_cvar95_fcf_usd_m": -1050.89,
+              "structured_cvar95_fcf_usd_m": 1774.59
+            },
+            {
+              "tariff_rate": 0.6,
+              "crisis_rho": 0.55,
+              "unhedged_breach_prob": 0.2793,
+              "structured_breach_prob": 0.0072,
+              "unhedged_p95_lev": 3.6844,
+              "structured_p95_lev": 2.0274,
+              "unhedged_cvar95_fcf_usd_m": -1063.54,
+              "structured_cvar95_fcf_usd_m": 1766.02
+            },
+            {
+              "tariff_rate": 0.6,
+              "crisis_rho": 0.88,
+              "unhedged_breach_prob": 0.2814,
+              "structured_breach_prob": 0.0095,
+              "unhedged_p95_lev": 3.9069,
+              "structured_p95_lev": 2.045,
+              "unhedged_cvar95_fcf_usd_m": -1099.75,
+              "structured_cvar95_fcf_usd_m": 1755.66
+            },
+            {
+              "tariff_rate": 0.8,
+              "crisis_rho": 0.15,
+              "unhedged_breach_prob": 0.3372,
+              "structured_breach_prob": 0.0061,
+              "unhedged_p95_lev": 3.5917,
+              "structured_p95_lev": 2.0472,
+              "unhedged_cvar95_fcf_usd_m": -1189.33,
+              "structured_cvar95_fcf_usd_m": 1723.34
+            },
+            {
+              "tariff_rate": 0.8,
+              "crisis_rho": 0.55,
+              "unhedged_breach_prob": 0.3341,
+              "structured_breach_prob": 0.0082,
+              "unhedged_p95_lev": 3.8804,
+              "structured_p95_lev": 2.0709,
+              "unhedged_cvar95_fcf_usd_m": -1199.31,
+              "structured_cvar95_fcf_usd_m": 1714.8
+            },
+            {
+              "tariff_rate": 0.8,
+              "crisis_rho": 0.88,
+              "unhedged_breach_prob": 0.3336,
+              "structured_breach_prob": 0.0112,
+              "unhedged_p95_lev": 4.1375,
+              "structured_p95_lev": 2.0923,
+              "unhedged_cvar95_fcf_usd_m": -1234.1,
+              "structured_cvar95_fcf_usd_m": 1704.5
+            }
+          ]
+        },
+        "artifact_sizes_bytes": {
+          "solution_py": 14781,
+          "metrics_json": 9933,
+          "deliverable_md": 17039
+        }
+      }
+    },
+    "447a047e": {
+      "trial_uuid8": "447a047e",
+      "task_num": 3,
+      "task_id": "task3_clinical_sepsis",
+      "arm": "Arm_1_Baseline",
+      "persona_source": "Generic 2-Sentence Specialist Prompt",
+      "persona_char_count": 277,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/private_key/personas/persona_447a047e.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task3_clinical_sepsis/TASK.md",
+      "input_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task3_clinical_sepsis/sepsis_cohort.csv",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/runs/run_447a047e",
+      "role_label": "Clinical Biostatistics & Medical AI Safety Specialist",
+      "conversation_id": "2db91014-ecdd-4ade-8e0b-9a83444aab1a",
+      "launched_at_utc": "2026-11-10T17:46:13Z",
+      "objective_eval": {
+        "ok": true,
+        "status": "ok",
+        "objective_score_50": 50,
+        "breakdown": {
+          "c1_cohort_execution": 10,
+          "c2_simpsons_and_hosp_c_confounding": 10,
+          "c3_anc_subgroup_recalibration": 10,
+          "c4_ood_abstention_gate": 10,
+          "c5_fda_samd_pccp_governance": 10
+        },
+        "metrics": {
+          "total_patients": 2400,
+          "aggregate_auroc": 0.924775,
+          "aggregate_baseline_at_050": {
+            "auroc": 0.924775,
+            "accuracy": 0.879583,
+            "ece_10bin": 0.122897,
+            "brier_score": 0.110854,
+            "fn_rate": 0.25,
+            "fp_rate": 0.063995,
+            "ppv": 0.836141,
+            "npv": 0.895821,
+            "tp": 546,
+            "fn": 182,
+            "fp": 107,
+            "tn": 1565
+          },
+          "simpsons_paradox_and_hosp_c_throttling": {
+            "hosp_c_high_occupancy_threshold_pct": 85.0,
+            "hosp_c_high_occupancy_total_n": 502,
+            "hosp_c_high_occupancy_ai_pos_n": 163,
+            "hosp_c_high_occupancy_alerts_suppressed_n": 163,
+            "hosp_c_high_occupancy_alert_suppression_rate": 1.0,
+            "hosp_c_high_occupancy_suppression_95ci": [
+              0.976975,
+              1.0
+            ],
+            "hosp_c_low_occupancy_alert_suppression_rate": 0.0,
+            "other_hospitals_high_occupancy_alert_suppression_rate": 0.0,
+            "hosp_c_ai_pos_early_antibiotics_low_vs_high_occ": {
+              "low_occ_le_85_rate": 0.84058,
+              "high_occ_gt_85_rate": 0.184049,
+              "absolute_treatment_drop": -0.656531
+            },
+            "alert_delivery_mortality_paradox": {
+              "unadjusted_alerted_mortality": 0.140816,
+              "unadjusted_unalerted_mortality": 0.087958,
+              "unadjusted_risk_difference": 0.052858,
+              "stratified_ai_pos_alerted_mortality": 0.140816,
+              "stratified_ai_pos_throttled_mortality": 0.263804,
+              "stratified_ai_pos_risk_difference": -0.122987,
+              "stratified_ai_pos_fisher_p_value": 0.00048573,
+              "mh_adjusted_risk_difference": -0.116088,
+              "mh_common_odds_ratio": 0.463996
+            },
+            "early_antibiotics_treatment_effect": {
+              "unadjusted_treated_mortality": 0.086592,
+              "unadjusted_untreated_mortality": 0.103919,
+              "unadjusted_risk_difference": -0.017327,
+              "unadjusted_chi2_p_value": 0.2198,
+              "sepsis_positive_treated_mortality": 0.134663,
+              "sepsis_positive_untreated_mortality": 0.409786,
+              "sepsis_positive_absolute_risk_reduction": -0.275123,
+              "sepsis_positive_chi2_p_value": 6.7473e-17,
+              "immunocompromised_sepsis_treated_mortality": 0.25,
+              "immunocompromised_sepsis_untreated_mortality": 0.576923,
+              "mh_adjusted_risk_difference": -0.078452,
+              "mh_common_odds_ratio": 0.391866
+            }
+          },
+          "immunocompromised_anc_lt_500": {
+            "n": 327,
+            "sepsis_cases": 194,
+            "sepsis_prevalence": 0.593272,
+            "subgroup_auroc": 0.945605,
+            "afebrile_lactatemia_physiology": {
+              "septic_mean_temp_c": 36.6956,
+              "septic_mean_lactate_mmol_l": 3.8109,
+              "septic_mean_raw_ai_score": 0.415,
+              "immunocompetent_septic_mean_temp_c": 38.8287
+            },
+            "pre_recalibration_fn_rate": 0.706186,
+            "pre_recalibration_ece": 0.288003,
+            "pre_recalibration_brier": 0.227533,
+            "platt_scaling_params": {
+              "intercept": -4.747234,
+              "slope": 20.442107
+            },
+            "calibrated_subgroup_threshold": 0.3,
+            "equivalent_raw_score_threshold_at_p30": 0.19078,
+            "equivalent_raw_score_threshold_at_p50": 0.232228,
+            "youden_optimal_raw_score_threshold": 0.2424,
+            "post_recalibration_fn_rate": 0.07732,
+            "post_recalibration_fp_rate": 0.270677,
+            "post_recalibration_ece": 0.029473,
+            "post_recalibration_brier": 0.088624,
+            "post_recalibration_fn_rate_at_p50": 0.103093,
+            "decision_curve_net_benefit_uplift": 0.325907,
+            "decision_curve_analysis": {
+              "at_pt_030": {
+                "pre_deployed_050_nb": 0.174312,
+                "pre_uncalibrated_p30_nb": 0.444299,
+                "treat_all_nb": 0.41896,
+                "post_recalibrated_nb": 0.500218,
+                "uplift_vs_deployed_050": 0.325907,
+                "uplift_vs_uncalibrated_p30": 0.05592,
+                "uplift_vs_treat_all": 0.081258
+              },
+              "at_pt_050": {
+                "pre_deployed_050_nb": 0.174312,
+                "treat_all_nb": 0.186544,
+                "post_recalibrated_nb": 0.48318,
+                "uplift_vs_deployed_050": 0.308869
+              }
+            }
+          },
+          "ood_procalcitonin_abstention": {
+            "detected_ood_count": 50,
+            "detected_ood_fraction": 0.020833,
+            "lot_and_pct_gt_12_perfect_concordance": true,
+            "abstention_gate_rule": "ABSTAIN_TO_CLINICIAN_HITL if procalcitonin_ng_ml > 12.0 OR analyzer_lot != 'PCT_LOT_STD_04'; suppress autonomous AI risk score/alert, display OOD assay-drift warning, and order stat repeat PCT/lactate.",
+            "ood_subset_diagnostics": {
+              "mean_procalcitonin_ng_ml": 37.2372,
+              "min_procalcitonin_ng_ml": 13.98,
+              "mean_ai_risk_score": 0.915646,
+              "min_ai_risk_score": 0.8411,
+              "true_sepsis_prevalence": 0.22,
+              "false_positive_alerts_generated": 39,
+              "share_of_all_cohort_false_positives": 0.364486
+            },
+            "cleaned_cohort_n": 2350,
+            "cleaned_cohort_raw_score_metrics": {
+              "auroc": 0.942769,
+              "accuracy": 0.893617,
+              "ece_10bin": 0.125056,
+              "brier_score": 0.099178,
+              "fn_rate": 0.253835,
+              "fp_rate": 0.041641,
+              "ppv": 0.887231,
+              "npv": 0.895821,
+              "tp": 535,
+              "fn": 182,
+              "fp": 68,
+              "tn": 1565
+            },
+            "cleaned_cohort_stratified_recalibrated_at_050": {
+              "auroc": 0.983133,
+              "accuracy": 0.937872,
+              "ece_10bin": 0.007957,
+              "brier_score": 0.04527,
+              "fn_rate": 0.11855,
+              "fp_rate": 0.037355,
+              "ppv": 0.911977,
+              "npv": 0.948702,
+              "tp": 632,
+              "fn": 85,
+              "fp": 61,
+              "tn": 1572
+            },
+            "cleaned_cohort_stratified_recalibrated_cost_sensitive": {
+              "auroc": 0.983133,
+              "accuracy": 0.931489,
+              "ece_10bin": 0.007957,
+              "brier_score": 0.04527,
+              "fn_rate": 0.111576,
+              "fp_rate": 0.049602,
+              "ppv": 0.887187,
+              "npv": 0.95098,
+              "tp": 637,
+              "fn": 80,
+              "fp": 81,
+              "tn": 1552
+            }
+          }
+        },
+        "artifact_sizes_bytes": {
+          "solution_py": 15926,
+          "metrics_json": 5570,
+          "deliverable_md": 17072
+        }
+      }
+    },
+    "dc72e707": {
+      "trial_uuid8": "dc72e707",
+      "task_num": 3,
+      "task_id": "task3_clinical_sepsis",
+      "arm": "Arm_2_Canonical",
+      "persona_source": "Canonical OKG Role (role_health_principal_biostatistician: Principal Clinical Biostatistician)",
+      "persona_char_count": 10729,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/private_key/personas/persona_dc72e707.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task3_clinical_sepsis/TASK.md",
+      "input_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task3_clinical_sepsis/sepsis_cohort.csv",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/runs/run_dc72e707",
+      "role_label": "Clinical Biostatistics & Medical AI Safety Specialist",
+      "conversation_id": "3b3dc361-98b3-42e4-959a-dfac2b7855fe",
+      "launched_at_utc": "2026-11-10T17:46:15Z",
+      "objective_eval": {
+        "ok": true,
+        "status": "ok",
+        "objective_score_50": 50,
+        "breakdown": {
+          "c1_cohort_execution": 10,
+          "c2_simpsons_and_hosp_c_confounding": 10,
+          "c3_anc_subgroup_recalibration": 10,
+          "c4_ood_abstention_gate": 10,
+          "c5_fda_samd_pccp_governance": 10
+        },
+        "metrics": {
+          "total_patients": 2400,
+          "aggregate_auroc": 0.924775,
+          "aggregate_auroc_95ci": [
+            0.91363,
+            0.936768
+          ],
+          "aggregate_baseline_metrics": {
+            "n": 2400,
+            "auroc": 0.924775,
+            "accuracy": 0.879583,
+            "sensitivity": 0.75,
+            "specificity": 0.936005,
+            "ppv": 0.836141,
+            "fn_rate": 0.25,
+            "fp_rate": 0.063995,
+            "brier_score": 0.110854,
+            "ece": 0.122897
+          },
+          "simpsons_paradox_and_hosp_c_throttling": {
+            "hosp_c_total_patients": 700,
+            "hosp_c_high_occupancy_gt_85_patients": 502,
+            "hosp_c_high_occupancy_alert_eligible_n": 163,
+            "hosp_c_high_occupancy_alerts_delivered_n": 0,
+            "hosp_c_high_occupancy_alert_suppression_rate": 1.0,
+            "hosp_c_low_occupancy_alert_suppression_rate": 0.0,
+            "other_hospitals_high_occupancy_alert_suppression_rate": 0.0,
+            "early_antibiotics_rate_when_alert_delivered_score_ge_05": 0.863265,
+            "early_antibiotics_rate_when_alert_throttled_score_ge_05": 0.184049,
+            "unadjusted_mortality_alert_delivered_1": 0.140816,
+            "unadjusted_mortality_alert_delivered_0": 0.087958,
+            "unadjusted_alert_mortality_risk_difference": 0.052858,
+            "stratified_score_ge_05_mortality_alert_1": 0.140816,
+            "stratified_score_ge_05_mortality_alert_0_throttled": 0.263804,
+            "stratified_alert_mortality_risk_difference": -0.122987,
+            "stratified_alert_cloglog_30d_hazard_ratio": 0.49557,
+            "unadjusted_mortality_early_antibiotics_1": 0.086592,
+            "unadjusted_mortality_early_antibiotics_0": 0.103919,
+            "unadjusted_early_antibiotics_risk_difference": -0.017327,
+            "sepsis_stratified_mortality_early_antibiotics_1": 0.134663,
+            "sepsis_stratified_mortality_early_antibiotics_0": 0.409786,
+            "sepsis_stratified_early_antibiotics_risk_difference": -0.275123,
+            "sepsis_stratified_early_antibiotics_cloglog_30d_hazard_ratio": 0.274312,
+            "mantel_haenszel_pooled_abx_risk_difference": -0.091223,
+            "direct_standardized_abx_ate_risk_difference": -0.070759
+          },
+          "immunocompromised_anc_lt_500": {
+            "n": 327,
+            "sepsis_prevalence": 0.593272,
+            "sepsis_mean_temperature_c": 36.6956,
+            "sepsis_mean_lactate_mmol_l": 3.8109,
+            "subgroup_auroc": 0.945605,
+            "pre_recalibration_fn_rate": 0.706186,
+            "pre_recalibration_ece": 0.288003,
+            "post_recalibration_fn_rate": 0.103093,
+            "post_recalibration_ece": 0.029473,
+            "calibrated_subgroup_threshold": 0.232228,
+            "high_sensitivity_pt_030_raw_threshold": 0.19078,
+            "platt_intercept": -4.747234,
+            "platt_slope": 20.442107,
+            "decision_curve_net_benefit_pre_at_pt_050": 0.174312,
+            "decision_curve_net_benefit_treat_all_at_pt_050": 0.186544,
+            "decision_curve_net_benefit_post_at_pt_050": 0.48318,
+            "decision_curve_net_benefit_uplift": 0.308869,
+            "decision_curve_net_benefit_post_at_pt_030": 0.500218,
+            "decision_curve_net_benefit_uplift_at_pt_030": 0.325907,
+            "phase2_afebrile_lactatemia_multivariable_cv": {
+              "oof_auroc": 0.997132,
+              "oof_fn_rate_at_050": 0.005155,
+              "oof_ece": 0.009467,
+              "net_benefit_uplift_at_pt_050": 0.409786
+            }
+          },
+          "ood_procalcitonin_abstention": {
+            "detected_ood_count": 50,
+            "exact_concordance_pct_gt_12_and_drift_lot_x9": true,
+            "abstention_gate_rule": "ABSTAIN_TO_CLINICIAN_HITL IF (procalcitonin_ng_ml > 12.0) OR (analyzer_lot != 'PCT_LOT_STD_04')",
+            "ood_subset_mean_ai_risk_score": 0.915646,
+            "ood_subset_sepsis_prevalence": 0.22,
+            "ood_subset_non_sepsis_fp_rate_at_050": 1.0,
+            "ood_share_of_total_cohort_false_positives": 0.364486,
+            "cleaned_cohort_raw_metrics": {
+              "n": 2350,
+              "auroc": 0.942769,
+              "accuracy": 0.893617,
+              "sensitivity": 0.746165,
+              "specificity": 0.958359,
+              "ppv": 0.887231,
+              "fn_rate": 0.253835,
+              "fp_rate": 0.041641,
+              "brier_score": 0.099178,
+              "ece": 0.125056
+            },
+            "cleaned_cohort_dual_stratum_recalibrated_metrics": {
+              "n": 2350,
+              "auroc": 0.983133,
+              "accuracy": 0.937872,
+              "sensitivity": 0.88145,
+              "specificity": 0.962645,
+              "ppv": 0.911977,
+              "fn_rate": 0.11855,
+              "fp_rate": 0.037355,
+              "brier_score": 0.04527,
+              "ece": 0.007957
+            }
+          },
+          "fwer_holm_bonferroni_multiplicity_control": {
+            "H4_immunocompromised_fn_disparity": {
+              "raw_p": 2.1926e-61,
+              "holm_fwer_adjusted_p": 1.0963e-60,
+              "reject_at_alpha_0_05": true
+            },
+            "H1_hosp_c_high_occ_throttling": {
+              "raw_p": 8.2491e-61,
+              "holm_fwer_adjusted_p": 3.2997e-60,
+              "reject_at_alpha_0_05": true
+            },
+            "H5_ood_procalcitonin_fp_enrichment": {
+              "raw_p": 1.5204e-50,
+              "holm_fwer_adjusted_p": 4.5613e-50,
+              "reject_at_alpha_0_05": true
+            },
+            "H3_early_antibiotics_mortality_benefit_sepsis": {
+              "raw_p": 3.8494e-17,
+              "holm_fwer_adjusted_p": 7.6988e-17,
+              "reject_at_alpha_0_05": true
+            },
+            "H2_alert_delivery_mortality_benefit_score_ge_05": {
+              "raw_p": 0.00048573,
+              "holm_fwer_adjusted_p": 0.00048573,
+              "reject_at_alpha_0_05": true
+            }
+          },
+          "sap_governance_attestation": {
+            "metadata": {
+              "author_role": "Principal Clinical Biostatistician",
+              "exemplar_org": "Genentech",
+              "version": "1.0.0"
+            },
+            "verification_status": "PASSED_100_PCT_SCHEMA_AND_INVARIANT_CHECKS"
+          }
+        },
+        "artifact_sizes_bytes": {
+          "solution_py": 14679,
+          "metrics_json": 5219,
+          "deliverable_md": 13799
+        }
+      }
+    },
+    "daf52618": {
+      "trial_uuid8": "daf52618",
+      "task_num": 3,
+      "task_id": "task3_clinical_sepsis",
+      "arm": "Arm_3_Superhuman",
+      "persona_source": "Superhuman Pathway C (sh_custom_lead_clinical_ai_biostatistics_fd_bafbf6be: Superhuman Lead Clinical AI Biostatistics & FDA SaMD Safety Architect)",
+      "persona_char_count": 36324,
+      "persona_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/private_key/personas/persona_daf52618.md",
+      "task_md_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task3_clinical_sepsis/TASK.md",
+      "input_file_path": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/tasks/task3_clinical_sepsis/sepsis_cohort.csv",
+      "run_dir": "/home/pakmingw/.gemini/antigravity/scratch/org_meta_prompt_db/benchmarks/superhuman_eval/runs/run_daf52618",
+      "role_label": "Clinical Biostatistics & Medical AI Safety Specialist",
+      "conversation_id": "1fb47940-3ecb-41ed-bbe4-32d5edb22c73",
+      "launched_at_utc": "2026-11-10T17:46:26Z",
+      "objective_eval": {
+        "ok": true,
+        "status": "ok",
+        "objective_score_50": 50,
+        "breakdown": {
+          "c1_cohort_execution": 10,
+          "c2_simpsons_and_hosp_c_confounding": 10,
+          "c3_anc_subgroup_recalibration": 10,
+          "c4_ood_abstention_gate": 10,
+          "c5_fda_samd_pccp_governance": 10
+        },
+        "metrics": {
+          "total_patients": 2400,
+          "aggregate_auroc": 0.924775,
+          "aggregate_mortality_30d_auroc": 0.67482,
+          "simpsons_paradox_and_hosp_c_throttling": {
+            "hosp_c_total_patients": 700,
+            "hosp_c_high_occupancy_gt_85_patients": 502,
+            "hosp_c_high_occupancy_score_ge_050_n": 163,
+            "hosp_c_high_occupancy_alerts_delivered": 0,
+            "hosp_c_high_occupancy_alert_suppression_rate": 1.0,
+            "hosp_c_normal_occupancy_alert_suppression_rate": 0.0,
+            "hosp_c_overall_eligible_alert_suppression_rate": 0.702586,
+            "hosp_c_score_ge_050_early_antibiotics_rate_throttled_gt_85": 0.184049,
+            "hosp_c_score_ge_050_early_antibiotics_rate_unthrottled_le_85": 0.84058,
+            "hosp_c_score_ge_050_mortality_throttled_gt_85": 0.263804,
+            "hosp_c_score_ge_050_mortality_unthrottled_le_85": 0.217391,
+            "unadjusted_cohort_mortality_by_alert": {
+              "alert_delivered_1": 0.140816,
+              "alert_delivered_0": 0.087958,
+              "naive_risk_difference": 0.052858
+            },
+            "unadjusted_cohort_mortality_by_early_antibiotics": {
+              "early_antibiotics_1": 0.086592,
+              "early_antibiotics_0": 0.103919,
+              "naive_risk_difference": -0.017327
+            },
+            "confounding_adjusted_and_stratified_effects": {
+              "score_ge_050_alert_mortality_delivered_1": 0.140816,
+              "score_ge_050_alert_mortality_throttled_0": 0.263804,
+              "score_ge_050_alert_risk_difference": -0.122987,
+              "sepsis_positive_alert_mortality_delivered_1": 0.164589,
+              "sepsis_positive_alert_mortality_unalerted_0": 0.373089,
+              "sepsis_positive_alert_risk_difference": -0.2085,
+              "sepsis_positive_early_abx_mortality_1": 0.134663,
+              "sepsis_positive_early_abx_mortality_0": 0.409786,
+              "sepsis_positive_early_abx_risk_difference": -0.275123,
+              "immunocompromised_sepsis_early_abx_mortality_1": 0.25,
+              "immunocompromised_sepsis_early_abx_mortality_0": 0.576923,
+              "mantel_haenszel_alert_effect": {
+                "mh_adjusted_risk_difference": -0.081976,
+                "mh_common_odds_ratio": 0.518038
+              },
+              "mantel_haenszel_early_antibiotics_effect": {
+                "mh_adjusted_risk_difference": -0.091223,
+                "mh_common_odds_ratio": 0.349293
+              },
+              "standardized_g_comp_early_antibiotics_ate": -0.070759
+            }
+          },
+          "immunocompromised_anc_lt_500": {
+            "n": 327,
+            "sepsis_cases": 194,
+            "sepsis_prevalence": 0.593272,
+            "mortality_30d_rate": 0.287462,
+            "afebrile_sepsis_pct_temp_lt_38c": 1.0,
+            "mean_sepsis_temperature_c": 36.6956,
+            "mean_sepsis_lactate_mmol_l": 3.8109,
+            "subgroup_auroc": 0.945605,
+            "pre_recalibration_fn_rate": 0.706186,
+            "pre_recalibration_ece": 0.288003,
+            "pre_recalibration_brier": 0.227533,
+            "post_recalibration_fn_rate": 0.07732,
+            "post_recalibration_fp_rate": 0.270677,
+            "post_recalibration_ece": 0.029473,
+            "post_recalibration_brier": 0.088624,
+            "calibrated_subgroup_threshold": 0.3,
+            "equivalent_raw_ai_risk_score_threshold": 0.19078,
+            "platt_calibration_params": {
+              "slope": 20.442107,
+              "intercept": -4.747234
+            },
+            "decision_curve_net_benefit": {
+              "threshold_probability_pt": 0.3,
+              "pre_recalibration_deployed_050_nb": 0.174312,
+              "pre_recalibration_uncalibrated_030_nb": 0.444299,
+              "treat_all_nb": 0.41896,
+              "post_recalibration_nb": 0.500218,
+              "net_benefit_uplift_vs_deployed_050": 0.325907,
+              "net_benefit_uplift_vs_uncalibrated_030": 0.05592,
+              "net_benefit_uplift_vs_treat_all": 0.081258
+            }
+          },
+          "ood_procalcitonin_abstention": {
+            "detected_ood_rows": 50,
+            "pct_gt_12_and_drift_lot_exact_concordance": true,
+            "abstention_gate_rule": "IF procalcitonin_ng_ml > 12.0 OR analyzer_lot != 'PCT_LOT_STD_04' (e.g. 'PCT_LOT_DRIFT_X9') THEN suppress autonomous AI score, emit OOD_ASSAY_ABSTAIN flag, and route to mandatory clinician HITL review",
+            "ood_subset_diagnostics": {
+              "mean_ai_risk_score": 0.915646,
+              "true_sepsis_prevalence": 0.22,
+              "ood_auroc": 0.424242,
+              "ood_ece": 0.695646,
+              "false_positives_eliminated": 39
+            },
+            "cleaned_cohort_metrics": {
+              "n_cleaned": 2350,
+              "auroc_raw_cleaned": 0.942769,
+              "accuracy_at_050_raw_cleaned": 0.893617,
+              "precision_at_050_raw_cleaned": 0.887231,
+              "sensitivity_at_050_raw_cleaned": 0.746165,
+              "ece_raw_cleaned": 0.125056,
+              "brier_raw_cleaned": 0.099178,
+              "auroc_post_stratified_recalibration": 0.983133,
+              "accuracy_post_stratified_recalibration": 0.931489,
+              "sensitivity_post_stratified_recalibration": 0.888424,
+              "ece_post_stratified_recalibration": 0.007957,
+              "brier_post_stratified_recalibration": 0.04527
+            }
+          }
+        },
+        "artifact_sizes_bytes": {
+          "solution_py": 13749,
+          "metrics_json": 4605,
+          "deliverable_md": 15083
+        }
+      }
+    }
+  },
+  "blind_key": {
+    "task_1": {
+      "Candidate_A": {
+        "trial_uuid8": "2bf69405",
+        "arm": "Arm_2_Canonical",
+        "persona_source": "Canonical OKG Role (role_infra_principal_distributed_systems_eng: Principal Distributed Systems Engineer)"
+      },
+      "Candidate_B": {
+        "trial_uuid8": "4fd2686b",
+        "arm": "Arm_1_Baseline",
+        "persona_source": "Generic 2-Sentence Specialist Prompt"
+      },
+      "Candidate_C": {
+        "trial_uuid8": "5e85d913",
+        "arm": "Arm_3_Superhuman",
+        "persona_source": "Superhuman Pathway A (sh_infra_principal_distributed_systems_eng_19f6b915: Superhuman Principal Distributed Systems Engineer)"
+      }
+    },
+    "task_2": {
+      "Candidate_A": {
+        "trial_uuid8": "abac2d68",
+        "arm": "Arm_3_Superhuman",
+        "persona_source": "Superhuman Pathway B (sh_fin_chief_financial_officer_67a9b8c9: Superhuman Chief Financial Officer (CFO) (NVIDIA))"
+      },
+      "Candidate_B": {
+        "trial_uuid8": "b4c81504",
+        "arm": "Arm_2_Canonical",
+        "persona_source": "Canonical OKG Role (role_fin_chief_financial_officer: Chief Financial Officer (CFO))"
+      },
+      "Candidate_C": {
+        "trial_uuid8": "d1edc585",
+        "arm": "Arm_1_Baseline",
+        "persona_source": "Generic 2-Sentence Specialist Prompt"
+      }
+    },
+    "task_3": {
+      "Candidate_A": {
+        "trial_uuid8": "dc72e707",
+        "arm": "Arm_2_Canonical",
+        "persona_source": "Canonical OKG Role (role_health_principal_biostatistician: Principal Clinical Biostatistician)"
+      },
+      "Candidate_B": {
+        "trial_uuid8": "447a047e",
+        "arm": "Arm_1_Baseline",
+        "persona_source": "Generic 2-Sentence Specialist Prompt"
+      },
+      "Candidate_C": {
+        "trial_uuid8": "daf52618",
+        "arm": "Arm_3_Superhuman",
+        "persona_source": "Superhuman Pathway C (sh_custom_lead_clinical_ai_biostatistics_fd_bafbf6be: Superhuman Lead Clinical AI Biostatistics & FDA SaMD Safety Architect)"
+      }
+    }
+  }
+}

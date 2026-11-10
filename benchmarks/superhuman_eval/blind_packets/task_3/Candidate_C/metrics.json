@@ -1,0 +1,109 @@
+{
+  "total_patients": 2400,
+  "aggregate_auroc": 0.924775,
+  "aggregate_mortality_30d_auroc": 0.67482,
+  "simpsons_paradox_and_hosp_c_throttling": {
+    "hosp_c_total_patients": 700,
+    "hosp_c_high_occupancy_gt_85_patients": 502,
+    "hosp_c_high_occupancy_score_ge_050_n": 163,
+    "hosp_c_high_occupancy_alerts_delivered": 0,
+    "hosp_c_high_occupancy_alert_suppression_rate": 1.0,
+    "hosp_c_normal_occupancy_alert_suppression_rate": 0.0,
+    "hosp_c_overall_eligible_alert_suppression_rate": 0.702586,
+    "hosp_c_score_ge_050_early_antibiotics_rate_throttled_gt_85": 0.184049,
+    "hosp_c_score_ge_050_early_antibiotics_rate_unthrottled_le_85": 0.84058,
+    "hosp_c_score_ge_050_mortality_throttled_gt_85": 0.263804,
+    "hosp_c_score_ge_050_mortality_unthrottled_le_85": 0.217391,
+    "unadjusted_cohort_mortality_by_alert": {
+      "alert_delivered_1": 0.140816,
+      "alert_delivered_0": 0.087958,
+      "naive_risk_difference": 0.052858
+    },
+    "unadjusted_cohort_mortality_by_early_antibiotics": {
+      "early_antibiotics_1": 0.086592,
+      "early_antibiotics_0": 0.103919,
+      "naive_risk_difference": -0.017327
+    },
+    "confounding_adjusted_and_stratified_effects": {
+      "score_ge_050_alert_mortality_delivered_1": 0.140816,
+      "score_ge_050_alert_mortality_throttled_0": 0.263804,
+      "score_ge_050_alert_risk_difference": -0.122987,
+      "sepsis_positive_alert_mortality_delivered_1": 0.164589,
+      "sepsis_positive_alert_mortality_unalerted_0": 0.373089,
+      "sepsis_positive_alert_risk_difference": -0.2085,
+      "sepsis_positive_early_abx_mortality_1": 0.134663,
+      "sepsis_positive_early_abx_mortality_0": 0.409786,
+      "sepsis_positive_early_abx_risk_difference": -0.275123,
+      "immunocompromised_sepsis_early_abx_mortality_1": 0.25,
+      "immunocompromised_sepsis_early_abx_mortality_0": 0.576923,
+      "mantel_haenszel_alert_effect": {
+        "mh_adjusted_risk_difference": -0.081976,
+        "mh_common_odds_ratio": 0.518038
+      },
+      "mantel_haenszel_early_antibiotics_effect": {
+        "mh_adjusted_risk_difference": -0.091223,
+        "mh_common_odds_ratio": 0.349293
+      },
+      "standardized_g_comp_early_antibiotics_ate": -0.070759
+    }
+  },
+  "immunocompromised_anc_lt_500": {
+    "n": 327,
+    "sepsis_cases": 194,
+    "sepsis_prevalence": 0.593272,
+    "mortality_30d_rate": 0.287462,
+    "afebrile_sepsis_pct_temp_lt_38c": 1.0,
+    "mean_sepsis_temperature_c": 36.6956,
+    "mean_sepsis_lactate_mmol_l": 3.8109,
+    "subgroup_auroc": 0.945605,
+    "pre_recalibration_fn_rate": 0.706186,
+    "pre_recalibration_ece": 0.288003,
+    "pre_recalibration_brier": 0.227533,
+    "post_recalibration_fn_rate": 0.07732,
+    "post_recalibration_fp_rate": 0.270677,
+    "post_recalibration_ece": 0.029473,
+    "post_recalibration_brier": 0.088624,
+    "calibrated_subgroup_threshold": 0.3,
+    "equivalent_raw_ai_risk_score_threshold": 0.19078,
+    "platt_calibration_params": {
+      "slope": 20.442107,
+      "intercept": -4.747234
+    },
+    "decision_curve_net_benefit": {
+      "threshold_probability_pt": 0.3,
+      "pre_recalibration_deployed_050_nb": 0.174312,
+      "pre_recalibration_uncalibrated_030_nb": 0.444299,
+      "treat_all_nb": 0.41896,
+      "post_recalibration_nb": 0.500218,
+      "net_benefit_uplift_vs_deployed_050": 0.325907,
+      "net_benefit_uplift_vs_uncalibrated_030": 0.05592,
+      "net_benefit_uplift_vs_treat_all": 0.081258
+    }
+  },
+  "ood_procalcitonin_abstention": {
+    "detected_ood_rows": 50,
+    "pct_gt_12_and_drift_lot_exact_concordance": true,
+    "abstention_gate_rule": "IF procalcitonin_ng_ml > 12.0 OR analyzer_lot != 'PCT_LOT_STD_04' (e.g. 'PCT_LOT_DRIFT_X9') THEN suppress autonomous AI score, emit OOD_ASSAY_ABSTAIN flag, and route to mandatory clinician HITL review",
+    "ood_subset_diagnostics": {
+      "mean_ai_risk_score": 0.915646,
+      "true_sepsis_prevalence": 0.22,
+      "ood_auroc": 0.424242,
+      "ood_ece": 0.695646,
+      "false_positives_eliminated": 39
+    },
+    "cleaned_cohort_metrics": {
+      "n_cleaned": 2350,
+      "auroc_raw_cleaned": 0.942769,
+      "accuracy_at_050_raw_cleaned": 0.893617,
+      "precision_at_050_raw_cleaned": 0.887231,
+      "sensitivity_at_050_raw_cleaned": 0.746165,
+      "ece_raw_cleaned": 0.125056,
+      "brier_raw_cleaned": 0.099178,
+      "auroc_post_stratified_recalibration": 0.983133,
+      "accuracy_post_stratified_recalibration": 0.931489,
+      "sensitivity_post_stratified_recalibration": 0.888424,
+      "ece_post_stratified_recalibration": 0.007957,
+      "brier_post_stratified_recalibration": 0.04527
+    }
+  }
+}

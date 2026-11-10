@@ -1,0 +1,21 @@
+{
+  "baseline_p99_9_ms": 256.7,
+  "mitigated_p50_ms": 2.017,
+  "mitigated_p99_ms": 2.07,
+  "mitigated_p99_9_ms": 2.07,
+  "mitigated_all_5000_including_dr_partition_p50_ms": 2.017,
+  "mitigated_all_5000_including_dr_partition_p99_ms": 19.043,
+  "mitigated_all_5000_including_dr_partition_p99_9_ms": 19.07,
+  "mitigated_3_intra_az_witness_topology_p99_9_ms": 2.07,
+  "total_events": 5000,
+  "unique_committed_transfers": 4079,
+  "duplicates_deduplicated": 921,
+  "double_spend_count": 0,
+  "baseline_double_spend_count": 921,
+  "sum_debits_cents": 51076820408,
+  "sum_credits_cents": 51076820408,
+  "conservation_invariant_passed": true,
+  "split_brain_commits_prevented": 151,
+  "max_concurrent_open_zones_used": 6,
+  "zns_sequential_invariant_passed": true
+}

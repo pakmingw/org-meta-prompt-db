@@ -1,0 +1,322 @@
+{
+  "num_monte_carlo_paths": 10000,
+  "accounting_identity_max_error": 7.275957614183426e-12,
+  "accounting_identity_passed": true,
+  "modeled_normal_rho": 0.15,
+  "modeled_crisis_rho": 0.88,
+  "crisis_upper_tail_dependence_lambda_u": 0.5965,
+  "unhedged_covenant_breach_prob": 0.2814,
+  "structured_covenant_breach_prob": 0.0095,
+  "breach_prob_reduction_abs": 0.2719,
+  "unhedged_p95_net_debt_to_ebitda": 3.9069,
+  "structured_p95_net_debt_to_ebitda": 2.045,
+  "unhedged_cvar95_fcf_usd_m": -1099.75,
+  "structured_cvar95_fcf_usd_m": 1755.66,
+  "hedging_and_working_capital_actions": [
+    {
+      "instrument": "Zero-CSA OTC FX Call Spreads + Tariff-Contingent Quanto Collars",
+      "notional_usd_m_per_qtr": 1368.0,
+      "strikes": "+2.5% / +24.0% call spread funded by -3.5% OTM put floor",
+      "annual_cost_usd_m": 68.0
+    },
+    {
+      "instrument": "Physical Rare-Earth Offtake Price-Cap + OTC Asian Basket Call Options",
+      "notional_usd_m_per_qtr": 320.1,
+      "strikes": "20.0% spot surcharge cap across Q1..Q4",
+      "annual_cost_usd_m": 56.0
+    },
+    {
+      "instrument": "FTZ Bonded Tier-2 Substrate Safety Stock + ASEAN/JP Dual-Source Tooling",
+      "buffer_dio_schedule_days": [
+        95,
+        92,
+        88,
+        88
+      ],
+      "dutiable_corridor_ramp": [
+        0.5,
+        0.38,
+        0.25,
+        0.16
+      ],
+      "qualification_capex_usd_m": 30.0
+    },
+    {
+      "instrument": "ASC 860 Non-Recourse AR True-Sale Securitization + ASU 2022-04 G-SIB SCF",
+      "facility_limit_usd_m": 750.0,
+      "wc_targets": "Cap DSO <= 55d in crisis (SOFR+spread 5.8% ann.); stabilize DPO at 56d",
+      "annual_commitment_fee_usd_m": 8.0
+    },
+    {
+      "instrument": "Covenant-Gated Zero-Based OpEx Circuit Breaker + Contractual Tariff Indexation",
+      "trigger": "Crisis regime or ship_mult < 0.87 or trailing Leverage > 2.05x",
+      "quarterly_ebitda_protection_usd_m": 60.0
+    }
+  ],
+  "diagnostic_benchmarks": {
+    "gaussian_prior_unhedged": {
+      "covenant_breach_prob": 0.1246,
+      "p50_net_debt_to_ebitda": 2.0355,
+      "p95_net_debt_to_ebitda": 2.7798,
+      "mean_fcf_4q_usd_m": 1735.69,
+      "cvar95_fcf_usd_m": 802.67,
+      "p95_revolver_draw_usd_m": 0.0,
+      "accounting_identity_max_error": 7.275957614183426e-12,
+      "quarterly": [
+        {
+          "quarter": "Q1",
+          "mean_ltm_ebitda_usd_m": 4466.67,
+          "mean_net_debt_usd_m": 7711.91,
+          "p50_leverage": 1.7088,
+          "p95_leverage": 1.9621,
+          "qtr_breach_prob": 0.0
+        },
+        {
+          "quarter": "Q2",
+          "mean_ltm_ebitda_usd_m": 4076.2,
+          "mean_net_debt_usd_m": 7382.85,
+          "p50_leverage": 1.7981,
+          "p95_leverage": 2.1776,
+          "qtr_breach_prob": 0.0017
+        },
+        {
+          "quarter": "Q3",
+          "mean_ltm_ebitda_usd_m": 3692.37,
+          "mean_net_debt_usd_m": 7026.01,
+          "p50_leverage": 1.8916,
+          "p95_leverage": 2.435,
+          "qtr_breach_prob": 0.037
+        },
+        {
+          "quarter": "Q4",
+          "mean_ltm_ebitda_usd_m": 3311.45,
+          "mean_net_debt_usd_m": 6664.31,
+          "p50_leverage": 2.0044,
+          "p95_leverage": 2.7761,
+          "qtr_breach_prob": 0.122
+        }
+      ]
+    },
+    "naive_gaussian_linear_hedge": {
+      "covenant_breach_prob": 0.2473,
+      "p50_net_debt_to_ebitda": 2.1521,
+      "p95_net_debt_to_ebitda": 3.3722,
+      "mean_fcf_4q_usd_m": 1311.68,
+      "cvar95_fcf_usd_m": -720.77,
+      "p95_revolver_draw_usd_m": 338.14,
+      "accounting_identity_max_error": 7.275957614183426e-12,
+      "quarterly": [
+        {
+          "quarter": "Q1",
+          "mean_ltm_ebitda_usd_m": 4467.86,
+          "mean_net_debt_usd_m": 8133.3,
+          "p50_leverage": 1.7351,
+          "p95_leverage": 2.3263,
+          "qtr_breach_prob": 0.0254
+        },
+        {
+          "quarter": "Q2",
+          "mean_ltm_ebitda_usd_m": 4076.12,
+          "mean_net_debt_usd_m": 7806.33,
+          "p50_leverage": 1.8602,
+          "p95_leverage": 2.5846,
+          "qtr_breach_prob": 0.0614
+        },
+        {
+          "quarter": "Q3",
+          "mean_ltm_ebitda_usd_m": 3693.21,
+          "mean_net_debt_usd_m": 7455.06,
+          "p50_leverage": 1.9678,
+          "p95_leverage": 2.8494,
+          "qtr_breach_prob": 0.1157
+        },
+        {
+          "quarter": "Q4",
+          "mean_ltm_ebitda_usd_m": 3315.35,
+          "mean_net_debt_usd_m": 7088.32,
+          "p50_leverage": 2.0853,
+          "p95_leverage": 3.2853,
+          "qtr_breach_prob": 0.2132
+        }
+      ]
+    },
+    "unhedged_detail": {
+      "covenant_breach_prob": 0.2814,
+      "p50_net_debt_to_ebitda": 2.1591,
+      "p95_net_debt_to_ebitda": 3.9069,
+      "mean_fcf_4q_usd_m": 1332.2,
+      "cvar95_fcf_usd_m": -1099.75,
+      "p95_revolver_draw_usd_m": 605.46,
+      "accounting_identity_max_error": 7.275957614183426e-12,
+      "quarterly": [
+        {
+          "quarter": "Q1",
+          "mean_ltm_ebitda_usd_m": 4470.91,
+          "mean_net_debt_usd_m": 8118.19,
+          "p50_leverage": 1.7445,
+          "p95_leverage": 2.4191,
+          "qtr_breach_prob": 0.0422
+        },
+        {
+          "quarter": "Q2",
+          "mean_ltm_ebitda_usd_m": 4081.41,
+          "mean_net_debt_usd_m": 7792.51,
+          "p50_leverage": 1.8507,
+          "p95_leverage": 2.78,
+          "qtr_breach_prob": 0.0812
+        },
+        {
+          "quarter": "Q3",
+          "mean_ltm_ebitda_usd_m": 3704.26,
+          "mean_net_debt_usd_m": 7436.71,
+          "p50_leverage": 1.9513,
+          "p95_leverage": 3.1581,
+          "qtr_breach_prob": 0.1489
+        },
+        {
+          "quarter": "Q4",
+          "mean_ltm_ebitda_usd_m": 3332.21,
+          "mean_net_debt_usd_m": 7067.8,
+          "p50_leverage": 2.0675,
+          "p95_leverage": 3.8022,
+          "qtr_breach_prob": 0.2431
+        }
+      ]
+    },
+    "structured_detail": {
+      "covenant_breach_prob": 0.0095,
+      "p50_net_debt_to_ebitda": 1.6949,
+      "p95_net_debt_to_ebitda": 2.045,
+      "mean_fcf_4q_usd_m": 2508.89,
+      "cvar95_fcf_usd_m": 1755.66,
+      "p95_revolver_draw_usd_m": 0.0,
+      "accounting_identity_max_error": 7.275957614183426e-12,
+      "quarterly": [
+        {
+          "quarter": "Q1",
+          "mean_ltm_ebitda_usd_m": 4526.24,
+          "mean_net_debt_usd_m": 7501.32,
+          "p50_leverage": 1.6556,
+          "p95_leverage": 1.7109,
+          "qtr_breach_prob": 0.0
+        },
+        {
+          "quarter": "Q2",
+          "mean_ltm_ebitda_usd_m": 4220.07,
+          "mean_net_debt_usd_m": 6979.92,
+          "p50_leverage": 1.654,
+          "p95_leverage": 1.8573,
+          "qtr_breach_prob": 0.0024
+        },
+        {
+          "quarter": "Q3",
+          "mean_ltm_ebitda_usd_m": 3942.31,
+          "mean_net_debt_usd_m": 6365.68,
+          "p50_leverage": 1.6126,
+          "p95_leverage": 1.9286,
+          "qtr_breach_prob": 0.0044
+        },
+        {
+          "quarter": "Q4",
+          "mean_ltm_ebitda_usd_m": 3679.41,
+          "mean_net_debt_usd_m": 5891.11,
+          "p50_leverage": 1.5997,
+          "p95_leverage": 2.0229,
+          "qtr_breach_prob": 0.009
+        }
+      ]
+    }
+  },
+  "sensitivity_grid": [
+    {
+      "tariff_rate": 0.4,
+      "crisis_rho": 0.15,
+      "unhedged_breach_prob": 0.225,
+      "structured_breach_prob": 0.0041,
+      "unhedged_p95_lev": 3.2495,
+      "structured_p95_lev": 1.9596,
+      "unhedged_cvar95_fcf_usd_m": -912.73,
+      "structured_cvar95_fcf_usd_m": 1825.81
+    },
+    {
+      "tariff_rate": 0.4,
+      "crisis_rho": 0.55,
+      "unhedged_breach_prob": 0.2339,
+      "structured_breach_prob": 0.0057,
+      "unhedged_p95_lev": 3.4946,
+      "structured_p95_lev": 1.9826,
+      "unhedged_cvar95_fcf_usd_m": -928.09,
+      "structured_cvar95_fcf_usd_m": 1817.2
+    },
+    {
+      "tariff_rate": 0.4,
+      "crisis_rho": 0.88,
+      "unhedged_breach_prob": 0.2348,
+      "structured_breach_prob": 0.0076,
+      "unhedged_p95_lev": 3.7032,
+      "structured_p95_lev": 2.0001,
+      "unhedged_cvar95_fcf_usd_m": -965.66,
+      "structured_cvar95_fcf_usd_m": 1806.79
+    },
+    {
+      "tariff_rate": 0.6,
+      "crisis_rho": 0.15,
+      "unhedged_breach_prob": 0.2774,
+      "structured_breach_prob": 0.0046,
+      "unhedged_p95_lev": 3.4141,
+      "structured_p95_lev": 2.0002,
+      "unhedged_cvar95_fcf_usd_m": -1050.89,
+      "structured_cvar95_fcf_usd_m": 1774.59
+    },
+    {
+      "tariff_rate": 0.6,
+      "crisis_rho": 0.55,
+      "unhedged_breach_prob": 0.2793,
+      "structured_breach_prob": 0.0072,
+      "unhedged_p95_lev": 3.6844,
+      "structured_p95_lev": 2.0274,
+      "unhedged_cvar95_fcf_usd_m": -1063.54,
+      "structured_cvar95_fcf_usd_m": 1766.02
+    },
+    {
+      "tariff_rate": 0.6,
+      "crisis_rho": 0.88,
+      "unhedged_breach_prob": 0.2814,
+      "structured_breach_prob": 0.0095,
+      "unhedged_p95_lev": 3.9069,
+      "structured_p95_lev": 2.045,
+      "unhedged_cvar95_fcf_usd_m": -1099.75,
+      "structured_cvar95_fcf_usd_m": 1755.66
+    },
+    {
+      "tariff_rate": 0.8,
+      "crisis_rho": 0.15,
+      "unhedged_breach_prob": 0.3372,
+      "structured_breach_prob": 0.0061,
+      "unhedged_p95_lev": 3.5917,
+      "structured_p95_lev": 2.0472,
+      "unhedged_cvar95_fcf_usd_m": -1189.33,
+      "structured_cvar95_fcf_usd_m": 1723.34
+    },
+    {
+      "tariff_rate": 0.8,
+      "crisis_rho": 0.55,
+      "unhedged_breach_prob": 0.3341,
+      "structured_breach_prob": 0.0082,
+      "unhedged_p95_lev": 3.8804,
+      "structured_p95_lev": 2.0709,
+      "unhedged_cvar95_fcf_usd_m": -1199.31,
+      "structured_cvar95_fcf_usd_m": 1714.8
+    },
+    {
+      "tariff_rate": 0.8,
+      "crisis_rho": 0.88,
+      "unhedged_breach_prob": 0.3336,
+      "structured_breach_prob": 0.0112,
+      "unhedged_p95_lev": 4.1375,
+      "structured_p95_lev": 2.0923,
+      "unhedged_cvar95_fcf_usd_m": -1234.1,
+      "structured_cvar95_fcf_usd_m": 1704.5
+    }
+  ]
+}

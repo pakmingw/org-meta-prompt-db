@@ -1,0 +1,165 @@
+{
+  "total_patients": 2400,
+  "aggregate_auroc": 0.924775,
+  "aggregate_baseline_at_050": {
+    "auroc": 0.924775,
+    "accuracy": 0.879583,
+    "ece_10bin": 0.122897,
+    "brier_score": 0.110854,
+    "fn_rate": 0.25,
+    "fp_rate": 0.063995,
+    "ppv": 0.836141,
+    "npv": 0.895821,
+    "tp": 546,
+    "fn": 182,
+    "fp": 107,
+    "tn": 1565
+  },
+  "simpsons_paradox_and_hosp_c_throttling": {
+    "hosp_c_high_occupancy_threshold_pct": 85.0,
+    "hosp_c_high_occupancy_total_n": 502,
+    "hosp_c_high_occupancy_ai_pos_n": 163,
+    "hosp_c_high_occupancy_alerts_suppressed_n": 163,
+    "hosp_c_high_occupancy_alert_suppression_rate": 1.0,
+    "hosp_c_high_occupancy_suppression_95ci": [
+      0.976975,
+      1.0
+    ],
+    "hosp_c_low_occupancy_alert_suppression_rate": 0.0,
+    "other_hospitals_high_occupancy_alert_suppression_rate": 0.0,
+    "hosp_c_ai_pos_early_antibiotics_low_vs_high_occ": {
+      "low_occ_le_85_rate": 0.84058,
+      "high_occ_gt_85_rate": 0.184049,
+      "absolute_treatment_drop": -0.656531
+    },
+    "alert_delivery_mortality_paradox": {
+      "unadjusted_alerted_mortality": 0.140816,
+      "unadjusted_unalerted_mortality": 0.087958,
+      "unadjusted_risk_difference": 0.052858,
+      "stratified_ai_pos_alerted_mortality": 0.140816,
+      "stratified_ai_pos_throttled_mortality": 0.263804,
+      "stratified_ai_pos_risk_difference": -0.122987,
+      "stratified_ai_pos_fisher_p_value": 0.00048573,
+      "mh_adjusted_risk_difference": -0.116088,
+      "mh_common_odds_ratio": 0.463996
+    },
+    "early_antibiotics_treatment_effect": {
+      "unadjusted_treated_mortality": 0.086592,
+      "unadjusted_untreated_mortality": 0.103919,
+      "unadjusted_risk_difference": -0.017327,
+      "unadjusted_chi2_p_value": 0.2198,
+      "sepsis_positive_treated_mortality": 0.134663,
+      "sepsis_positive_untreated_mortality": 0.409786,
+      "sepsis_positive_absolute_risk_reduction": -0.275123,
+      "sepsis_positive_chi2_p_value": 6.7473e-17,
+      "immunocompromised_sepsis_treated_mortality": 0.25,
+      "immunocompromised_sepsis_untreated_mortality": 0.576923,
+      "mh_adjusted_risk_difference": -0.078452,
+      "mh_common_odds_ratio": 0.391866
+    }
+  },
+  "immunocompromised_anc_lt_500": {
+    "n": 327,
+    "sepsis_cases": 194,
+    "sepsis_prevalence": 0.593272,
+    "subgroup_auroc": 0.945605,
+    "afebrile_lactatemia_physiology": {
+      "septic_mean_temp_c": 36.6956,
+      "septic_mean_lactate_mmol_l": 3.8109,
+      "septic_mean_raw_ai_score": 0.415,
+      "immunocompetent_septic_mean_temp_c": 38.8287
+    },
+    "pre_recalibration_fn_rate": 0.706186,
+    "pre_recalibration_ece": 0.288003,
+    "pre_recalibration_brier": 0.227533,
+    "platt_scaling_params": {
+      "intercept": -4.747234,
+      "slope": 20.442107
+    },
+    "calibrated_subgroup_threshold": 0.3,
+    "equivalent_raw_score_threshold_at_p30": 0.19078,
+    "equivalent_raw_score_threshold_at_p50": 0.232228,
+    "youden_optimal_raw_score_threshold": 0.2424,
+    "post_recalibration_fn_rate": 0.07732,
+    "post_recalibration_fp_rate": 0.270677,
+    "post_recalibration_ece": 0.029473,
+    "post_recalibration_brier": 0.088624,
+    "post_recalibration_fn_rate_at_p50": 0.103093,
+    "decision_curve_net_benefit_uplift": 0.325907,
+    "decision_curve_analysis": {
+      "at_pt_030": {
+        "pre_deployed_050_nb": 0.174312,
+        "pre_uncalibrated_p30_nb": 0.444299,
+        "treat_all_nb": 0.41896,
+        "post_recalibrated_nb": 0.500218,
+        "uplift_vs_deployed_050": 0.325907,
+        "uplift_vs_uncalibrated_p30": 0.05592,
+        "uplift_vs_treat_all": 0.081258
+      },
+      "at_pt_050": {
+        "pre_deployed_050_nb": 0.174312,
+        "treat_all_nb": 0.186544,
+        "post_recalibrated_nb": 0.48318,
+        "uplift_vs_deployed_050": 0.308869
+      }
+    }
+  },
+  "ood_procalcitonin_abstention": {
+    "detected_ood_count": 50,
+    "detected_ood_fraction": 0.020833,
+    "lot_and_pct_gt_12_perfect_concordance": true,
+    "abstention_gate_rule": "ABSTAIN_TO_CLINICIAN_HITL if procalcitonin_ng_ml > 12.0 OR analyzer_lot != 'PCT_LOT_STD_04'; suppress autonomous AI risk score/alert, display OOD assay-drift warning, and order stat repeat PCT/lactate.",
+    "ood_subset_diagnostics": {
+      "mean_procalcitonin_ng_ml": 37.2372,
+      "min_procalcitonin_ng_ml": 13.98,
+      "mean_ai_risk_score": 0.915646,
+      "min_ai_risk_score": 0.8411,
+      "true_sepsis_prevalence": 0.22,
+      "false_positive_alerts_generated": 39,
+      "share_of_all_cohort_false_positives": 0.364486
+    },
+    "cleaned_cohort_n": 2350,
+    "cleaned_cohort_raw_score_metrics": {
+      "auroc": 0.942769,
+      "accuracy": 0.893617,
+      "ece_10bin": 0.125056,
+      "brier_score": 0.099178,
+      "fn_rate": 0.253835,
+      "fp_rate": 0.041641,
+      "ppv": 0.887231,
+      "npv": 0.895821,
+      "tp": 535,
+      "fn": 182,
+      "fp": 68,
+      "tn": 1565
+    },
+    "cleaned_cohort_stratified_recalibrated_at_050": {
+      "auroc": 0.983133,
+      "accuracy": 0.937872,
+      "ece_10bin": 0.007957,
+      "brier_score": 0.04527,
+      "fn_rate": 0.11855,
+      "fp_rate": 0.037355,
+      "ppv": 0.911977,
+      "npv": 0.948702,
+      "tp": 632,
+      "fn": 85,
+      "fp": 61,
+      "tn": 1572
+    },
+    "cleaned_cohort_stratified_recalibrated_cost_sensitive": {
+      "auroc": 0.983133,
+      "accuracy": 0.931489,
+      "ece_10bin": 0.007957,
+      "brier_score": 0.04527,
+      "fn_rate": 0.111576,
+      "fp_rate": 0.049602,
+      "ppv": 0.887187,
+      "npv": 0.95098,
+      "tp": 637,
+      "fn": 80,
+      "fp": 81,
+      "tn": 1552
+    }
+  }
+}

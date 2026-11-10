@@ -1,0 +1,381 @@
+{
+  "unblinded_trials": [
+    {
+      "task": "task_1",
+      "candidate": "Candidate_A",
+      "arm": "Arm_2_Canonical",
+      "trial_uuid8": "2bf69405",
+      "persona_source": "Canonical OKG Role (role_infra_principal_distributed_systems_eng: Principal Distributed Systems Engineer)",
+      "persona_char_count": 8804,
+      "artifact_sizes_bytes": {
+        "solution_py": 11362,
+        "metrics_json": 719,
+        "deliverable_md": 13640
+      },
+      "objective_50": 50,
+      "objective_breakdown": {
+        "c1_clean_execution": 10,
+        "c2_conservation_and_idempotency": 10,
+        "c3_zns_zone_invariants": 10,
+        "c4_tail_latency_sla": 10,
+        "c5_audit_and_rollback_gates": 10
+      },
+      "auditor_50": 37.5,
+      "auditor_breakdown": {
+        "d1": 8.5,
+        "d2": 8.0,
+        "d3": 8.0,
+        "d4": 6.0,
+        "d5": 7.0,
+        "total_50": 37.5,
+        "rank": 3
+      },
+      "combined_100": 87.5
+    },
+    {
+      "task": "task_1",
+      "candidate": "Candidate_B",
+      "arm": "Arm_1_Baseline",
+      "trial_uuid8": "4fd2686b",
+      "persona_source": "Generic 2-Sentence Specialist Prompt",
+      "persona_char_count": 269,
+      "artifact_sizes_bytes": {
+        "solution_py": 12548,
+        "metrics_json": 699,
+        "deliverable_md": 11047
+      },
+      "objective_50": 50,
+      "objective_breakdown": {
+        "c1_clean_execution": 10,
+        "c2_conservation_and_idempotency": 10,
+        "c3_zns_zone_invariants": 10,
+        "c4_tail_latency_sla": 10,
+        "c5_audit_and_rollback_gates": 10
+      },
+      "auditor_50": 39.0,
+      "auditor_breakdown": {
+        "d1": 8.5,
+        "d2": 8.5,
+        "d3": 6.5,
+        "d4": 8.5,
+        "d5": 7.0,
+        "total_50": 39.0,
+        "rank": 2
+      },
+      "combined_100": 89.0
+    },
+    {
+      "task": "task_1",
+      "candidate": "Candidate_C",
+      "arm": "Arm_3_Superhuman",
+      "trial_uuid8": "5e85d913",
+      "persona_source": "Superhuman Pathway A (sh_infra_principal_distributed_systems_eng_19f6b915: Superhuman Principal Distributed Systems Engineer)",
+      "persona_char_count": 41853,
+      "artifact_sizes_bytes": {
+        "solution_py": 12895,
+        "metrics_json": 759,
+        "deliverable_md": 15910
+      },
+      "objective_50": 50,
+      "objective_breakdown": {
+        "c1_clean_execution": 10,
+        "c2_conservation_and_idempotency": 10,
+        "c3_zns_zone_invariants": 10,
+        "c4_tail_latency_sla": 10,
+        "c5_audit_and_rollback_gates": 10
+      },
+      "auditor_50": 46.0,
+      "auditor_breakdown": {
+        "d1": 9.5,
+        "d2": 9.5,
+        "d3": 9.0,
+        "d4": 8.5,
+        "d5": 9.5,
+        "total_50": 46.0,
+        "rank": 1
+      },
+      "combined_100": 96.0
+    },
+    {
+      "task": "task_2",
+      "candidate": "Candidate_A",
+      "arm": "Arm_3_Superhuman",
+      "trial_uuid8": "abac2d68",
+      "persona_source": "Superhuman Pathway B (sh_fin_chief_financial_officer_67a9b8c9: Superhuman Chief Financial Officer (CFO) (NVIDIA))",
+      "persona_char_count": 41857,
+      "artifact_sizes_bytes": {
+        "solution_py": 14781,
+        "metrics_json": 9933,
+        "deliverable_md": 17039
+      },
+      "objective_50": 50,
+      "objective_breakdown": {
+        "c1_monte_carlo_execution": 10,
+        "c2_accounting_identity": 10,
+        "c3_regime_shift_contagion": 10,
+        "c4_covenant_breach_reduction": 10,
+        "c5_board_triggers_and_sensitivity": 10
+      },
+      "auditor_50": 46.0,
+      "auditor_breakdown": {
+        "d1": 9.5,
+        "d2": 9.5,
+        "d3": 9.5,
+        "d4": 8.0,
+        "d5": 9.5,
+        "total_50": 46.0,
+        "rank": 1
+      },
+      "combined_100": 96.0
+    },
+    {
+      "task": "task_2",
+      "candidate": "Candidate_B",
+      "arm": "Arm_2_Canonical",
+      "trial_uuid8": "b4c81504",
+      "persona_source": "Canonical OKG Role (role_fin_chief_financial_officer: Chief Financial Officer (CFO))",
+      "persona_char_count": 8611,
+      "artifact_sizes_bytes": {
+        "solution_py": 14163,
+        "metrics_json": 6124,
+        "deliverable_md": 14606
+      },
+      "objective_50": 50,
+      "objective_breakdown": {
+        "c1_monte_carlo_execution": 10,
+        "c2_accounting_identity": 10,
+        "c3_regime_shift_contagion": 10,
+        "c4_covenant_breach_reduction": 10,
+        "c5_board_triggers_and_sensitivity": 10
+      },
+      "auditor_50": 42.5,
+      "auditor_breakdown": {
+        "d1": 9.0,
+        "d2": 8.5,
+        "d3": 8.0,
+        "d4": 9.0,
+        "d5": 8.0,
+        "total_50": 42.5,
+        "rank": 2
+      },
+      "combined_100": 92.5
+    },
+    {
+      "task": "task_2",
+      "candidate": "Candidate_C",
+      "arm": "Arm_1_Baseline",
+      "trial_uuid8": "d1edc585",
+      "persona_source": "Generic 2-Sentence Specialist Prompt",
+      "persona_char_count": 278,
+      "artifact_sizes_bytes": {
+        "solution_py": 15086,
+        "metrics_json": 10136,
+        "deliverable_md": 16509
+      },
+      "objective_50": 50,
+      "objective_breakdown": {
+        "c1_monte_carlo_execution": 10,
+        "c2_accounting_identity": 10,
+        "c3_regime_shift_contagion": 10,
+        "c4_covenant_breach_reduction": 10,
+        "c5_board_triggers_and_sensitivity": 10
+      },
+      "auditor_50": 40.5,
+      "auditor_breakdown": {
+        "d1": 8.5,
+        "d2": 8.5,
+        "d3": 7.0,
+        "d4": 8.5,
+        "d5": 8.0,
+        "total_50": 40.5,
+        "rank": 3
+      },
+      "combined_100": 90.5
+    },
+    {
+      "task": "task_3",
+      "candidate": "Candidate_A",
+      "arm": "Arm_2_Canonical",
+      "trial_uuid8": "dc72e707",
+      "persona_source": "Canonical OKG Role (role_health_principal_biostatistician: Principal Clinical Biostatistician)",
+      "persona_char_count": 10729,
+      "artifact_sizes_bytes": {
+        "solution_py": 14679,
+        "metrics_json": 5219,
+        "deliverable_md": 13799
+      },
+      "objective_50": 50,
+      "objective_breakdown": {
+        "c1_cohort_execution": 10,
+        "c2_simpsons_and_hosp_c_confounding": 10,
+        "c3_anc_subgroup_recalibration": 10,
+        "c4_ood_abstention_gate": 10,
+        "c5_fda_samd_pccp_governance": 10
+      },
+      "auditor_50": 39.5,
+      "auditor_breakdown": {
+        "d1": 8.5,
+        "d2": 8.0,
+        "d3": 7.5,
+        "d4": 7.5,
+        "d5": 8.0,
+        "total_50": 39.5,
+        "rank": 3
+      },
+      "combined_100": 89.5
+    },
+    {
+      "task": "task_3",
+      "candidate": "Candidate_B",
+      "arm": "Arm_1_Baseline",
+      "trial_uuid8": "447a047e",
+      "persona_source": "Generic 2-Sentence Specialist Prompt",
+      "persona_char_count": 277,
+      "artifact_sizes_bytes": {
+        "solution_py": 15926,
+        "metrics_json": 5570,
+        "deliverable_md": 17072
+      },
+      "objective_50": 50,
+      "objective_breakdown": {
+        "c1_cohort_execution": 10,
+        "c2_simpsons_and_hosp_c_confounding": 10,
+        "c3_anc_subgroup_recalibration": 10,
+        "c4_ood_abstention_gate": 10,
+        "c5_fda_samd_pccp_governance": 10
+      },
+      "auditor_50": 43.0,
+      "auditor_breakdown": {
+        "d1": 8.5,
+        "d2": 8.5,
+        "d3": 9.0,
+        "d4": 9.0,
+        "d5": 8.0,
+        "total_50": 43.0,
+        "rank": 2
+      },
+      "combined_100": 93.0
+    },
+    {
+      "task": "task_3",
+      "candidate": "Candidate_C",
+      "arm": "Arm_3_Superhuman",
+      "trial_uuid8": "daf52618",
+      "persona_source": "Superhuman Pathway C (sh_custom_lead_clinical_ai_biostatistics_fd_bafbf6be: Superhuman Lead Clinical AI Biostatistics & FDA SaMD Safety Architect)",
+      "persona_char_count": 36324,
+      "artifact_sizes_bytes": {
+        "solution_py": 13749,
+        "metrics_json": 4605,
+        "deliverable_md": 15083
+      },
+      "objective_50": 50,
+      "objective_breakdown": {
+        "c1_cohort_execution": 10,
+        "c2_simpsons_and_hosp_c_confounding": 10,
+        "c3_anc_subgroup_recalibration": 10,
+        "c4_ood_abstention_gate": 10,
+        "c5_fda_samd_pccp_governance": 10
+      },
+      "auditor_50": 47.0,
+      "auditor_breakdown": {
+        "d1": 9.5,
+        "d2": 9.5,
+        "d3": 9.5,
+        "d4": 9.0,
+        "d5": 9.5,
+        "total_50": 47.0,
+        "rank": 1
+      },
+      "combined_100": 97.0
+    }
+  ],
+  "auditor_locked_payload": {
+    "task_1": {
+      "Candidate_A": {
+        "d1": 8.5,
+        "d2": 8.0,
+        "d3": 8.0,
+        "d4": 6.0,
+        "d5": 7.0,
+        "total_50": 37.5,
+        "rank": 3
+      },
+      "Candidate_B": {
+        "d1": 8.5,
+        "d2": 8.5,
+        "d3": 6.5,
+        "d4": 8.5,
+        "d5": 7.0,
+        "total_50": 39.0,
+        "rank": 2
+      },
+      "Candidate_C": {
+        "d1": 9.5,
+        "d2": 9.5,
+        "d3": 9.0,
+        "d4": 8.5,
+        "d5": 9.5,
+        "total_50": 46.0,
+        "rank": 1
+      }
+    },
+    "task_2": {
+      "Candidate_A": {
+        "d1": 9.5,
+        "d2": 9.5,
+        "d3": 9.5,
+        "d4": 8.0,
+        "d5": 9.5,
+        "total_50": 46.0,
+        "rank": 1
+      },
+      "Candidate_B": {
+        "d1": 9.0,
+        "d2": 8.5,
+        "d3": 8.0,
+        "d4": 9.0,
+        "d5": 8.0,
+        "total_50": 42.5,
+        "rank": 2
+      },
+      "Candidate_C": {
+        "d1": 8.5,
+        "d2": 8.5,
+        "d3": 7.0,
+        "d4": 8.5,
+        "d5": 8.0,
+        "total_50": 40.5,
+        "rank": 3
+      }
+    },
+    "task_3": {
+      "Candidate_A": {
+        "d1": 8.5,
+        "d2": 8.0,
+        "d3": 7.5,
+        "d4": 7.5,
+        "d5": 8.0,
+        "total_50": 39.5,
+        "rank": 3
+      },
+      "Candidate_B": {
+        "d1": 8.5,
+        "d2": 8.5,
+        "d3": 9.0,
+        "d4": 9.0,
+        "d5": 8.0,
+        "total_50": 43.0,
+        "rank": 2
+      },
+      "Candidate_C": {
+        "d1": 9.5,
+        "d2": 9.5,
+        "d3": 9.5,
+        "d4": 9.0,
+        "d5": 9.5,
+        "total_50": 47.0,
+        "rank": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "target_leverage": "<= 2.00x Net Debt / LTM EBITDA (2.50x Maintenance Covenant Ceiling)",
+  "liquidity_buffer_billions": 3.296,
+  "num_monte_carlo_paths": 10000,
+  "accounting_identity_max_error": 7.275957614183426e-12,
+  "accounting_identity_passed": true,
+  "modeled_normal_rho": 0.1456,
+  "modeled_crisis_rho": 0.8746,
+  "unhedged_covenant_breach_prob": 0.3193,
+  "structured_covenant_breach_prob": 0.0247,
+  "breach_prob_reduction_abs": 0.2946,
+  "unhedged_p95_net_debt_to_ebitda": 4.3261,
+  "structured_p95_net_debt_to_ebitda": 2.2203,
+  "unhedged_cvar95_fcf_usd_m": -1455.57,
+  "structured_cvar95_fcf_usd_m": 2216.28,
+  "hedging_and_working_capital_actions": [
+    {
+      "instrument": "ASC 815 OTM Rare-Earth Asian Call Spread + Dual-Trigger Contagion Cap",
+      "notional_usd_m": 1240.0,
+      "annual_cost_usd_m": 57.96
+    },
+    {
+      "instrument": "FX Contingent Collar & Basis Cap (+3.5% Cap / -5.5% Short Put)",
+      "notional_usd_m": 1240.0,
+      "annual_cost_usd_m": 21.97
+    },
+    {
+      "instrument": "ASC 860 Non-Recourse True-Sale AR Securitization + Credit-Insured DSO Cap",
+      "facility_limit_usd_m": 680.0,
+      "annual_discount_rate": 0.0615
+    },
+    {
+      "instrument": "ASU 2022-04 Supply-Chain Reverse Factoring (DPO 46d -> 56d)",
+      "working_capital_release_usd_m": 396.0,
+      "reclassification_risk": "Zero (<= 60d industry trade norm)"
+    },
+    {
+      "instrument": "FTZ First-Sale Tariff Valuation & Allied Tier-2 Dual-Source Qualification",
+      "upfront_qual_opex_usd_m": 36.0,
+      "q4_tariff_relief_share": 0.48
+    },
+    {
+      "instrument": "Discretionary CapEx Deferral ($140M/yr), Variable SG&A Flex (5.0%) & Par Debt Sweep",
+      "annual_cash_preservation_usd_m": 380.0,
+      "on_bs_cash_buffer_floor_usd_m": 1800.0
+    }
+  ],
+  "diagnostics": {
+    "unhedged": {
+      "breach_prob": 0.3193,
+      "p95_lev": 4.3260823854425245,
+      "median_lev": 2.182608618695398,
+      "cvar95_fcf": -1455.566162030064,
+      "mean_fcf": 1167.1393199386343,
+      "min_cash_breach_prob": 0.0046,
+      "q4_mean_cash": 3289.186892162584,
+      "max_bs_err": 7.275957614183426e-12,
+      "qtr_breach_probs": [
+        0.0116,
+        0.0501,
+        0.1447,
+        0.3156
+      ],
+      "re_prem_annual_m": 57.9592916823987,
+      "fx_prem_annual_m": 21.973021269262905
+    },
+    "gaussian_linear": {
+      "breach_prob": 0.3449,
+      "p95_lev": 4.319716786105341,
+      "median_lev": 2.232661599203566,
+      "cvar95_fcf": -1394.4244718628856,
+      "mean_fcf": 1095.7133118181746,
+      "min_cash_breach_prob": 0.0033,
+      "q4_mean_cash": 3215.783931540324,
+      "max_bs_err": 7.275957614183426e-12,
+      "qtr_breach_probs": [
+        0.0098,
+        0.0498,
+        0.1576,
+        0.3414
+      ],
+      "re_prem_annual_m": 57.9592916823987,
+      "fx_prem_annual_m": 21.973021269262905
+    },
+    "structured": {
+      "breach_prob": 0.0247,
+      "p95_lev": 2.2202762784380075,
+      "median_lev": 1.4709507067522245,
+      "cvar95_fcf": 2216.2811478655635,
+      "mean_fcf": 3226.3062027899355,
+      "min_cash_breach_prob": 0.0,
+      "q4_mean_cash": 1796.1220605360352,
+      "max_bs_err": 7.275957614183426e-12,
+      "qtr_breach_probs": [
+        0.0,
+        0.0001,
+        0.0051,
+        0.0247
+      ],
+      "re_prem_annual_m": 57.9592916823987,
+      "fx_prem_annual_m": 21.973021269262905
+    },
+    "sensitivity_grid": [
+      {
+        "crisis_rho": 0.15,
+        "tariff_rate": 0.4,
+        "unhedged_breach_prob": 0.2535,
+        "unhedged_p95_lev": 3.454,
+        "structured_breach_prob": 0.0135,
+        "structured_p95_lev": 2.05
+      },
+      {
+        "crisis_rho": 0.15,
+        "tariff_rate": 0.6,
+        "unhedged_breach_prob": 0.3232,
+        "unhedged_p95_lev": 3.768,
+        "structured_breach_prob": 0.019,
+        "structured_p95_lev": 2.155
+      },
+      {
+        "crisis_rho": 0.15,
+        "tariff_rate": 0.8,
+        "unhedged_breach_prob": 0.4075,
+        "unhedged_p95_lev": 4.125,
+        "structured_breach_prob": 0.0265,
+        "structured_p95_lev": 2.273
+      },
+      {
+        "crisis_rho": 0.55,
+        "tariff_rate": 0.4,
+        "unhedged_breach_prob": 0.2512,
+        "unhedged_p95_lev": 3.874,
+        "structured_breach_prob": 0.0177,
+        "structured_p95_lev": 2.111
+      },
+      {
+        "crisis_rho": 0.55,
+        "tariff_rate": 0.6,
+        "unhedged_breach_prob": 0.3187,
+        "unhedged_p95_lev": 4.267,
+        "structured_breach_prob": 0.0243,
+        "structured_p95_lev": 2.224
+      },
+      {
+        "crisis_rho": 0.55,
+        "tariff_rate": 0.8,
+        "unhedged_breach_prob": 0.3957,
+        "unhedged_p95_lev": 4.739,
+        "structured_breach_prob": 0.0335,
+        "structured_p95_lev": 2.337
+      },
+      {
+        "crisis_rho": 0.88,
+        "tariff_rate": 0.4,
+        "unhedged_breach_prob": 0.2532,
+        "unhedged_p95_lev": 3.999,
+        "structured_breach_prob": 0.0205,
+        "structured_p95_lev": 2.13
+      },
+      {
+        "crisis_rho": 0.88,
+        "tariff_rate": 0.6,
+        "unhedged_breach_prob": 0.316,
+        "unhedged_p95_lev": 4.381,
+        "structured_breach_prob": 0.028,
+        "structured_p95_lev": 2.238
+      },
+      {
+        "crisis_rho": 0.88,
+        "tariff_rate": 0.8,
+        "unhedged_breach_prob": 0.3917,
+        "unhedged_p95_lev": 4.849,
+        "structured_breach_prob": 0.0372,
+        "structured_p95_lev": 2.357
+      },
+      {
+        "crisis_rho": 0.95,
+        "tariff_rate": 0.4,
+        "unhedged_breach_prob": 0.2565,
+        "unhedged_p95_lev": 4.07,
+        "structured_breach_prob": 0.0198,
+        "structured_p95_lev": 2.125
+      },
+      {
+        "crisis_rho": 0.95,
+        "tariff_rate": 0.6,
+        "unhedged_breach_prob": 0.3167,
+        "unhedged_p95_lev": 4.476,
+        "structured_breach_prob": 0.0275,
+        "structured_p95_lev": 2.231
+      },
+      {
+        "crisis_rho": 0.95,
+        "tariff_rate": 0.8,
+        "unhedged_breach_prob": 0.3892,
+        "unhedged_p95_lev": 4.933,
+        "structured_breach_prob": 0.037,
+        "structured_p95_lev": 2.351
+      }
+    ]
+  }
+}

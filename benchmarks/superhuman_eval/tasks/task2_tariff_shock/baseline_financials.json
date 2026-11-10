@@ -1,0 +1,69 @@
+{
+  "benchmark_id": "task2_cfo_tariff_rare_earth_shock",
+  "company_profile": "Global AI & Semiconductor Hardware Enterprise (Annualized Baseline in $M)",
+  "annual_baseline_usd_m": {
+    "revenue": 24000.0,
+    "cogs": 14400.0,
+    "opex_sga_rd": 4800.0,
+    "ebitda": 4800.0,
+    "ebitda_margin": 0.2,
+    "depreciation_amortization": 800.0,
+    "gross_debt": 10500.0,
+    "cash": 2100.0,
+    "net_debt": 8400.0,
+    "net_debt_to_ebitda": 1.75,
+    "undrawn_revolver_limit": 1500.0,
+    "debt_interest_rate_annual": 0.055,
+    "revolver_spread_annual": 0.0675,
+    "effective_tax_rate": 0.18,
+    "quarterly_capex_maintenance": 225.0
+  },
+  "initial_balance_sheet_usd_m": {
+    "assets": {
+      "cash_and_equivalents": 2100.0,
+      "accounts_receivable": 3551.0,
+      "inventory": 3472.0,
+      "net_ppe_and_other_noncurrent": 12877.0,
+      "total_assets": 22000.0
+    },
+    "liabilities_and_equity": {
+      "accounts_payable": 1815.0,
+      "accrued_and_other_liabilities": 1685.0,
+      "total_debt": 10500.0,
+      "shareholders_equity": 8000.0,
+      "total_liabilities_and_equity": 22000.0
+    },
+    "working_capital_days": {
+      "dso": 54.0,
+      "dio": 88.0,
+      "dpo": 46.0
+    }
+  },
+  "covenants_and_thresholds": {
+    "max_net_debt_to_ltm_ebitda": 2.5,
+    "min_cash_liquidity_usd_m": 1000.0,
+    "horizon_quarters": 4,
+    "min_monte_carlo_paths": 2000,
+    "random_seed": 20261110
+  },
+  "supply_chain_and_shock_parameters": {
+    "bom_tier2_specialty_substrate_share": 0.38,
+    "tier2_substrate_lead_time_days": 140,
+    "abrupt_tariff_rate_shock": 0.6,
+    "rare_earth_quota_spot_surcharge_mean": 0.28,
+    "rare_earth_quota_spot_surcharge_std": 0.14,
+    "short_run_price_passthrough_fraction_mean": 0.4,
+    "demand_volume_shock_mean": -0.09,
+    "demand_volume_shock_std": 0.06,
+    "fx_adverse_cost_vol_annual_normal": 0.12,
+    "fx_adverse_cost_vol_annual_crisis": 0.26,
+    "tier2_supplier_disruption_prob_quarterly": 0.16,
+    "dso_crisis_elongation_days_mean": 14.0,
+    "correlation_regime": {
+      "normal_pairwise_rho": 0.15,
+      "crisis_pairwise_rho": 0.88,
+      "crisis_regime_probability": 0.35,
+      "student_t_df_crisis": 4
+    }
+  }
+}
