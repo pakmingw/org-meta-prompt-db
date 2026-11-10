@@ -58,25 +58,30 @@ def hydrated_graph(db_conn):
 # ==============================================================================
 
 def test_ranks_strict_contiguity_1_to_500(db_conn, hydrated_graph):
-    """Adversarially asserts that ranks 1..500 are contiguous, unique, and bounded."""
+    """Adversarially asserts that core Fortune 500 ranks 1..500 are contiguous, unique, and bounded."""
     cursor = db_conn.cursor()
+    total_companies = cursor.execute("SELECT count(*) FROM fortune500_companies").fetchone()[0]
+    assert total_companies >= 500, f"Expected >= 500 companies, found {total_companies}"
+
     companies = cursor.execute(
-        "SELECT rank, name, slug, revenue_billions FROM fortune500_companies ORDER BY rank ASC"
+        "SELECT rank, name, slug, revenue_billions FROM fortune500_companies WHERE rank <= 500 ORDER BY rank ASC"
     ).fetchall()
 
-    assert len(companies) == 500, f"Expected exactly 500 companies, found {len(companies)}"
+    assert len(companies) == 500, f"Expected 500 core F500 companies, found {len(companies)}"
 
     ranks = [c[0] for c in companies]
     expected_ranks = list(range(1, 501))
     assert ranks == expected_ranks, "Ranks are not contiguous from 1 to 500"
 
-    # Check uniqueness of slugs and IDs
+    # Check uniqueness of slugs and IDs across all companies
     slugs = [c[2] for c in companies]
     assert len(set(slugs)) == 500, f"Slug collisions detected: {500 - len(set(slugs))} duplicates"
 
     # Graph node verification
-    f500_nodes = [n for n, d in hydrated_graph.nodes(data=True) if d.get("type") == "Fortune500Company"]
-    assert len(f500_nodes) == 500, f"Expected 500 Fortune500Company graph nodes, found {len(f500_nodes)}"
+    all_f500_nodes = [n for n, d in hydrated_graph.nodes(data=True) if d.get("type") == "Fortune500Company"]
+    assert len(all_f500_nodes) >= 500, f"Expected >= 500 Fortune500Company graph nodes, found {len(all_f500_nodes)}"
+    f500_nodes = [n for n in all_f500_nodes if hydrated_graph.nodes[n].get("rank", 999) <= 500]
+    assert len(f500_nodes) == 500, f"Expected 500 core Fortune500Company graph nodes (rank <= 500), found {len(f500_nodes)}"
     graph_ranks = sorted([hydrated_graph.nodes[n]["rank"] for n in f500_nodes])
     assert graph_ranks == expected_ranks, "Graph ranks do not match 1..500 contiguous set"
 
@@ -107,9 +112,9 @@ def test_ranks_bookends_and_prominent_anchors(db_conn):
 
 
 def test_revenue_monotonicity_and_bounds(db_conn):
-    """Adversarially verifies monotonic non-increasing revenue across all ranks."""
+    """Adversarially verifies monotonic non-increasing revenue across core Fortune 500 ranks 1..500."""
     cursor = db_conn.cursor()
-    revs = [r[0] for r in cursor.execute("SELECT revenue_billions FROM fortune500_companies ORDER BY rank ASC").fetchall()]
+    revs = [r[0] for r in cursor.execute("SELECT revenue_billions FROM fortune500_companies WHERE rank <= 500 ORDER BY rank ASC").fetchall()]
 
     assert len(revs) == 500
     assert min(revs) == 7.1, f"Expected minimum revenue $7.1B, got {min(revs)}"
@@ -252,7 +257,7 @@ def test_employs_role_volume_and_degree_bounds(db_conn, hydrated_graph):
     company_degrees = cursor.execute(
         "SELECT company_id, count(*) FROM employs_role GROUP BY company_id"
     ).fetchall()
-    assert len(company_degrees) == 500, f"Expected 500 companies with employment edges, got {len(company_degrees)}"
+    assert len(company_degrees) >= 500, f"Expected >= 500 companies with employment edges, got {len(company_degrees)}"
     min_comp_deg = min(d[1] for d in company_degrees)
     max_comp_deg = max(d[1] for d in company_degrees)
     assert min_comp_deg >= 10, f"Company with insufficient roles: min is {min_comp_deg} (< 10)"
@@ -264,11 +269,16 @@ def test_employs_role_volume_and_degree_bounds(db_conn, hydrated_graph):
     min_role_deg = min(d[1] for d in role_degrees)
     assert min_role_deg >= 1, f"Role with 0 companies found: min is {min_role_deg}"
 
-    # CEO must be employed by all 500 companies
-    ceo_count = cursor.execute(
+    # CEO must be employed by all 500 core F500 companies (and >= 500 total)
+    ceo_core_count = cursor.execute(
+        "SELECT count(*) FROM employs_role WHERE role_id = 'role_exec_chief_executive_officer' "
+        "AND company_id IN (SELECT id FROM fortune500_companies WHERE rank <= 500)"
+    ).fetchone()[0]
+    assert ceo_core_count == 500, f"Expected CEO to be employed by 500 core F500 companies, got {ceo_core_count}"
+    ceo_total = cursor.execute(
         "SELECT count(*) FROM employs_role WHERE role_id = 'role_exec_chief_executive_officer'"
     ).fetchone()[0]
-    assert ceo_count == 500, f"Expected CEO to be employed by 500 companies, got {ceo_count}"
+    assert ceo_total >= 500, f"Expected CEO to be employed by >= 500 companies, got {ceo_total}"
 
 
 def test_referential_integrity_bipartite_edges(db_conn):

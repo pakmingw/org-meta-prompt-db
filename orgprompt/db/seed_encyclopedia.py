@@ -126,7 +126,7 @@ def seed_encyclopedia(
     cur = conn.cursor()
     companies = cur.execute(
         "SELECT id, slug, name, rank, revenue_billions, macro_industry, industry_id, sub_sector, business_model, operating_archetype "
-        "FROM fortune500_companies ORDER BY rank ASC"
+        "FROM fortune500_companies WHERE rank <= 500 ORDER BY rank ASC"
     ).fetchall()
 
     if len(companies) != 500:

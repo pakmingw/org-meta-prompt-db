@@ -2383,7 +2383,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: American Express links to 55 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: American Express links to 55 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Diversified Financials Solutions Architect, Principal American Express Diversified Financials Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 82.0%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2424,7 +2424,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Caterpillar links to 54 canonical roles in `org_knowledge_base.db` (Chief Automation Officer (Lights-Out Manufacturing), Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Caterpillar links to 54 canonical roles in `org_knowledge_base.db` (Chief Automation Officer (Lights-Out Manufacturing), Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Construction and Farm Machinery Solutions Architect, Principal Caterpillar Construction and Farm Machinery Operations Manager, Director of Autonomous Mobility Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 83.1%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2465,7 +2465,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: MetLife links to 53 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: MetLife links to 53 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Insurance: Life, Health (stock) Solutions Architect, Principal MetLife Insurance: Life, Health (stock) Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 83.9%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2506,7 +2506,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: HCA Healthcare links to 54 canonical roles in `org_knowledge_base.db` (Attending Cardiothoracic Surgeon, Attending Critical Care Intensivist, Chair of Cardiovascular Surgery & M&M Board, Chair of Surgical Morbidity & Mortality (M&M) Review, Chief Executive Officer (CEO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: HCA Healthcare links to 54 canonical roles in `org_knowledge_base.db` (Attending Cardiothoracic Surgeon, Attending Critical Care Intensivist, Chair of Cardiovascular Surgery & M&M Board, Chair of Surgical Morbidity & Mortality (M&M) Review, Chief Customs & Digital Freight Platform Officer and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Health Care: Medical Facilities Solutions Architect, Principal HCA Healthcare Health Care: Medical Facilities Operations Manager, Director of Healthcare Systems Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 83.2%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2547,7 +2547,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Progressive links to 55 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Progressive links to 55 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Insurance: Property and Casualty (Stock) Solutions Architect, Principal Progressive Insurance: Property and Casualty (Stock) Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 83.6%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2588,7 +2588,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: IBM links to 54 canonical roles in `org_knowledge_base.db` (Chief Cloud Infrastructure Architect, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: IBM links to 54 canonical roles in `org_knowledge_base.db` (Chief Cloud Infrastructure Architect, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Information Technology Services Solutions Architect, Principal IBM Information Technology Services Operations Manager, Director of Technology Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 82.1%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2629,7 +2629,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Deere links to 54 canonical roles in `org_knowledge_base.db` (Chief Automation Officer (Lights-Out Manufacturing), Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Deere links to 54 canonical roles in `org_knowledge_base.db` (Chief Automation Officer (Lights-Out Manufacturing), Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Construction and Farm Machinery Solutions Architect, Principal Deere Construction and Farm Machinery Operations Manager, Director of Autonomous Mobility Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 87.4%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2670,7 +2670,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Nvidia links to 55 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Nvidia links to 55 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Semiconductors and Other Electronic Components Solutions Architect, Principal Nvidia Semiconductors and Other Electronic Components Operations Manager, Director of Semiconductors & Advanced Hardware Manufacturing Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 84.5%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2711,7 +2711,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: StoneX Group links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: StoneX Group links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Diversified Financials Solutions Architect, Principal StoneX Group Diversified Financials Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 79.0%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2752,7 +2752,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Merck links to 53 canonical roles in `org_knowledge_base.db` (21 CFR Part 11 Electronic Records & Data Integrity Auditor, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Merck links to 53 canonical roles in `org_knowledge_base.db` (21 CFR Part 11 Electronic Records & Data Integrity Auditor, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Pharmaceuticals Solutions Architect, Principal Merck Pharmaceuticals Operations Manager, Director of Pharmaceuticals Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 87.8%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2793,7 +2793,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: ConocoPhillips links to 54 canonical roles in `org_knowledge_base.db` (Chief Energy Regulatory & FERC Compliance Counsel, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Grid Transmission & Interconnection Officer, Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: ConocoPhillips links to 54 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Energy Regulatory & FERC Compliance Counsel, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Mining, Crude-Oil Production Solutions Architect, Principal ConocoPhillips Mining, Crude-Oil Production Operations Manager, Director of Energy Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 84.7%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2834,7 +2834,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Pfizer links to 55 canonical roles in `org_knowledge_base.db` (21 CFR Part 11 Electronic Records & Data Integrity Auditor, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Pfizer links to 55 canonical roles in `org_knowledge_base.db` (21 CFR Part 11 Electronic Records & Data Integrity Auditor, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Pharmaceuticals Solutions Architect, Principal Pfizer Pharmaceuticals Operations Manager, Director of Pharmaceuticals Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 79.4%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2876,7 +2876,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Delta Air Lines links to 54 canonical roles in `org_knowledge_base.db` (Certified Dangerous Goods & IMDG Hazmat Specialist, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Delta Air Lines links to 54 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Certified Dangerous Goods & IMDG Hazmat Specialist, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Airlines Solutions Architect, Principal Delta Air Lines Airlines Operations Manager, Director of Global Logistics Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 89.4%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2918,7 +2918,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: TD Synnex links to 54 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: TD Synnex links to 54 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Wholesalers: Electronics and Office Equipment Solutions Architect, Principal TD Synnex Wholesalers: Electronics and Office Equipment Operations Manager, Director of Retail Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 88.5%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -2960,7 +2960,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Publix Super Markets links to 55 canonical roles in `org_knowledge_base.db` (Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Publix Super Markets links to 55 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Food & Drug Stores Solutions Architect, Principal Publix Super Markets Food & Drug Stores Operations Manager, Director of Retail Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 86.1%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3001,7 +3001,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Allstate links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Allstate links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Insurance: Property and Casualty (Stock) Solutions Architect, Principal Allstate Insurance: Property and Casualty (Stock) Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 80.3%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3043,7 +3043,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Cisco Systems links to 53 canonical roles in `org_knowledge_base.db` (Chief Cloud Infrastructure Architect, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Cisco Systems links to 53 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Cloud Infrastructure Architect, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Network and Other Communications Equipment Solutions Architect, Principal Cisco Systems Network and Other Communications Equipment Operations Manager, Director of Technology Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 90.9%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3084,7 +3084,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Nationwide links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Nationwide links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Insurance: Property and Casualty (Mutual) Solutions Architect, Principal Nationwide Insurance: Property and Casualty (Mutual) Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 89.6%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3126,7 +3126,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Charter Communications links to 55 canonical roles in `org_knowledge_base.db` (Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Charter Communications links to 55 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Telecommunications Solutions Architect, Principal Charter Communications Telecommunications Operations Manager, Director of Telecommunications & Digital Networks Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 78.9%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3167,7 +3167,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: AbbVie links to 54 canonical roles in `org_knowledge_base.db` (21 CFR Part 11 Electronic Records & Data Integrity Auditor, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: AbbVie links to 54 canonical roles in `org_knowledge_base.db` (21 CFR Part 11 Electronic Records & Data Integrity Auditor, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Pharmaceuticals Solutions Architect, Principal AbbVie Pharmaceuticals Operations Manager, Director of Pharmaceuticals Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 82.6%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3208,7 +3208,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: New York Life Insurance links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: New York Life Insurance links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Insurance: Life, Health (Mutual) Solutions Architect, Principal New York Life Insurance Insurance: Life, Health (Mutual) Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 80.4%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3625,7 +3625,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Nike links to 53 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Nike links to 53 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Apparel Solutions Architect, Principal Nike Apparel Operations Manager, Director of Retail Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 92.5%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3666,7 +3666,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Oracle links to 54 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Cloud Infrastructure Architect, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Oracle links to 54 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Cloud Infrastructure Architect, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Computer Software Solutions Architect, Principal Oracle Computer Software Operations Manager, Director of Technology Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 79.9%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3707,7 +3707,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Enterprise Products Partners links to 55 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Energy Regulatory & FERC Compliance Counsel, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Enterprise Products Partners links to 55 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Energy Regulatory & FERC Compliance Counsel, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Grid Transmission & Interconnection Officer and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Pipelines Solutions Architect, Principal Enterprise Products Partners Pipelines Operations Manager, Director of Energy Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 78.7%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3748,7 +3748,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Capital One Financial links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Capital One Financial links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Commercial Banks Solutions Architect, Principal Capital One Financial Commercial Banks Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 82.5%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3789,7 +3789,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Plains GP Holdings links to 54 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Energy Regulatory & FERC Compliance Counsel, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Plains GP Holdings links to 54 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Energy Regulatory & FERC Compliance Counsel, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Grid Transmission & Interconnection Officer and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Pipelines Solutions Architect, Principal Plains GP Holdings Pipelines Operations Manager, Director of Energy Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 86.4%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3830,7 +3830,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: World Kinect links to 55 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Energy Regulatory & FERC Compliance Counsel, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: World Kinect links to 55 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Energy Regulatory & FERC Compliance Counsel, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Grid Transmission & Interconnection Officer and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Energy Solutions Architect, Principal World Kinect Energy Operations Manager, Director of Energy Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 89.4%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3871,7 +3871,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: AIG links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: AIG links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Insurance: Property and Casualty (Stock) Solutions Architect, Principal AIG Insurance: Property and Casualty (Stock) Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 84.2%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3913,7 +3913,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Coca-Cola links to 53 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Coca-Cola links to 53 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 48 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Beverages Solutions Architect, Principal Coca-Cola Beverages Operations Manager, Director of Retail Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 84.4%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3954,7 +3954,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: TIAA links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: TIAA links to 54 canonical roles in `org_knowledge_base.db` (Alternative Data Quantitative Researcher, Basel III/IV FRTB Capital Adequacy Lead, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Insurance: Life, Health (Mutual) Solutions Architect, Principal TIAA Insurance: Life, Health (Mutual) Operations Manager, Director of Finance Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 83.0%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -3996,7 +3996,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: CHS links to 55 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: CHS links to 55 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Food Production Solutions Architect, Principal CHS Food Production Operations Manager, Director of Retail Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 90.0%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -4037,7 +4037,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Bristol-Myers Squibb links to 54 canonical roles in `org_knowledge_base.db` (21 CFR Part 11 Electronic Records & Data Integrity Auditor, C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Bristol-Myers Squibb links to 54 canonical roles in `org_knowledge_base.db` (21 CFR Part 11 Electronic Records & Data Integrity Auditor, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Pharmaceuticals Solutions Architect, Principal Bristol-Myers Squibb Pharmaceuticals Operations Manager, Director of Pharmaceuticals Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 81.8%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -4078,7 +4078,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Dow links to 54 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Dow links to 54 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 49 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Chemicals Solutions Architect, Principal Dow Chemicals Operations Manager, Director of Semiconductors & Advanced Hardware Manufacturing Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 80.6%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 
@@ -4120,7 +4120,7 @@ Public workforce intelligence and recruitment disclosures highlight key speciali
 These roles leverage a dual-layer software stack combining horizontal productivity applications (`WORD_PROCESSOR`, `SPREADSHEET_PROCESSOR`, `SLIDE_PRESENTER`, `MEETING_NOTE_TAKER`, `COMMUNICATION_TRIAGE`, `BI_ANALYTICS`) with vertical enterprise systems (ERP, SCM, CRM, and proprietary analytics platforms).
 
 ### C. Side-by-Side Comparison: Internet Ground Truth vs. org_knowledge_base.db
-- **Exact Matches (DB Mapped Roles)**: Best Buy links to 55 canonical roles in `org_knowledge_base.db` (C-TPAT & Supply Chain Anti-Terrorism Officer, Chief Customs & Digital Freight Platform Officer, Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
+- **Exact Matches (DB Mapped Roles)**: Best Buy links to 55 canonical roles in `org_knowledge_base.db` (Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Human Resources Officer (CHRO), Chief Information Security Officer (CISO), Chief Legal Officer & General Counsel (CLO) and 50 more), establishing deep coverage across strategic leadership and operational tiers.
 - **Bespoke Role Deltas**: Specialized market profiles (Lead Specialty Retailers: Other Solutions Architect, Principal Best Buy Specialty Retailers: Other Operations Manager, Director of Retail Regulatory Governance) represent bespoke operational extensions. Overall taxonomy alignment score is 86.1%.
 - **Tailored Personal Subagent Swarm Recommendation**:
 

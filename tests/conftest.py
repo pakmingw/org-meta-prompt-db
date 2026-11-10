@@ -246,13 +246,41 @@ def cleanup_disk_db():
                     conn.execute("DELETE FROM canonical_roles WHERE slug LIKE 'adversarial_verification_%'")
                     conn.execute("DELETE FROM canonical_roles WHERE slug LIKE 'temp_%'")
                     conn.execute("DELETE FROM canonical_roles WHERE slug LIKE 'stripe_%'")
-                    # Clean up test companies and related expansion records
-                    conn.execute("DELETE FROM role_subagent_swarms WHERE role_id LIKE 'role_stripe_%'")
-                    conn.execute("DELETE FROM role_genai_plans WHERE role_id LIKE 'role_stripe_%'")
-                    conn.execute("DELETE FROM role_tooling WHERE role_id LIKE 'role_stripe_%'")
-                    conn.execute("DELETE FROM role_use_cases WHERE role_id LIKE 'role_stripe_%'")
-                    conn.execute("DELETE FROM employs_role WHERE company_id IN (SELECT id FROM fortune500_companies WHERE rank >= 501 OR slug = 'stripe')")
-                    conn.execute("DELETE FROM fortune500_companies WHERE rank >= 501 OR slug = 'stripe'")
+                    conn.execute("DELETE FROM canonical_roles WHERE slug LIKE 'barebones_corp_%'")
+                    conn.execute("DELETE FROM canonical_roles WHERE slug LIKE 'idempotent_global_tech_%'")
+                    conn.execute("DELETE FROM canonical_roles WHERE slug LIKE 'l_oreal_%'")
+                    conn.execute("DELETE FROM canonical_roles WHERE slug LIKE 'acme_%'")
+                    conn.execute("DELETE FROM canonical_roles WHERE slug LIKE 'mock_%'")
+                    # Clean up test companies and bespoke roles linked to them (preserving f500_orange_france & real onboarded companies)
+                    test_company_where = (
+                        "slug IN ('stripe', 'barebones_corp', 'idempotent_global_tech') "
+                        "OR slug LIKE 'l_oreal%' "
+                        "OR slug LIKE 'test_%' "
+                        "OR slug LIKE 'acme%' "
+                        "OR slug LIKE 'mock_%'"
+                    )
+                    test_bespoke_subquery = (
+                        f"SELECT role_id FROM employs_role "
+                        f"WHERE company_id IN (SELECT id FROM fortune500_companies WHERE {test_company_where}) "
+                        f"AND metadata_json LIKE '%is_bespoke%'"
+                    )
+                    test_role_filter = (
+                        f"role_id IN ({test_bespoke_subquery}) "
+                        "OR role_id LIKE 'role_stripe_%' "
+                        "OR role_id LIKE 'role_barebones_corp_%' "
+                        "OR role_id LIKE 'role_idempotent_global_tech_%' "
+                        "OR role_id LIKE 'role_l_oreal_%' "
+                        "OR role_id LIKE 'role_test_%' "
+                        "OR role_id LIKE 'role_acme_%' "
+                        "OR role_id LIKE 'role_mock_%'"
+                    )
+                    conn.execute(f"DELETE FROM role_subagent_swarms WHERE {test_role_filter}")
+                    conn.execute(f"DELETE FROM role_genai_plans WHERE {test_role_filter}")
+                    conn.execute(f"DELETE FROM role_tooling WHERE {test_role_filter}")
+                    conn.execute(f"DELETE FROM role_use_cases WHERE {test_role_filter}")
+                    conn.execute(f"DELETE FROM canonical_roles WHERE id IN ({test_bespoke_subquery})")
+                    conn.execute(f"DELETE FROM employs_role WHERE company_id IN (SELECT id FROM fortune500_companies WHERE {test_company_where})")
+                    conn.execute(f"DELETE FROM fortune500_companies WHERE {test_company_where}")
                     # Clean up test artifacts matching test slugs or orphaned
                     conn.execute("""
                         DELETE FROM artifacts

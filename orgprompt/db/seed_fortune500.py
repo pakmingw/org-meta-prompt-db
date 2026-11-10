@@ -384,9 +384,15 @@ def generate_employs_role_edges(conn: sqlite3.Connection) -> List[Dict[str, Any]
     """Generates >= 15,000 deterministic 4-tier bipartite employment edges with 0 orphan roles."""
     cursor = conn.cursor()
     companies = cursor.execute(
-        "SELECT id, slug, industry_id, operating_archetype FROM fortune500_companies ORDER BY rank ASC"
+        "SELECT id, slug, industry_id, operating_archetype FROM fortune500_companies WHERE rank <= 500 ORDER BY rank ASC"
     ).fetchall()
     roles = cursor.execute("SELECT id, slug, role_archetype, seniority_level, org_unit_id FROM canonical_roles").fetchall()
+    existing_onboarded_employed = set(
+        r[0]
+        for r in cursor.execute(
+            "SELECT DISTINCT role_id FROM employs_role WHERE company_id IN (SELECT id FROM fortune500_companies WHERE rank > 500)"
+        ).fetchall()
+    )
     role_map = {r[1]: r[0] for r in roles}  # slug -> id
     unit_role_map: Dict[str, List[str]] = {}
     for r in roles:
@@ -496,7 +502,7 @@ def generate_employs_role_edges(conn: sqlite3.Connection) -> List[Dict[str, Any]
                 })
 
     # Zero-Orphan Guarantee Pass: Connect any canonical role lacking employment edges
-    employed_roles = set(e["role_id"] for e in edges)
+    employed_roles = set(e["role_id"] for e in edges) | existing_onboarded_employed
     all_role_ids = set(r[0] for r in roles)
     orphans = all_role_ids - employed_roles
 

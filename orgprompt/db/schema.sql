@@ -430,3 +430,27 @@ CREATE TABLE IF NOT EXISTS role_genai_plans (
 
 CREATE INDEX IF NOT EXISTS idx_rgp_role ON role_genai_plans(role_id);
 
+-- ==============================================================================
+-- 18. Superhuman Role Profiles Table (Phase 12 Polymathic & OOD Synthesis)
+-- ==============================================================================
+CREATE TABLE IF NOT EXISTS superhuman_role_profiles (
+    id TEXT PRIMARY KEY,
+    slug TEXT NOT NULL UNIQUE,
+    title TEXT NOT NULL,
+    problem_statement TEXT NOT NULL,
+    primary_role_id TEXT,
+    adjacent_role_ids_json TEXT NOT NULL DEFAULT '[]',
+    academic_foundation_json TEXT NOT NULL DEFAULT '{}',
+    on_the_job_crucibles_json TEXT NOT NULL DEFAULT '{}',
+    human_characteristics_json TEXT NOT NULL DEFAULT '{}',
+    unknown_problem_protocol_json TEXT NOT NULL DEFAULT '{}',
+    developer_context TEXT DEFAULT '',
+    deep_superhuman_prompt TEXT NOT NULL,
+    package_json TEXT NOT NULL DEFAULT '{}',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_srp_slug ON superhuman_role_profiles(slug);
+CREATE INDEX IF NOT EXISTS idx_srp_primary_role ON superhuman_role_profiles(primary_role_id);
+
+

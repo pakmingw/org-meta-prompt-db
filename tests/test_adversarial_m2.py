@@ -41,6 +41,7 @@ def test_adv_01_complete_null_and_empty_check(db: sqlite3.Connection):
                 assert val.strip() != "", f"Empty string in tools column {idx} for row {row[0]}"
 
     # 2. role_use_cases table
+    total_roles = cur.execute("SELECT COUNT(*) FROM canonical_roles").fetchone()[0]
     cur.execute("""
         SELECT id, role_id, title, cadence, trigger_event, inputs_consumed_json,
                horizontal_tools_json, vertical_tools_json, cognitive_bottlenecks,
@@ -48,7 +49,9 @@ def test_adv_01_complete_null_and_empty_check(db: sqlite3.Connection):
         FROM role_use_cases
     """)
     use_cases = cur.fetchall()
-    assert len(use_cases) == 2735, f"Expected exactly 2735 use cases, got {len(use_cases)}"
+    assert len(use_cases) >= 2735 and len(use_cases) == 5 * total_roles, (
+        f"Expected 5 * {total_roles} = {5 * total_roles} use cases (>= 2735), got {len(use_cases)}"
+    )
     for row in use_cases:
         for idx, val in enumerate(row):
             assert val is not None, f"NULL found in role_use_cases column {idx} for uc {row[0]}"
@@ -67,15 +70,16 @@ def test_adv_01_complete_null_and_empty_check(db: sqlite3.Connection):
 
 
 def test_adv_02_json_parse_and_non_empty_arrays(db: sqlite3.Connection):
-    """Stress test JSON parsing across all 2,735 use cases and verify non-empty array elements."""
+    """Stress test JSON parsing across all role use cases (>= 2,735) and verify non-empty array elements."""
     cur = db.cursor()
+    total_roles = cur.execute("SELECT COUNT(*) FROM canonical_roles").fetchone()[0]
     cur.execute("""
         SELECT id, inputs_consumed_json, horizontal_tools_json, vertical_tools_json,
                output_artifacts_json, metadata_json
         FROM role_use_cases
     """)
     rows = cur.fetchall()
-    assert len(rows) == 2735
+    assert len(rows) >= 2735 and len(rows) == 5 * total_roles
 
     for uc_id, inps_j, htools_j, vtools_j, outs_j, meta_j in rows:
         # Inputs
@@ -145,11 +149,11 @@ def test_adv_03_tool_id_referential_integrity(db: sqlite3.Connection):
 
 
 def test_adv_04_cadence_distribution_across_roles(db: sqlite3.Connection):
-    """Verify cadence distribution across all 547 roles: exactly 1 of each (DAILY, WEEKLY, MONTHLY, QUARTERLY, AD_HOC)."""
+    """Verify cadence distribution across all canonical roles (>= 547): exactly 1 of each (DAILY, WEEKLY, MONTHLY, QUARTERLY, AD_HOC)."""
     cur = db.cursor()
     cur.execute("SELECT id FROM canonical_roles")
     role_ids = [row[0] for row in cur.fetchall()]
-    assert len(role_ids) == 547, f"Expected 547 canonical roles, got {len(role_ids)}"
+    assert len(role_ids) >= 547, f"Expected >= 547 canonical roles, got {len(role_ids)}"
 
     expected_cadences = {"DAILY", "WEEKLY", "MONTHLY", "QUARTERLY", "AD_HOC"}
 
@@ -169,7 +173,7 @@ def test_adv_04_cadence_distribution_across_roles(db: sqlite3.Connection):
     cur.execute("SELECT cadence, COUNT(*) FROM role_use_cases GROUP BY cadence")
     totals = dict(cur.fetchall())
     for cad in expected_cadences:
-        assert totals.get(cad) == 547, f"Cadence {cad} count {totals.get(cad)} != 547"
+        assert totals.get(cad) == len(role_ids), f"Cadence {cad} count {totals.get(cad)} != {len(role_ids)}"
 
 
 def test_adv_05_query_latency_benchmarks(db: sqlite3.Connection):

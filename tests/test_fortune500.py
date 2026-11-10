@@ -31,25 +31,30 @@ def expansion_graph(expansion_db_conn):
 
 
 def test_fortune500_companies_count_and_ranks(expansion_db_conn, expansion_graph):
-    """Verifies exactly 500 companies with contiguous ranks 1..500 in SQLite and NetworkX."""
+    """Verifies 500 core Fortune 500 companies with contiguous ranks 1..500 (plus any permanently onboarded rank > 500 companies)."""
     cursor = expansion_db_conn.cursor()
+    total_companies = cursor.execute("SELECT count(*) FROM fortune500_companies").fetchone()[0]
+    assert total_companies >= 500, f"Expected >= 500 companies in SQLite, got {total_companies}"
+
     companies = cursor.execute(
-        "SELECT rank, name, slug, revenue_billions FROM fortune500_companies ORDER BY rank ASC"
+        "SELECT rank, name, slug, revenue_billions FROM fortune500_companies WHERE rank <= 500 ORDER BY rank ASC"
     ).fetchall()
 
-    assert len(companies) == 500, f"Expected 500 companies in SQLite, got {len(companies)}"
+    assert len(companies) == 500, f"Expected 500 core Fortune 500 companies in SQLite, got {len(companies)}"
     ranks = [c[0] for c in companies]
     assert ranks == list(range(1, 501)), "Ranks must be strictly contiguous from 1 to 500 without gaps"
 
     # NetworkX verification
-    f500_nodes = [n for n, d in expansion_graph.nodes(data=True) if d.get("type") == "Fortune500Company"]
-    assert len(f500_nodes) == 500, f"Expected 500 Fortune500Company nodes in graph, got {len(f500_nodes)}"
+    all_f500_nodes = [n for n, d in expansion_graph.nodes(data=True) if d.get("type") == "Fortune500Company"]
+    assert len(all_f500_nodes) >= 500, f"Expected >= 500 Fortune500Company nodes in graph, got {len(all_f500_nodes)}"
+    f500_nodes = [n for n in all_f500_nodes if expansion_graph.nodes[n].get("rank", 999) <= 500]
+    assert len(f500_nodes) == 500, f"Expected 500 core Fortune500Company nodes (rank <= 500) in graph, got {len(f500_nodes)}"
     graph_ranks = sorted([expansion_graph.nodes[n].get("rank") for n in f500_nodes])
     assert graph_ranks == list(range(1, 501)), "Graph node ranks must be strictly contiguous 1..500"
 
 
 def test_fortune500_revenue_sanity(expansion_db_conn):
-    """Verifies revenue bookends and monotonicity."""
+    """Verifies revenue bookends and monotonicity across core Fortune 500 ranks 1..500."""
     cursor = expansion_db_conn.cursor()
     c1 = cursor.execute("SELECT name, revenue_billions FROM fortune500_companies WHERE rank = 1").fetchone()
     c500 = cursor.execute("SELECT name, revenue_billions FROM fortune500_companies WHERE rank = 500").fetchone()
@@ -59,7 +64,7 @@ def test_fortune500_revenue_sanity(expansion_db_conn):
     assert c500[0] == "O-I Glass"
     assert c500[1] == 7.1
 
-    all_revs = [r[0] for r in cursor.execute("SELECT revenue_billions FROM fortune500_companies ORDER BY rank ASC").fetchall()]
+    all_revs = [r[0] for r in cursor.execute("SELECT revenue_billions FROM fortune500_companies WHERE rank <= 500 ORDER BY rank ASC").fetchall()]
     assert all(rev > 0 for rev in all_revs), "All revenues must be positive"
     for i in range(len(all_revs) - 1):
         assert all_revs[i] >= all_revs[i + 1], f"Revenue out of order at rank {i+1}: {all_revs[i]} < {all_revs[i+1]}"
@@ -192,7 +197,11 @@ def test_company_role_graph_traversal(expansion_graph):
     employing_companies = [
         u for u, v, d in expansion_graph.in_edges(ceo_node, data=True) if d.get("type") == "EMPLOYS_ROLE"
     ]
-    assert len(employing_companies) == 500, f"Expected 500 companies employing CEO, got {len(employing_companies)}"
+    core_f500_employing = [
+        u for u in employing_companies if expansion_graph.nodes[u].get("rank", 999) <= 500
+    ]
+    assert len(core_f500_employing) == 500, f"Expected 500 core F500 companies employing CEO, got {len(core_f500_employing)}"
+    assert len(employing_companies) >= 500, f"Expected >= 500 companies employing CEO, got {len(employing_companies)}"
 
 
 def test_seed_fortune500_json_validity():

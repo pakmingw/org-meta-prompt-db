@@ -62,7 +62,9 @@ def test_graph_scale_and_edge_types(persistent_graph: nx.MultiDiGraph):
     industries = [n for n, d in g.nodes(data=True) if d.get("type") == "Industry"]
 
     assert len(roles) >= 540, f"Expected >= 540 roles, got {len(roles)}"
-    assert len(f500_cos) == 500, f"Expected exactly 500 F500 companies, got {len(f500_cos)}"
+    assert len(f500_cos) >= 500, f"Expected >= 500 F500 companies, got {len(f500_cos)}"
+    core_f500_cos = [n for n in f500_cos if g.nodes[n].get("rank", 999) <= 500]
+    assert len(core_f500_cos) == 500, f"Expected exactly 500 core F500 companies (rank <= 500), got {len(core_f500_cos)}"
     assert len(units) >= 130, f"Expected >= 130 org units, got {len(units)}"
     assert len(industries) == 16, f"Expected 16 industries, got {len(industries)}"
 
@@ -98,9 +100,19 @@ def test_role_degree_distribution_metrics(persistent_graph: nx.MultiDiGraph):
         employs_in_degrees.append(emp_in)
         workflow_in_degrees.append(wf_in)
 
-    # 1. Zero-orphan verification: all roles must have in-degree > 0
+    # 1. Zero-orphan verification: all roles must have in-degree > 0 (bespoke single-company roles >= 1, core F500 roles >= 6)
     min_in = min(in_degrees)
-    assert min_in >= 6, f"Expected minimum in-degree >= 6, found {min_in}"
+    assert min_in >= 1, f"Expected minimum in-degree >= 1, found {min_in}"
+    core_in_degrees = [
+        len(list(g.in_edges(r, data=True)))
+        for r in role_nodes
+        if any(
+            g.nodes[u].get("rank", 999) <= 500
+            for u, _, d in g.in_edges(r, data=True)
+            if d.get("type") == "EMPLOYS_ROLE"
+        )
+    ]
+    assert min(core_in_degrees) >= 6, f"Expected minimum core F500 role in-degree >= 6, found {min(core_in_degrees)}"
 
     # 2. Maximum in-degree: C-suite / corporate leadership roles should have in-degree >= 500
     max_in = max(in_degrees)
@@ -199,7 +211,7 @@ def test_company_role_multihop_traversal_speed(persistent_graph: nx.MultiDiGraph
         t0 = time.perf_counter()
         employers = [u for u, _, d in g.in_edges(r, data=True) if d.get("type") == "EMPLOYS_ROLE"]
         dur = (time.perf_counter() - t0) * 1000
-        assert len(employers) >= 6
+        assert len(employers) >= 1
         assert dur < 5.0, f"Role traversal took {dur:.2f}ms (> 5.0ms)"
 
 

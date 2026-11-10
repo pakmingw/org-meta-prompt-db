@@ -30,6 +30,7 @@ from orgprompt.scaffolder.company_scaffolder import CompanyScaffolder
 from orgprompt.scaffolder.role_scaffolder import RoleScaffolder
 from orgprompt.search.benchmark import RetrievalBenchmark
 from orgprompt.search.hybrid import HybridSearchEngine
+from orgprompt.superhuman.synthesizer import SuperhumanRoleSynthesizer
 from orgprompt.synthesizer.team_builder import TeamSynthesizer
 from orgprompt.synthesizer.workflow_engine import WorkflowEngine
 
@@ -798,6 +799,229 @@ def company_onboard_cmd(
         for v in res.violations:
             console.print(f"[yellow]Violation:[/yellow] {v}")
         sys.exit(1)
+
+
+# ---------------------------------------------------------------------------
+# Superhuman Role Synthesis Command Group (Phase 12)
+# ---------------------------------------------------------------------------
+
+@cli.group(name="superhuman")
+def superhuman_group() -> None:
+    """Polymathic Superhuman Role synthesis, Perfect Human pedigree & OOD epistemology."""
+    pass
+
+
+@superhuman_group.command(name="synthesize")
+@click.option("--problem", "-p", default=None, help="Target problem statement (known or frontier/OOD).")
+@click.option("--role", "-r", default=None, help="Canonical role ID, slug, or title.")
+@click.option(
+    "--custom-role-file",
+    "-crf",
+    type=click.Path(exists=True, dir_okay=False),
+    default=None,
+    help="Path to JSON or Markdown/text custom role definition from an external agent.",
+)
+@click.option("--custom-role-title", default=None, help="Ad-hoc custom role title.")
+@click.option("--custom-role-prompt", default=None, help="Ad-hoc custom role prompt or description.")
+@click.option("--company", "-c", default=None, help="Optional enterprise/company context.")
+@click.option(
+    "--developer-context",
+    "-dc",
+    default=None,
+    help="Developer-complemented domain axioms, constraints, or proprietary context.",
+)
+@click.option(
+    "--context-file",
+    "-cf",
+    type=click.Path(exists=True, dir_okay=False),
+    default=None,
+    help="Path to file containing developer-complemented domain context.",
+)
+@click.option("--adjacent-k", default=4, type=int, show_default=True, help="Number of OKG neighbors to fuse.")
+@click.option("--persist/--no-persist", default=False, show_default=True, help="Persist profile to SQLite.")
+@click.option(
+    "--format",
+    "-f",
+    "output_format",
+    default="markdown",
+    type=click.Choice(["markdown", "md", "json"], case_sensitive=False),
+    show_default=True,
+    help="Export format (markdown or json).",
+)
+@click.option("--output", "-o", "output_path", default=None, help="Output file path to save package.")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option(
+    "--json-output",
+    "--json",
+    "json_output",
+    is_flag=True,
+    help="Output synthesized package as structured JSON.",
+)
+def superhuman_synthesize_cmd(
+    problem: Optional[str],
+    role: Optional[str],
+    custom_role_file: Optional[str],
+    custom_role_title: Optional[str],
+    custom_role_prompt: Optional[str],
+    company: Optional[str],
+    developer_context: Optional[str],
+    context_file: Optional[str],
+    adjacent_k: int,
+    persist: bool,
+    output_format: str,
+    output_path: Optional[str],
+    db_path: Optional[str],
+    json_output: bool,
+) -> None:
+    """Synthesizes a Superhuman Role Definition & 8-Section Deep Meta-Prompt."""
+    custom_spec: Any = None
+    if custom_role_file:
+        p = Path(custom_role_file)
+        raw_txt = p.read_text(encoding="utf-8").strip()
+        if p.suffix.lower() == ".json" or raw_txt.startswith("{"):
+            custom_spec = json.loads(raw_txt)
+            if custom_role_title:
+                custom_spec["title"] = custom_role_title
+            if custom_role_prompt:
+                custom_spec["system_prompt"] = custom_role_prompt
+        else:
+            custom_spec = {
+                "title": custom_role_title or p.stem.replace("_", " ").title(),
+                "system_prompt": f"{custom_role_prompt}\n\n{raw_txt}".strip() if custom_role_prompt else raw_txt,
+            }
+    elif custom_role_title or custom_role_prompt:
+        custom_spec = {
+            "title": custom_role_title or "Custom Agent Specialist",
+            "system_prompt": custom_role_prompt or f"You are {custom_role_title}.",
+        }
+
+    try:
+        with SuperhumanRoleSynthesizer.build_from_db(db_path) as syn:
+            pkg = syn.synthesize(
+                problem=problem,
+                role=role,
+                custom_role_spec=custom_spec,
+                company=company,
+                developer_context=developer_context,
+                context_file=context_file,
+                adjacent_k=adjacent_k,
+                persist=persist,
+            )
+    except Exception as exc:
+        console.print(f"[bold red]Superhuman Synthesis Error:[/bold red] {exc}")
+        sys.exit(1)
+
+    eff_fmt = "json" if (json_output or output_format.lower() == "json") else "markdown"
+    if output_path:
+        saved = pkg.save(output_path, format=eff_fmt)
+        if json_output:
+            click.echo(pkg.to_json())
+        else:
+            console.print(
+                f"[bold green]Superhuman Role Blueprint saved to:[/bold green] {saved} "
+                f"(`{pkg.prompt_character_count:,}` prompt chars)"
+            )
+        return
+
+    if eff_fmt == "json":
+        click.echo(pkg.to_json())
+    else:
+        click.echo(pkg.to_markdown())
+
+
+@superhuman_group.command(name="list")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option(
+    "--format",
+    "-f",
+    "output_format",
+    default="table",
+    type=click.Choice(["table", "json", "markdown", "md"], case_sensitive=False),
+    show_default=True,
+    help="Output format.",
+)
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output list as JSON.")
+def superhuman_list_cmd(db_path: Optional[str], output_format: str, json_output: bool) -> None:
+    """Lists persisted Superhuman Role profiles in the database."""
+    try:
+        with SuperhumanRoleSynthesizer.build_from_db(db_path) as syn:
+            profiles = syn.list_profiles()
+    except Exception as exc:
+        console.print(f"[bold red]Superhuman List Error:[/bold red] {exc}")
+        sys.exit(1)
+
+    if json_output or output_format.lower() == "json":
+        click.echo(json.dumps(profiles, indent=2))
+        return
+
+    if output_format.lower() in ("markdown", "md"):
+        lines = ["# Persisted Superhuman Role Profiles", ""]
+        for p in profiles:
+            lines.append(
+                f"- **{p['title']}** (`{p['slug']}` | ID: `{p['id']}`) — `{p['prompt_character_count']:,}` chars"
+            )
+        click.echo("\n".join(lines))
+        return
+
+    table = Table(title=f"Persisted Superhuman Role Profiles ({len(profiles)})", show_header=True)
+    table.add_column("ID / Slug", style="cyan")
+    table.add_column("Title", style="bold white")
+    table.add_column("Neighbors", justify="right")
+    table.add_column("Prompt Chars", justify="right", style="green")
+    table.add_column("Created At", style="dim")
+    for p in profiles:
+        table.add_row(
+            f"{p['id']}\n({p['slug']})",
+            p["title"],
+            str(p["adjacent_roles_count"]),
+            f"{p['prompt_character_count']:,}",
+            str(p["created_at"]),
+        )
+    console.print(table)
+
+
+@superhuman_group.command(name="inspect")
+@click.argument("id_or_slug", required=True)
+@click.option(
+    "--format",
+    "-f",
+    "output_format",
+    default="markdown",
+    type=click.Choice(["markdown", "md", "json"], case_sensitive=False),
+    show_default=True,
+    help="Export format (markdown or json).",
+)
+@click.option("--output", "-o", "output_path", default=None, help="Optional file path to save output.")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output profile as JSON.")
+def superhuman_inspect_cmd(
+    id_or_slug: str,
+    output_format: str,
+    output_path: Optional[str],
+    db_path: Optional[str],
+    json_output: bool,
+) -> None:
+    """Inspects a persisted Superhuman Role profile by ID or slug."""
+    try:
+        with SuperhumanRoleSynthesizer.build_from_db(db_path) as syn:
+            pkg = syn.get_profile(id_or_slug)
+    except Exception as exc:
+        console.print(f"[bold red]Superhuman Inspect Error:[/bold red] {exc}")
+        sys.exit(1)
+
+    eff_fmt = "json" if (json_output or output_format.lower() == "json") else "markdown"
+    if output_path:
+        saved = pkg.save(output_path, format=eff_fmt)
+        if json_output:
+            click.echo(pkg.to_json())
+        else:
+            console.print(f"[bold green]Superhuman profile exported to:[/bold green] {saved}")
+        return
+
+    if eff_fmt == "json":
+        click.echo(pkg.to_json())
+    else:
+        click.echo(pkg.to_markdown())
 
 
 if __name__ == "__main__":

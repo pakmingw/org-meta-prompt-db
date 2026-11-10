@@ -323,8 +323,8 @@ class CompanyOnboardingEngine:
                         json.dumps(["tool_word_processor", "tool_spreadsheet_processor", "tool_meeting_note_taker"]),
                         json.dumps(["tool_bi_analytics", "tool_bloomberg_terminal"]),
                         "Multi-variable constraint optimization under low latency",
-                        json.dumps([f"{b_name}_{cadence}_Deliverable.md"]),
-                        json.dumps({"source": "bespoke_onboarding"}),
+                        json.dumps([f"{b_name}_{cadence}_Deliverable.md", f"{b_name}_{cadence}_Verification_Report.json"]),
+                        json.dumps({"source": "bespoke_onboarding", "role_seniority": b_tier, "industry": industry_id}),
                     ),
                 )
 
@@ -420,13 +420,13 @@ class CompanyOnboardingEngine:
             # Upgrade prompt with Section 7
             sec7_text = (
                 f"\n\n## 7. Day-to-Day Tooling, GenAI Build Plan & Personal Subagent Swarm Protocol\n\n"
-                f"### 7.1 Operational Tooling Stack\n"
+                f"### Operational Tooling Stack\n"
                 f"The {b_name} commands both horizontal productivity suites (Word, Sheets, Slides, Notes, Chat) "
                 f"and specialized vertical domain software to execute operational workflows with maximum fidelity.\n\n"
-                f"### 7.2 Personal Subagent Swarm ('Role-in-a-Box')\n"
+                f"### Personal Subagent Swarm ('Role-in-a-Box')\n"
                 f"Equipped with an acyclic 6-agent swarm: Role Chief of Staff, Document Drafter, Quantitative Modeler, "
                 f"Deck Presenter, Meeting Graph Subagent, and Quality Critic, coordinated via strict Human-in-the-Loop gates.\n\n"
-                f"### 7.3 Generative AI Engineering Blueprint\n"
+                f"### Generative AI Engineering Blueprint\n"
                 f"Leverages hybrid BM25 + subword vector RAG with MCP integrations to automate 35-50% of routine synthesis."
             )
             if "## 7." not in synth_prompt:
