@@ -1170,5 +1170,161 @@ def governance_inspect_cmd(id_or_slug: str, output_format: str, output_path: Opt
     click.echo(text)
 
 
+# ---------------------------------------------------------------------------
+# Nov 2026 Frontier AI Lab & Real-World Enterprise Join Group (Phase 16)
+# ---------------------------------------------------------------------------
+
+@cli.group(name="frontier")
+def frontier_group() -> None:
+    """Nov 2026 Frontier AI Labs & Real-World Enterprise/Creator Join Engine."""
+    pass
+
+
+@frontier_group.command(name="labs")
+@click.option("--format", "-f", "output_format", default="table", type=click.Choice(["table", "markdown", "md", "json"], case_sensitive=False), show_default=True)
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output labs as JSON.")
+def frontier_labs_cmd(output_format: str, db_path: Optional[str], json_output: bool) -> None:
+    """Lists the 5 Nov 2026 Frontier AI Labs and their 30 internal operating pods."""
+    from orgprompt.frontier import FrontierLabJoinEngine
+
+    with FrontierLabJoinEngine(db_path) as eng:
+        labs = eng.list_labs()
+
+    if json_output or output_format.lower() == "json":
+        click.echo(json.dumps([l.to_dict() for l in labs], indent=2))
+        return
+    if output_format.lower() in ("markdown", "md"):
+        lines = [f"# Nov 2026 Frontier AI Labs ({len(labs)} Labs, {sum(len(l.pods) for l in labs)} Pods)", ""]
+        for l in labs:
+            lines.append(f"- **{l.name}** (`{l.slug}` | `{len(l.pods)}` pods) — {l.headquarters}")
+        click.echo("\n".join(lines))
+        return
+    table = Table(title=f"Nov 2026 Frontier AI Labs ({len(labs)} Labs)", show_header=True)
+    table.add_column("ID / Slug", style="cyan")
+    table.add_column("Lab Name", style="bold white")
+    table.add_column("Pods", justify="right", style="green")
+    table.add_column("Flagship Models & Superpowers", style="dim")
+    for l in labs:
+        table.add_row(f"{l.id}\n({l.slug})", l.name, str(len(l.pods)), "; ".join(l.flagship_models[:2]))
+    console.print(table)
+
+
+@frontier_group.command(name="inspect-lab")
+@click.argument("lab", required=True)
+@click.option("--format", "-f", "output_format", default="markdown", type=click.Choice(["markdown", "md", "json"], case_sensitive=False), show_default=True)
+@click.option("--output", "-o", "output_path", default=None, help="Optional output file path.")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output as JSON.")
+def frontier_inspect_lab_cmd(lab: str, output_format: str, output_path: Optional[str], db_path: Optional[str], json_output: bool) -> None:
+    """Inspects a Frontier AI Lab's governance, research loop, safety gates, and 6 pods."""
+    from orgprompt.frontier import FrontierLabJoinEngine
+
+    try:
+        with FrontierLabJoinEngine(db_path) as eng:
+            lab_obj = eng.inspect_lab(lab)
+    except Exception as exc:
+        console.print(f"[bold red]Frontier Lab Inspect Error:[/bold red] {exc}")
+        sys.exit(1)
+
+    eff_fmt = "json" if (json_output or output_format.lower() == "json") else "markdown"
+    if output_path:
+        saved = lab_obj.save(output_path, format=eff_fmt)
+        if json_output:
+            click.echo(lab_obj.to_json())
+        else:
+            console.print(f"[bold green]Frontier Lab dossier saved to:[/bold green] {saved}")
+        return
+    click.echo(lab_obj.to_json() if eff_fmt == "json" else lab_obj.to_markdown())
+
+
+@frontier_group.command(name="join-role")
+@click.argument("role", required=True)
+@click.option("--company", "-c", default=None, help="Optional enterprise/creator company context.")
+@click.option("--format", "-f", "output_format", default="markdown", type=click.Choice(["markdown", "md", "json"], case_sensitive=False), show_default=True)
+@click.option("--output", "-o", "output_path", default=None, help="Optional output file path.")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output as JSON.")
+def frontier_join_role_cmd(role: str, company: Optional[str], output_format: str, output_path: Optional[str], db_path: Optional[str], json_output: bool) -> None:
+    """Joins a real-world canonical role to its counterpart Frontier AI Lab roles & recipes."""
+    from orgprompt.frontier import FrontierLabJoinEngine
+
+    try:
+        with FrontierLabJoinEngine(db_path) as eng:
+            res = eng.join_role(role, company_name_or_slug=company)
+    except Exception as exc:
+        console.print(f"[bold red]Frontier Join-Role Error:[/bold red] {exc}")
+        sys.exit(1)
+
+    eff_fmt = "json" if (json_output or output_format.lower() == "json") else "markdown"
+    if output_path:
+        saved = res.save(output_path, format=eff_fmt)
+        if json_output:
+            click.echo(res.to_json())
+        else:
+            console.print(f"[bold green]Role <-> Frontier Lab join saved to:[/bold green] {saved}")
+        return
+    click.echo(res.to_json() if eff_fmt == "json" else res.to_markdown())
+
+
+@frontier_group.command(name="join-company")
+@click.argument("company", required=True)
+@click.option("--focus", default=None, help="Optional division/domain keyword filter.")
+@click.option("--format", "-f", "output_format", default="markdown", type=click.Choice(["markdown", "md", "json"], case_sensitive=False), show_default=True)
+@click.option("--output", "-o", "output_path", default=None, help="Optional output file path.")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output as JSON.")
+def frontier_join_company_cmd(company: str, focus: Optional[str], output_format: str, output_path: Optional[str], db_path: Optional[str], json_output: bool) -> None:
+    """Generates a complete Enterprise <-> Frontier AI Lab co-design blueprint for a company."""
+    from orgprompt.frontier import FrontierLabJoinEngine
+
+    try:
+        with FrontierLabJoinEngine(db_path) as eng:
+            res = eng.join_company(company, focus=focus)
+    except Exception as exc:
+        console.print(f"[bold red]Frontier Join-Company Error:[/bold red] {exc}")
+        sys.exit(1)
+
+    eff_fmt = "json" if (json_output or output_format.lower() == "json") else "markdown"
+    if output_path:
+        saved = res.save(output_path, format=eff_fmt)
+        if json_output:
+            click.echo(res.to_json())
+        else:
+            console.print(f"[bold green]Company <-> Frontier Lab blueprint saved to:[/bold green] {saved}")
+        return
+    click.echo(res.to_json() if eff_fmt == "json" else res.to_markdown())
+
+
+@frontier_group.command(name="bridge-problem")
+@click.option("--problem", "-p", required=True, help="Real-world enterprise, scientific, or creator problem statement.")
+@click.option("--company", "-c", default=None, help="Optional enterprise/creator company context.")
+@click.option("--top-k", "-k", default=6, show_default=True, type=int, help="Number of real-world anchor roles to retrieve.")
+@click.option("--format", "-f", "output_format", default="markdown", type=click.Choice(["markdown", "md", "json"], case_sensitive=False), show_default=True)
+@click.option("--output", "-o", "output_path", default=None, help="Optional output file path.")
+@click.option("--db-path", type=click.Path(dir_okay=False), default=None, help="Path to SQLite database.")
+@click.option("--json-output", "--json", "json_output", is_flag=True, help="Output as JSON.")
+def frontier_bridge_problem_cmd(problem: str, company: Optional[str], top_k: int, output_format: str, output_path: Optional[str], db_path: Optional[str], json_output: bool) -> None:
+    """Bridges any real-world problem to HybridSearch enterprise roles + Frontier AI Lab pods."""
+    from orgprompt.frontier import FrontierLabJoinEngine
+
+    try:
+        with FrontierLabJoinEngine(db_path) as eng:
+            res = eng.bridge_problem(problem, company_name_or_slug=company, top_k=top_k)
+    except Exception as exc:
+        console.print(f"[bold red]Frontier Bridge-Problem Error:[/bold red] {exc}")
+        sys.exit(1)
+
+    eff_fmt = "json" if (json_output or output_format.lower() == "json") else "markdown"
+    if output_path:
+        saved = res.save(output_path, format=eff_fmt)
+        if json_output:
+            click.echo(res.to_json())
+        else:
+            console.print(f"[bold green]Problem <-> Frontier Lab bridge saved to:[/bold green] {saved}")
+        return
+    click.echo(res.to_json() if eff_fmt == "json" else res.to_markdown())
+
+
 if __name__ == "__main__":
     cli()

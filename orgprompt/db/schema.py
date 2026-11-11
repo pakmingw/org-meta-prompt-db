@@ -66,11 +66,14 @@ def ensure_superhuman_schema(
 
 
 from orgprompt.governance.schema import GOVERNANCE_SCHEMA_DDL, ensure_governance_schema
+from orgprompt.frontier.schema import FRONTIER_SCHEMA_DDL, ensure_frontier_schema
 
 __all__ = [
     "SUPERHUMAN_ROLE_PROFILES_DDL",
     "GOVERNANCE_SCHEMA_DDL",
+    "FRONTIER_SCHEMA_DDL",
     "ensure_superhuman_schema",
     "ensure_governance_schema",
+    "ensure_frontier_schema",
     "get_schema_sql",
 ]

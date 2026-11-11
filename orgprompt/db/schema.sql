@@ -537,3 +537,95 @@ CREATE TABLE IF NOT EXISTS superhuman_governance_profiles (
 
 CREATE INDEX IF NOT EXISTS idx_sgp_slug ON superhuman_governance_profiles(slug);
 CREATE INDEX IF NOT EXISTS idx_sgp_base_role ON superhuman_governance_profiles(base_governance_role_slug);
+
+
+-- ==============================================================================
+-- 20. Nov 2026 Frontier AI Labs & Real-World Enterprise Join Layer (Phase 16)
+-- ==============================================================================
+CREATE TABLE IF NOT EXISTS frontier_ai_labs (
+    id TEXT PRIMARY KEY,
+    slug TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL,
+    company_id TEXT,
+    headquarters TEXT NOT NULL,
+    corporate_governance_structure TEXT NOT NULL,
+    leadership_json TEXT NOT NULL DEFAULT '[]',
+    research_to_product_loop TEXT NOT NULL,
+    flagship_models_json TEXT NOT NULL DEFAULT '[]',
+    safety_control_framework TEXT NOT NULL,
+    enterprise_gtm_fde_motion TEXT NOT NULL,
+    compute_and_infra_strategy TEXT NOT NULL,
+    metadata_json TEXT NOT NULL DEFAULT '{}',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_fal_slug ON frontier_ai_labs(slug);
+CREATE INDEX IF NOT EXISTS idx_fal_company ON frontier_ai_labs(company_id);
+
+CREATE TABLE IF NOT EXISTS frontier_lab_pods (
+    id TEXT PRIMARY KEY,
+    lab_id TEXT NOT NULL REFERENCES frontier_ai_labs(id) ON DELETE CASCADE,
+    slug TEXT NOT NULL UNIQUE,
+    name TEXT NOT NULL,
+    pod_category TEXT NOT NULL CHECK(pod_category IN (
+        'PRETRAINING_AND_ARCHITECTURE',
+        'REASONING_AND_AGENTIC_POST_TRAINING',
+        'ALIGNMENT_CONTROL_AND_EVALS',
+        'GIGAWATT_INFRA_AND_INFERENCE',
+        'APPLIED_PRODUCT_AND_ORCHESTRATION',
+        'FDE_ENTERPRISE_AND_SCIENCE'
+    )),
+    mandate TEXT NOT NULL,
+    canonical_role_slugs_json TEXT NOT NULL DEFAULT '[]',
+    signature_artifacts_json TEXT NOT NULL DEFAULT '[]',
+    operating_cadence TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_flp_lab ON frontier_lab_pods(lab_id);
+CREATE INDEX IF NOT EXISTS idx_flp_category ON frontier_lab_pods(pod_category);
+
+CREATE TABLE IF NOT EXISTS real_world_to_frontier_bridges (
+    id TEXT PRIMARY KEY,
+    slug TEXT NOT NULL UNIQUE,
+    industry_id TEXT NOT NULL REFERENCES industries(id) ON DELETE CASCADE,
+    domain_name TEXT NOT NULL,
+    real_world_goal TEXT NOT NULL,
+    real_world_role_slugs_json TEXT NOT NULL DEFAULT '[]',
+    real_world_bottlenecks_json TEXT NOT NULL DEFAULT '[]',
+    why_naive_llm_wrappers_fail TEXT NOT NULL,
+    lead_frontier_labs_json TEXT NOT NULL DEFAULT '[]',
+    frontier_pod_ids_json TEXT NOT NULL DEFAULT '[]',
+    frontier_role_slugs_json TEXT NOT NULL DEFAULT '[]',
+    frontier_technical_recipe TEXT NOT NULL,
+    joint_enterprise_lab_pod_topology TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_rwfb_industry ON real_world_to_frontier_bridges(industry_id);
+CREATE INDEX IF NOT EXISTS idx_rwfb_slug ON real_world_to_frontier_bridges(slug);
+
+CREATE TABLE IF NOT EXISTS role_frontier_joins (
+    id TEXT PRIMARY KEY,
+    source_enterprise_role_id TEXT NOT NULL REFERENCES canonical_roles(id) ON DELETE CASCADE,
+    target_frontier_role_id TEXT NOT NULL REFERENCES canonical_roles(id) ON DELETE CASCADE,
+    join_mechanism TEXT NOT NULL CHECK(join_mechanism IN (
+        'FDE_WORKFLOW_EMBEDDING',
+        'RL_VERIFIER_AND_EVAL_HARNESS',
+        'MCP_CONTEXT_AND_TOOL_RUNTIME',
+        'DOMAIN_DISTILLATION_AND_POST_TRAINING',
+        'SAFETY_CONTROL_AND_RED_TEAM_GATE',
+        'WORLD_MODEL_AND_SCIENTIFIC_SIM'
+    )),
+    enterprise_pain_point TEXT NOT NULL,
+    frontier_lab_capability TEXT NOT NULL,
+    joint_artifact TEXT NOT NULL,
+    recommended_labs_json TEXT NOT NULL DEFAULT '[]',
+    priority_rank INTEGER NOT NULL DEFAULT 1,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(source_enterprise_role_id, target_frontier_role_id, join_mechanism)
+);
+
+CREATE INDEX IF NOT EXISTS idx_rfj_source ON role_frontier_joins(source_enterprise_role_id);
+CREATE INDEX IF NOT EXISTS idx_rfj_target ON role_frontier_joins(target_frontier_role_id);
+CREATE INDEX IF NOT EXISTS idx_rfj_mechanism ON role_frontier_joins(join_mechanism);
